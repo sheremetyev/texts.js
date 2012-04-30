@@ -1,0 +1,28 @@
+{
+  "name": "texts",
+  "version": "0.0.1",
+  "description": "Text JSON tools for node.js",
+  "keywords": [
+    "text",
+    "markdown",
+    "json"
+  ],
+  "author": "Fyodor Sheremetyev <sheremetyev@gmail.com>",
+  "contributors": [ 
+  ],
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "http://github.com/sheremetyev/texts.js/raw/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sheremetyev/texts.js"
+  },  
+  "main": "./lib/texts.js",
+  "bin": "./bin/texts-cli.js",
+  "preferGlobal": true,
+  "dependencies": {
+  }
+}

@@ -41,12 +41,13 @@ function runTestFile(filename, done) {
   var test = require('fs').readFileSync(filename, 'utf8').replace(/\r\n/g,'\n');
 
   var match = /^(.*)\n<<<\n([\s\S]*)>>>\n([\s\S]*)$/.exec(test);
-  var options = match[1];
+  var command = match[1];
   var input   = match[2];
   var output  = match[3];
 
-  var command = 'node ' + __dirname + '/../bin/texts-cli.js ' + options;
-  require('child_process').exec(command,
+  var dir = require('path').dirname(filename);
+  
+  require('child_process').exec(command, { cwd: dir },
     function (error, stdout, stderr) {
       if (error !== null) {
         done(err);

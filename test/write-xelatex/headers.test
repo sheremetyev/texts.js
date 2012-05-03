@@ -1,4 +1,4 @@
---from textjson --to xelatex
+node ../../bin/texts.js --from textjson --to xelatex
 <<<
 ["text",
   ["heading", { "level": 1 },

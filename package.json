@@ -25,6 +25,10 @@
   "preferGlobal": true,
   "dependencies": {
   },
+  "devDependencies": {
+    "mocha": "1.0.x",
+    "chai": "0.5.x"
+  },
   "scripts": {
     "test": "node test/run.js"
   }

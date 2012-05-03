@@ -5,11 +5,13 @@ var options = {
   'help': Boolean,
   'from' : [ 'textjson' ],
   'to' : [ 'xelatex', 'html5' ],
+  'standalone' : Boolean,
 };
 var shorthands = {
   'h' : '--help',
   'f' : '--from',
   't' : '--to',
+  's' : '--standalone',
 };
 var parsed = nopt(options, shorthands);
 
@@ -20,6 +22,7 @@ if (parsed.help) {
     'Options:',
     '  -f FORMAT             --from=FORMAT',
     '  -t FORMAT             --to=FORMAT',
+    '  -s                    --standalone',
     '  -h                    --help',
   ].join('\n'));
   process.exit(1);
@@ -27,6 +30,9 @@ if (parsed.help) {
 
 parsed.from = parsed.from || 'textjson';
 parsed.to   = parsed.to   || 'html5';
+parsed.standalone = parsed.standalone || false;
+
+var writerOptions = { standalone: parsed.standalone };
 
 // option parsing completed
 
@@ -40,14 +46,14 @@ if (parsed.argv.remain.length) {
   parsed.argv.remain.forEach(function(inputFile) {
     var input = fs.readFileSync(inputFile);
     var text = reader(input);
-    var output = writer(text);
+    var output = writer(text, writerOptions);
     io.writeOutput(output);
   });
 } else {
   // process stdin
   io.readInput(function (err, input) {
     var text = reader(input);
-    var output = writer(text);
+    var output = writer(text, writerOptions);
     io.writeOutput(output);
   });
 }

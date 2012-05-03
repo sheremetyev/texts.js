@@ -1,0 +1,9 @@
+node ../../bin/texts.js --from textjson --to html5
+<<<
+["text",
+  ["heading", { "level": 1 },
+    ["plain", "main section"]
+  ]
+]
+>>>
+<h1>main section</h1>

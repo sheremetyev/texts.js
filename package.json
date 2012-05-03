@@ -24,6 +24,7 @@
   "bin": "./bin/texts.js",
   "preferGlobal": true,
   "dependencies": {
+    "nopt": "1.0.x"
   },
   "devDependencies": {
     "mocha": "1.0.x",

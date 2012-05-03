@@ -24,5 +24,8 @@
   "bin": "./bin/texts-cli.js",
   "preferGlobal": true,
   "dependencies": {
+  },
+  "scripts": {
+    "test": "node test/run.js"
   }
 }

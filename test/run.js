@@ -1,21 +1,44 @@
-var fs = require('fs');
+var mocha = require('mocha');
+var expect = require('chai').expect;
 
-fs.readdirSync(__dirname).forEach(function(testdirname) {
-  var testdir = __dirname + '/' + testdirname;
-  if (fs.statSync(testdir).isDirectory()) {
-    console.log('Running tests in ' + testdirname);
-    fs.readdirSync(testdir).forEach(function(testfilename) {
-      var testfile = testdir + '/' + testfilename;
-      if (testfile.substr(-5) === '.test') {
-        console.log('* ' + testfilename);
-        runTestFile(testfile);
-      }
-    });
-  }
-});
+var suite = loadTests();
+var runner = new mocha.Runner(suite);
+var reporter = new mocha.reporters.List(runner);
+runner.run();
 
-function runTestFile(filename) {
-  var test = fs.readFileSync(filename, 'utf8').replace(/\r\n/g,'\n');
+function loadTests(mainSuite) {
+  var fs = require('fs');
+  
+  var mainSuite = new mocha.Suite('', new mocha.Context);
+  
+  fs.readdirSync(__dirname).forEach(function(testdirname) {
+    var testdir = __dirname + '/' + testdirname;
+    if (fs.statSync(testdir).isDirectory()) {
+  
+      var suite = new mocha.Suite.create(mainSuite, testdirname);
+      fs.readdirSync(testdir).forEach(function(testfilename) {
+        if (testfilename.substr(-5) === '.test') {
+          
+          var testfile = testdir + '/' + testfilename;
+          var testname = testfilename.slice(0, -5);
+
+          var test = new mocha.Test(testname, function(done) {
+            runTestFile(testfile, done);
+          });
+          
+          suite.addTest(test);
+        }
+      });
+
+      mainSuite.addSuite(suite);
+    }
+  });
+
+  return mainSuite;
+}
+
+function runTestFile(filename, done) {
+  var test = require('fs').readFileSync(filename, 'utf8').replace(/\r\n/g,'\n');
 
   var match = /^(.*)\n<<<\n([\s\S]*)>>>\n([\s\S]*)$/.exec(test);
   var options = match[1];
@@ -26,15 +49,11 @@ function runTestFile(filename) {
   require('child_process').exec(command,
     function (error, stdout, stderr) {
       if (error !== null) {
-        console.log('ERROR: ' + error);
-        console.log('STDERR:\n' + stderr);
+        done(err);
       } else {
-        compare(output, stdout);
+        expect(stdout).to.eql(output);
+        done();
       }
     }
   ).stdin.end(input);
 };
-
-function compare(expected, actual) {
-  require('assert').equal(actual, expected);
-}  

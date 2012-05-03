@@ -29,8 +29,6 @@ function loadTests(mainSuite) {
           suite.addTest(test);
         }
       });
-
-      mainSuite.addSuite(suite);
     }
   });
 

@@ -27,10 +27,9 @@
     "nopt": "1.0.x"
   },
   "devDependencies": {
-    "mocha": "1.0.x",
-    "chai": "0.5.x"
+    "tests": "0.1.x"
   },
   "scripts": {
-    "test": "node test/run.js"
+    "test": "node_modules/.bin/tests test"
   }
 }

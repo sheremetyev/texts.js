@@ -1,0 +1,9 @@
+--from textjson --to xelatex
+<<<
+["text",
+  ["heading", { "level": 1 },
+    ["plain", "main section"]
+  ]
+]
+>>>
+\section{main section}

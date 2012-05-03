@@ -5,7 +5,9 @@ node ../../bin/texts.js --from textjson --to xelatex
     ["emph", "italic"],
     ["plain", " "],
     ["strong", "bold"]
+    ["plain", " "],
+    ["code", "code"]
   ]
 ]
 >>>
-\emph{italic} \textbf{bold}
+\emph{italic} \textbf{bold} \texttt{code}

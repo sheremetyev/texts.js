@@ -1,0 +1,12 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "first line"],
+    ["break", "\n"],
+    ["plain", "second line"]
+  ]
+]
+>>>
+first line\\
+second line

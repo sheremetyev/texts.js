@@ -1,0 +1,11 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["verbatim", { "level": 0 },
+    ["plain", "code"]
+  ]
+]
+>>>
+\begin{verbatim}
+code
+\end{verbatim}

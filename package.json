@@ -21,7 +21,7 @@
     "url": "https://github.com/sheremetyev/texts.js"
   },  
   "main": "./lib/texts.js",
-  "bin": "./bin/texts-cli.js",
+  "bin": "./bin/texts.js",
   "preferGlobal": true,
   "dependencies": {
   },

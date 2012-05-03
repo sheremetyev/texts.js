@@ -4,7 +4,7 @@ node ../../bin/texts.js --from textjson --to xelatex
   ["para", { "level": 0 },
     ["emph", "italic"],
     ["plain", " "],
-    ["strong", "bold"]
+    ["strong", "bold"],
     ["plain", " "],
     ["code", "code"]
   ]

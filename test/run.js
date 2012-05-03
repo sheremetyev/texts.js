@@ -50,7 +50,7 @@ function runTestFile(filename, done) {
   require('child_process').exec(command, { cwd: dir },
     function (error, stdout, stderr) {
       if (error !== null) {
-        done(err);
+        done(error);
       } else {
         expect(stdout).to.eql(output);
         done();

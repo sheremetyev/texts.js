@@ -30,6 +30,6 @@
     "tests": "0.1.x"
   },
   "scripts": {
-    "test": "node_modules/.bin/tests test"
+    "test": "node node_modules/tests/bin/tests.js test"
   }
 }

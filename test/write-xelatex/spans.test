@@ -1,0 +1,11 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["emph", "italic"],
+    ["plain", " "],
+    ["strong", "bold"]
+  ]
+]
+>>>
+\emph{italic} \textbf{bold}

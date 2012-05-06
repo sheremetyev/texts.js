@@ -1,0 +1,241 @@
+% That's an example of XeLaTeX document we'd like to be able to create
+
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=1in]{geometry} % set smaller margins %
+\usepackage{amssymb} % use standard math symbols %
+\usepackage{amsmath} % use \text inside formulas and for \eqref %
+\usepackage{xltxtra} % enable full XeLaTeX power %
+
+%\defaultfontfeatures{}
+\setmainfont{Georgia}
+
+% set paragraph margins %
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\usepackage{graphicx} % for \includegraphics
+\usepackage{float} % for exact placement of figures
+
+% setup hyperlinks support
+\usepackage[colorlinks,urlcolor=blue,filecolor=blue,linkcolor=black,citecolor=black]{hyperref}
+\usepackage[all]{hypcap}
+\urlstyle{same}
+
+\begin{document}
+
+\section{Introduction}
+
+This document shows what should be possible with
+\href{http://textjs.org/}{\texttt{texts.js}} and
+\href{http://en.wikipedia.org/wiki/XeTeX}{\XeTeX{}}.
+
+\section{Headings}
+
+\subsection{Subsection Heading}
+
+\subsubsection{Subsubsection Heading}
+\label{sec:somesection}
+
+\section{Text Formatting}
+
+You can use \emph{emphasis} and \textbf{strong} emphasis. Inline \texttt{code}
+will use monspaced font.
+
+\begin{verbatim}
+Code blocks use monospaced font as well and preserve line
+breaks
+\end{verbatim}
+
+\section{Math}
+
+Math formulas can be used inside paragraph like $E=mc^2$ or on a separate line
+like the following one.
+
+\begin{equation}
+\label{eq:myequation}
+1+\frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots =
+\prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},
+\quad\quad \text{for $|q|<1$}
+\end{equation}
+
+\section{Footnotes}
+
+Footnotes are placed inside text\footnote{Yes right here.} in the \TeX{} source
+file but appear at the bottom of the page.
+
+Or you could reference\footnotemark{} your footnote or two\footnotemark{}.
+
+\footnotetext{And then define it.}
+
+\footnotetext{I mean, both of them.}
+
+\section{Cross-references}
+
+We can refer to Section~\ref{sec:somesection},
+Equation~\eqref{eq:myequation}, Figure~\ref{fig:logo} or
+Table~\ref{tab:example}.
+
+\section{Hyperlinks}
+
+Cross-references are hyperlinked automatically (try clicking the figure number
+above). It is possible to include surrounding text in the link, e.g.
+\hyperref[fig:logo]{Figure~\ref*{fig:logo}}—so that
+link is larger.
+
+And you can add arbitrary hyperlinks of course.
+Link \href{http://www.texts.io/}{text} can differ from it's URL or be the same
+as the URL: \url{http://www.google.com/}.
+
+You can include e-mail links:
+\href{mailto:sheremetyev@gmail.com}{sheremetyev@gmail.com}. Local files can be
+\href{run:basic.pdf}{referenced}. It is possible to
+\hyperlink{mylabel}{reference} any location in the document.
+
+\hypertarget{mylabel}{}
+For example, this text is referenced in previous paragraph.
+
+\section{Images}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{Texts_Logo.png}
+    \caption{Texts editor logo}
+    \label{fig:logo}
+\end{figure}
+
+\section{Tables}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ | l | l | l | p{5cm} |}
+\hline
+Day & Min Temp & Max Temp & Summary \\ \hline
+Monday & 11C & 22C & A clear day with lots of sunshine.  However, the strong breeze will bring down the temperatures. \\ \hline
+Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells across most of Scotland and Northern Ireland, but rain reaching the far northwest. \\ \hline
+Wednesday & 10C & 21C & Rain will still linger for the morning. Conditions will improve by early afternoon and continue throughout the evening. \\
+\hline
+\end{tabular}
+\caption{Simple table}
+\label{tab:example}
+\end{table}
+
+\section{Bibliography}
+
+You define bibliographic sources at the bottom of the file and
+use~\cite{lamport94} them anywhere in the text.
+
+\section{Lists}
+
+\begin{itemize}
+
+\item First bulleted item.
+
+\item Second bulleted item.
+
+    \begin{itemize}
+
+    \item Subitem.
+
+        \begin{itemize}
+
+        \item Subsubitem.
+
+        \end{itemize}
+
+    \end{itemize}
+
+\end{itemize}
+
+
+\begin{enumerate}
+
+\item First numbered item.
+
+\item Second numbered item.
+
+    \begin{enumerate}
+
+    \item Subitem.
+
+        \begin{enumerate}
+
+        \item Subsubitem.
+
+        \end{enumerate}
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\begin{description}
+  \item[First] \hfill \\
+  The first item
+  \item[Second] \hfill \\
+  The second item
+  \item[Third] \hfill \\
+  The third etc \ldots
+\end{description}
+
+\section{Quoting}
+
+\begin{quotation}
+
+Quoted text can include other text styles.
+
+\Large But headings shouldn’t use default commands.
+
+\end{quotation}
+
+\section{Comments}
+
+\section{Symbol Escaping}
+
+No-break space (Unicode U+00A0) will be converted to tilde symbol for TeX.
+
+\XeTeX{} doesn't need \TeX{} ligatures for quotation marks, em-dash and other
+typographic symbols—they can be ‘used’ “directly”. Euro symbol can be used for
+as less as €10. Ellipsis… in the text should be a Unicode character.
+
+Should \TeX{} ligatures be ``used''—they will be printed <<as is>>.
+
+\TeX{} special symbols are automatically escaped: \%, \$, \{, \}, \_, \#,
+\&, \textbackslash, \textasciitilde, \textasciicircum.
+
+\section{Other Features}
+
+Document title and author should be defined in a wrapping \TeX{} file, as well
+as sepecial markup for abstract, placement of table of contents and
+bibliography. Default export intends to produce good quality document with
+minimal set of features. Another approach would be to use custom markup in the
+document (i.e. labels) and process it during the export stage.
+
+\begin{thebibliography}{9}
+
+\bibitem{lamport94} Leslie Lamport, \emph{\LaTeX: A Document Preparation System}.
+Addison Wesley, Massachusetts, 2nd Edition, 1994.
+
+\end{thebibliography}
+
+\hrulefill
+
+\section{Not Possible or Incompatible}
+
+\begin{itemize}
+
+\item Alternative headings for sections (to be used in TOC).
+
+\item Explicit hyphenation.
+
+\item Prohibiting ligatures by \{\} (but we might use special Unicode symbols
+for that).
+
+\item \TeX{} ligatures for typographic symbols (e.g. ---) are not processed
+by default.
+
+\item Difference between breakable (\texttt{\textbackslash{}slash}) and
+non-breakable slash mark.
+
+\end{itemize}
+
+\end{document}

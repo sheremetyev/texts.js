@@ -1,0 +1,397 @@
+["text",
+
+  ["heading", { "level": 1 },
+    ["plain", "Introduction"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "This document shows what should be possible with "],
+    ["linktext", "texts.js"],
+    ["url", "http://textjs.org/"],
+    ["plain", " and "],
+    ["linktext", "XeTeX"],
+    ["url", "http://en.wikipedia.org/wiki/XeTeX"],
+    ["plain", "."]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Headings"]
+  ],
+
+  ["heading", { "level": 2 },
+    ["plain", "Subsection Heading"]
+  ],
+
+  ["labels", { "level": 0 },
+    ["id", "sec:somesection"]
+  ],
+
+  ["heading", { "level": 3 },
+    ["plain", "Subsubsection Heading"]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Text Formatting"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "You can use "],
+    ["emph", "emphasis"],
+    ["plain", " and "],
+    ["strong", "strong"],
+    ["plain", " emphasis. Inline "],
+    ["code", "code"],
+    ["plain", " will use monspaced font."]
+  ],
+
+  ["verbatim", { "level": 0 },
+    ["plain", "Code blocks use monospaced font as well and preserve line"],
+    ["break", "\n"],
+    ["plain", "breaks"]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Math"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "Math formulas can be used inside paragraph like "],
+    ["math", "E=mc^2"],
+    ["plain", " or on a separate line like the following one."]
+  ],
+
+  ["labels", { "level": 0 },
+    ["id", "eq:myequation"]
+  ],
+
+  ["displaymath", { "level": 0 },
+    ["plain", "1+\\frac{q^2}{(1-q)}+\\frac{q^6}{(1-q)(1-q^2)}+\\cdots ="],
+    ["break", "\n"],
+    ["plain", "\\prod_{j=0}^{\\infty}\\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},"],
+    ["break", "\n"],
+    ["plain", "\\quad\\quad \\text{for $|q|<1$}"]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Footnotes"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "Footnotes are placed inside text"],
+    ["ref", "^1"],
+    ["plain", " in the TeX source file but appear at the bottom of the page."]
+  ],
+
+  ["labels", { "level": 0 },
+    ["id", "^1"]
+  ],
+
+  ["note", { "level": 0 },
+    ["plain", "Yes right here."]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "Or you could reference"],
+    ["ref", "^2"],
+    ["plain", " your footnote or two"],
+    ["ref", "^3"],
+    ["plain", "."]
+  ],
+
+  ["labels", { "level": 0 },
+    ["id", "^2"]
+  ],
+
+  ["note", { "level": 0 },
+    ["plain", "And then define it."]
+  ],
+
+  ["labels", { "level": 0 },
+    ["id", "^3"]
+  ],
+
+  ["note", { "level": 0 },
+    ["plain", "I mean, both of them."]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Cross-references"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "We can refer to Section "],
+    ["ref", "sec:somesection"],
+    ["plain", ", Equation "],
+    ["ref", "eq:myequation"],
+    ["plain", ", Figure "],
+    ["ref", "fig:logo"],
+    ["plain", " or Table "],
+    ["ref", "tab:example"],
+    ["plain", "."]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Hyperlinks"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "Cross-references are hyperlinked automatically (try clicking the figure number above). It is possible to include surrounding text in the link, e.g. "],
+    ["linktext", "Figure "],
+    ["ref", "fig:logo"],
+    ["plain", "—so that link is larger."]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "And you can add arbitrary hyperlinks of course. Link "],
+    ["linktext", "text"],
+    ["url", "http://www.texts.io/"],
+    ["plain", " can differ from it's URL or be the same as the URL: "],
+    ["url", "http://www.google.com/"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "You can include e-mail links: "],
+    ["url", "sheremetyev@gmail.com"],
+    ["plain", ". Local files can be "],
+    ["linktext", "referenced"],
+    ["url", "basic.pdf"],
+    ["plain", ". It is possible to "],
+    ["linktext", "reference"],
+    ["ref", "mylabel"],
+    ["plain", " any location in the document."]
+  ],
+
+  ["labels", { "level": 0 },
+    ["id", "mylabel"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "For example, this text is referenced in previous paragraph."]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Images"]
+  ],
+
+  ["labels", { "level": 0 },
+    ["id", "fig:logo"]
+  ],
+
+  ["image", { "level": 0 },
+    ["url", "Texts_Logo.png"]
+  ],
+
+  ["definition", { "level" : 1 },
+    ["plain", "Texts editor logo"]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Tables"]
+  ],
+
+  ["labels", { "level": 0 },
+    ["id", "tab:example"],
+    ["style", "table"],
+    ["style", "header"]
+  ],
+
+  ["item", { "level": 1 },
+    ["plain", "Day"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "Min Temp"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "Max Temp"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "Summary"]
+  ],
+
+  ["item", { "level": 1 },
+    ["plain", "Monday"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "11C"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "22C"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "A clear day with lots of sunshine.  However, the strong breeze will bring down the temperatures."]
+  ],
+
+  ["item", { "level": 1 },
+    ["plain", "Tuesday"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "9C"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "19C"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "Cloudy with rain, across many northern regions. Clear spells across most of Scotland and Northern Ireland, but rain reaching the far northwest."]
+  ],
+
+  ["item", { "level": 1 },
+    ["plain", "Wednesday"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "10C"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "21C"]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "Rain will still linger for the morning. Conditions will improve by early afternoon and continue throughout the evening."]
+  ],
+
+  ["definition", { "level": 1 },
+    ["plain", "Simple table"]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Bibliography"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "You define bibliographic sources at the bottom of the file and use "],
+    ["ref", "lamport94"],
+    ["plain", " them anywhere in the text."]
+  ],
+
+  ["labels", { "level": 0 },
+    ["id", "lamport94"]
+  ],
+
+  ["bibitem", { "level": 0 },
+    ["plain", "Leslie Lamport, "],
+    ["emph", "LaTeX: A Document Preparation System"],
+    ["plain", ". Addison Wesley, Massachusetts, 2nd Edition, 1994."]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "s"]
+  ],
+
+  ["item", { "level": 1 },
+    ["plain", "First bulleted item."]
+  ],
+
+  ["item", { "level": 1 },
+    ["plain", "Second bulleted item."]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "Subitem."]
+  ],
+
+  ["item", { "level": 3 },
+    ["plain", "Subsubitem."]
+  ],
+
+  ["labels", { "level": 0 },
+    ["style", "numbered"]
+  ],
+
+  ["item", { "level": 1 },
+    ["plain", "First numbered item."]
+  ],
+
+  ["item", { "level": 1 },
+    ["plain", "Second numbered item."]
+  ],
+
+  ["item", { "level": 2 },
+    ["plain", "Subitem."]
+  ],
+
+  ["item", { "level": 3 },
+    ["plain", "Subsubitem."]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "First"]
+  ],
+
+  ["definition", { "level": 1 },
+    ["plain", "The first item"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "Second"]
+  ],
+
+  ["definition", { "level": 1 },
+    ["plain", "The second item"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "Third"]
+  ],
+
+  ["definition", { "level": 1 },
+    ["plain", "The third etc …"]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Quoting"]
+  ],
+
+  ["para", { "quote": 1 },
+    ["plain", "Quoted text can include other text styles."]
+  ],
+
+  ["heading", { "level": 1, "quote": 1 },
+    ["plain", "But headings shouldn’t use default commands."]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Comments"]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Symbol Escaping"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "No-break space (Unicode U+00A0) will be converted to tilde symbol for TeX."]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "XeTeX doesn't need TeX ligatures for quotation marks, em-dash and other typographic symbols—they can be ‘used’ “directly”. Euro symbol can be used for as less as €10. Ellipsis… in the text should be a Unicode character."]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "Should TeX ligatures be ``used''—they will be printed <<as is>>."]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "TeX special symbols are automatically escaped: %, $, {, }, _, #, &, \\, ~, ^."]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Other Features"]
+  ],
+
+  ["para", { "level": 0 },
+    ["plain", "Document title and author should be defined in a wrapping TeX file, as well as sepecial markup for abstract, placement of table of contents and bibliography. Default export intends to produce good quality document with minimal set of features. Another approach would be to use custom markup in the document (i.e. labels) and process it during the export stage."]
+  ],
+
+  ["divider", { "level": 0 }
+  ]
+
+]

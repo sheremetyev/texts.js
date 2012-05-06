@@ -5,3 +5,5 @@
 /examples/*.out
 /examples/*.toc
 /examples/*.pdf
+/examples/*.bbl
+/examples/*.blg

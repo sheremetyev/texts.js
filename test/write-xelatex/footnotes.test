@@ -1,0 +1,17 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Main text"],
+    ["ref", "mynote"],
+    ["plain", "."]
+  ],
+  ["labels", {},
+    ["label", "mynote"]
+  ],
+  ["note", {},
+    ["plain", "Footnote text."]
+  ]
+]
+>>>
+Main text\footnote{Footnote text.}.

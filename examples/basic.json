@@ -160,7 +160,7 @@
     ["url", "Texts_Logo.png"]
   ],
 
-  ["definition", { "level" : 1 },
+  ["description", { "level" : 1 },
     ["plain", "Texts editor logo"]
   ],
 
@@ -234,7 +234,7 @@
     ["plain", "Rain will still linger for the morning. Conditions will improve by early afternoon and continue throughout the evening."]
   ],
 
-  ["definition", { "level": 1 },
+  ["description", { "level": 1 },
     ["plain", "Simple table"]
   ],
 
@@ -296,7 +296,7 @@
     ["plain", "First"]
   ],
 
-  ["definition", { "level": 1 },
+  ["description", { "level": 1 },
     ["plain", "The first item"]
   ],
 
@@ -304,7 +304,7 @@
     ["plain", "Second"]
   ],
 
-  ["definition", { "level": 1 },
+  ["description", { "level": 1 },
     ["plain", "The second item"]
   ],
 
@@ -312,7 +312,7 @@
     ["plain", "Third"]
   ],
 
-  ["definition", { "level": 1 },
+  ["description", { "level": 1 },
     ["plain", "The third etc …"]
   ],
 

@@ -22,7 +22,8 @@
     ["plain", "Subsection Heading"]
   ],
 
-  ["heading", { "level": 3, "labels": ["sec:somesection"] },
+  ["heading", { "level": 3 },
+    ["label", "sec:somesection"],
     ["plain", "Subsubsection Heading"]
   ],
 
@@ -56,7 +57,8 @@
     ["plain", " or on a separate line like the following one."]
   ],
 
-  ["displaymath", { "level": 0, "labels": ["eq:myequation"] },
+  ["displaymath", { "level": 0 },
+    ["label", "eq:myequation"],
     ["plain", "1+\\frac{q^2}{(1-q)}+\\frac{q^6}{(1-q)(1-q^2)}+\\cdots ="],
     ["break", "\n"],
     ["plain", "\\prod_{j=0}^{\\infty}\\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},"],
@@ -74,7 +76,8 @@
     ["plain", " in the TeX source file but appear at the bottom of the page."]
   ],
 
-  ["note", { "level": 0, "labels": ["^1"] },
+  ["note", { "level": 0 },
+    ["label", "^1"],
     ["plain", "Yes right here."]
   ],
 
@@ -86,11 +89,13 @@
     ["plain", "."]
   ],
 
-  ["note", { "level": 0, "labels": ["^2"] },
+  ["note", { "level": 0 },
+    ["label", "^2"],
     ["plain", "And then define it."]
   ],
 
-  ["note", { "level": 0, "labels": ["^3"] },
+  ["note", { "level": 0 },
+    ["label", "^3"],
     ["plain", "I mean, both of them."]
   ],
 
@@ -141,7 +146,8 @@
     ["plain", " any location in the document."]
   ],
 
-  ["para", { "level": 0, "labels": ["mylabel"] },
+  ["para", { "level": 0 },
+    ["label", "mylabel"],
     ["plain", "For example, this text is referenced in previous paragraph."]
   ],
 
@@ -149,7 +155,8 @@
     ["plain", "Images"]
   ],
 
-  ["image", { "level": 0, "labels": ["fig:logo"] },
+  ["image", { "level": 0 },
+    ["label", "fig:logo"],
     ["url", "Texts_Logo.png"]
   ],
 
@@ -161,7 +168,9 @@
     ["plain", "Tables"]
   ],
 
-  ["item", { "level": 1, "labels": ["tab:example", ".table"] },
+  ["item", { "level": 1 },
+    ["label", "tab:example"],
+    ["label", ".table"],
     ["plain", "Day"]
   ],
 
@@ -239,7 +248,8 @@
     ["plain", " them anywhere in the text."]
   ],
 
-  ["bibitem", { "level": 0, "labels": ["@lamport94"] },
+  ["bibitem", { "level": 0 },
+    ["label", "@lamport94"],
     ["plain", "Leslie Lamport, "],
     ["emph", "LaTeX: A Document Preparation System"],
     ["plain", ". Addison Wesley, Massachusetts, 2nd Edition, 1994."]
@@ -265,7 +275,8 @@
     ["plain", "Subsubitem."]
   ],
 
-  ["item", { "level": 1, "labels": [".numbered"] },
+  ["item", { "level": 1 },
+    ["label", ".numbered"],
     ["plain", "First numbered item."]
   ],
 

@@ -22,11 +22,7 @@
     ["plain", "Subsection Heading"]
   ],
 
-  ["labels", { "level": 0 },
-    ["id", "sec:somesection"]
-  ],
-
-  ["heading", { "level": 3 },
+  ["heading", { "level": 3, "labels": ["sec:somesection"] },
     ["plain", "Subsubsection Heading"]
   ],
 
@@ -60,11 +56,7 @@
     ["plain", " or on a separate line like the following one."]
   ],
 
-  ["labels", { "level": 0 },
-    ["id", "eq:myequation"]
-  ],
-
-  ["displaymath", { "level": 0 },
+  ["displaymath", { "level": 0, "labels": ["eq:myequation"] },
     ["plain", "1+\\frac{q^2}{(1-q)}+\\frac{q^6}{(1-q)(1-q^2)}+\\cdots ="],
     ["break", "\n"],
     ["plain", "\\prod_{j=0}^{\\infty}\\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},"],
@@ -82,11 +74,7 @@
     ["plain", " in the TeX source file but appear at the bottom of the page."]
   ],
 
-  ["labels", { "level": 0 },
-    ["id", "^1"]
-  ],
-
-  ["note", { "level": 0 },
+  ["note", { "level": 0, "labels": ["^1"] },
     ["plain", "Yes right here."]
   ],
 
@@ -98,19 +86,11 @@
     ["plain", "."]
   ],
 
-  ["labels", { "level": 0 },
-    ["id", "^2"]
-  ],
-
-  ["note", { "level": 0 },
+  ["note", { "level": 0, "labels": ["^2"] },
     ["plain", "And then define it."]
   ],
 
-  ["labels", { "level": 0 },
-    ["id", "^3"]
-  ],
-
-  ["note", { "level": 0 },
+  ["note", { "level": 0, "labels": ["^3"] },
     ["plain", "I mean, both of them."]
   ],
 
@@ -161,11 +141,7 @@
     ["plain", " any location in the document."]
   ],
 
-  ["labels", { "level": 0 },
-    ["id", "mylabel"]
-  ],
-
-  ["para", { "level": 0 },
+  ["para", { "level": 0, "labels": ["mylabel"] },
     ["plain", "For example, this text is referenced in previous paragraph."]
   ],
 
@@ -173,11 +149,7 @@
     ["plain", "Images"]
   ],
 
-  ["labels", { "level": 0 },
-    ["id", "fig:logo"]
-  ],
-
-  ["image", { "level": 0 },
+  ["image", { "level": 0, "labels": ["fig:logo"] },
     ["url", "Texts_Logo.png"]
   ],
 
@@ -189,13 +161,7 @@
     ["plain", "Tables"]
   ],
 
-  ["labels", { "level": 0 },
-    ["id", "tab:example"],
-    ["style", "table"],
-    ["style", "header"]
-  ],
-
-  ["item", { "level": 1 },
+  ["item", { "level": 1, "labels": ["tab:example", ".table"] },
     ["plain", "Day"]
   ],
 
@@ -269,15 +235,11 @@
 
   ["para", { "level": 0 },
     ["plain", "You define bibliographic sources at the bottom of the file and use "],
-    ["ref", "lamport94"],
+    ["ref", "@lamport94"],
     ["plain", " them anywhere in the text."]
   ],
 
-  ["labels", { "level": 0 },
-    ["id", "lamport94"]
-  ],
-
-  ["bibitem", { "level": 0 },
+  ["bibitem", { "level": 0, "labels": ["@lamport94"] },
     ["plain", "Leslie Lamport, "],
     ["emph", "LaTeX: A Document Preparation System"],
     ["plain", ". Addison Wesley, Massachusetts, 2nd Edition, 1994."]
@@ -303,11 +265,7 @@
     ["plain", "Subsubitem."]
   ],
 
-  ["labels", { "level": 0 },
-    ["style", "numbered"]
-  ],
-
-  ["item", { "level": 1 },
+  ["item", { "level": 1, "labels": [".numbered"] },
     ["plain", "First numbered item."]
   ],
 

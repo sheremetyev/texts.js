@@ -1,3 +1,5 @@
+{global-label}
+
 Introduction
 ============
 
@@ -13,9 +15,8 @@ Headings
 Subsection Heading
 ------------------
 
+{sec:somesection}
 ### Subsubsection Heading
-
-  {#sec:somesection}
 
 Text Formatting
 ===============
@@ -23,6 +24,7 @@ Text Formatting
 You can use *emphasis* and **strong** emphasis. Inline `code`
 will use monspaced font.
 
+{lst:somecode}
 ~~~~~
 Code blocks use monospaced font as well and preserve line
 breaks
@@ -34,19 +36,20 @@ Math
 Math formulas can be used inside paragraph like $E=mc^2$ or on a separate line
 like the following one.
 
+{eq:myequation}
 $$
 1+\frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots =
 \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},
 \quad\quad \text{for $|q|<1$}
 $$
 
-  {#eq:myequation}
-
 Footnotes
 =========
 
-Footnotes are placed inside text^[Yes right here.] in the TeX source
+Footnotes are placed inside text[^1] in the TeX source
 file but appear at the bottom of the page.
+
+  [^1]: Yes right here.
 
 Or you could reference[^2] your footnote or two[^3].
 
@@ -57,40 +60,42 @@ Or you could reference[^2] your footnote or two[^3].
 Cross-references
 ================
 
-We can refer to Section [#sec:somesection], Equation [eq:myequation],
-Figure [#fig:logo] or Table [#tab:example].
+We can refer to Section [sec:somesection], Equation [eq:myequation],
+Figure [fig:logo] or Table [tab:example].
 
 Hyperlinks
 ==========
 
 Cross-references are hyperlinked automatically (try clicking the figure number
 above). It is possible to include surrounding text in the link, e.g.
-[Figure ][#fig:logo]—so that link is larger.
+[Figure ][fig:logo]—so that link is larger.
 
-And you can add arbitrary hyperlinks of course.
-Link [text](<http://www.texts.io/>) can differ from it's URL or be the same
-as the URL: <http://www.google.com/>.
+And you can add arbitrary hyperlinks of course. Link [text][1] can differ from
+it's URL or be the same as the URL: <http://www.google.com/>.
+
+  [1]: <http://www.texts.io/>
 
 You can include e-mail links: <sheremetyev@gmail.com>. Local files can be
-[referenced](<basic.pdf>). It is possible to [reference][#mylabel] any
-location in the document.
+[referenced][2]. It is possible to [reference][mylabel] any location in the
+document.
 
+  [2]: <basic.pdf>
+
+{mylabel}
 For example, this text is referenced in previous paragraph.
-
-  {#mylabel}
 
 Images
 ======
 
+{fig:logo}
 ![](<Texts_Logo.png>)
-
-  {#fig:logo}
 
   ~ Texts editor logo
 
 Tables
 ======
 
+{tab:example}
 --------- -------- -------- ---------------------------------------------------
 Day       Min Temp Max Temp Summary
 
@@ -106,8 +111,6 @@ Wednesday 10C      21C      Rain will still linger for the morning. Conditions
                             will improve by early afternoon and continue
                             throughout the evening.
 --------------------------------------------------------------------------------
-
-  {#tab:example}
 
   ~ Simple table
 
@@ -152,7 +155,7 @@ Quoting
 =======
 
   > Quoted text can include other text styles.
-
+  >
   > # But headings shouldn’t use default commands.
 
 Comments

@@ -60,15 +60,15 @@ Or you could reference[^2] your footnote or two[^3].
 Cross-references
 ================
 
-We can refer to Section [sec:somesection], Equation [eq:myequation],
-Figure [fig:logo] or Table [tab:example].
+We can refer to Section {sec:somesection}, Equation {eq:myequation},
+Figure {fig:logo} or Table {tab:example}.
 
 Hyperlinks
 ==========
 
 Cross-references are hyperlinked automatically (try clicking the figure number
 above). It is possible to include surrounding text in the link, e.g.
-[Figure ][fig:logo]—so that link is larger.
+[Figure ]{fig:logo}—so that link is larger.
 
 And you can add arbitrary hyperlinks of course. Link [text][1] can differ from
 it's URL or be the same as the URL: <http://www.google.com/>.
@@ -76,7 +76,7 @@ it's URL or be the same as the URL: <http://www.google.com/>.
   [1]: <http://www.texts.io/>
 
 You can include e-mail links: <sheremetyev@gmail.com>. Local files can be
-[referenced][2]. It is possible to [reference][mylabel] any location in the
+[referenced][2]. It is possible to [reference]{mylabel} any location in the
 document.
 
   [2]: <basic.pdf>
@@ -88,7 +88,7 @@ Images
 ======
 
 {fig:logo}
-![](<Texts_Logo.png>)
+![Texts Logo](<Texts_Logo.png>)
 
   ~ Texts editor logo
 

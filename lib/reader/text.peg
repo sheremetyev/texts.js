@@ -1,0 +1,23 @@
+Document
+  = blocks:Block*
+  { return ['text'].concat(blocks); }
+
+Block
+  = lines:(l:Line NewLine { return l; })+ BlankLine?
+  { return ['para', { level : 0 }].concat(lines); }
+
+Line
+  = chars:(!NewLine c:. { return c; })+
+  { return ['plain', chars.join('')]; }
+
+BlankLine
+  = Space* NewLine
+
+Space
+  = ' '
+
+NewLine
+  = '\n' / '\r' '\n'?
+
+EOF
+  = !.

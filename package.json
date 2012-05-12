@@ -27,7 +27,7 @@
     "nopt": "1.0.x"
   },
   "devDependencies": {
-    "tests": "0.1.x"
+    "tests": "0.2.x"
   },
   "scripts": {
     "test": "node node_modules/tests/bin/tests.js test"

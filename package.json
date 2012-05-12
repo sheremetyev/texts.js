@@ -24,7 +24,8 @@
   "bin": "./bin/texts.js",
   "preferGlobal": true,
   "dependencies": {
-    "nopt": "1.0.x"
+    "nopt": "1.0.x",
+    "pegjs": "0.7.x"
   },
   "devDependencies": {
     "tests": "0.2.x"

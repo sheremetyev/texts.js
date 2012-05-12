@@ -1,0 +1,14 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+First.
+
+Second.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Second."]
+  ]
+]

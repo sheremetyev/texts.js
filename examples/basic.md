@@ -1,13 +1,18 @@
-{global-label}
+[draft]
 
-Introduction
-============
+[title]
+Texts.js Sample
+===============
 
-This document shows what should be possible with [texts.js] and [XeTeX].
+[author]
+Fyodor Sheremetyev
 
-  [texts.js]: <http://textjs.org/>
+[abstract]
+This document shows what should be possible with texts.js [^1] and XeTeX [^2].
 
-  [XeTeX]: <http://en.wikipedia.org/wiki/XeTeX>
+  [^1]: <http://textjs.org/>
+
+  [^2]: <http://en.wikipedia.org/wiki/XeTeX>
 
 Headings
 ========
@@ -15,20 +20,21 @@ Headings
 Subsection Heading
 ------------------
 
-{sec:somesection}
-### Subsubsection Heading
+[#somesection]
+Subsubsection
+~~~~~~~~~~~~~
 
 Text Formatting
 ===============
 
-You can use *emphasis* and **strong** emphasis. Inline `code`
-will use monspaced font.
+You can use *emphasis* and **strong** emphasis. Inline `code` will use
+monospaced font.
 
-{lst:somecode}
-~~~~~
+[#somecode]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Code blocks use monospaced font as well and preserve line
 breaks
-~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Math
 ====
@@ -36,7 +42,7 @@ Math
 Math formulas can be used inside paragraph like $E=mc^2$ or on a separate line
 like the following one.
 
-{eq:myequation}
+[#myequation]
 $$
 1+\frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots =
 \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},
@@ -46,56 +52,56 @@ $$
 Footnotes
 =========
 
-Footnotes are placed inside text[^1] in the TeX source
-file but appear at the bottom of the page.
+Footnotes are placed inside text [^3] in the TeX source file but appear at the
+bottom of the page.
 
-  [^1]: Yes right here.
+  [^3]: Yes right here.
 
-Or you could reference[^2] your footnote or two[^3].
+Or you could reference [^4] your footnote or two [^5].
 
-  [^2]: And then define it.
+  [^4]: And then define it.
 
-  [^3]: I mean, both of them.
+  [^5]: I mean, both of them.
 
 Cross-references
 ================
 
-We can refer to Section {sec:somesection}, Equation {eq:myequation},
-Figure {fig:logo} or Table {tab:example}.
+We can refer to Section [#somesection], Equation [#myequation],
+Figure [#logo] or Table [#table-example].
 
 Hyperlinks
 ==========
 
 Cross-references are hyperlinked automatically (try clicking the figure number
-above). It is possible to include surrounding text in the link, e.g.
-[Figure ]{fig:logo}—so that link is larger.
+above). It is possible to include surrounding text in the link, e.g. Figure
+[#logo]—so that link is larger.
 
-And you can add arbitrary hyperlinks of course. Link [text][1] can differ from
+And you can add arbitrary hyperlinks of course. Link text [^6] can differ from
 it's URL or be the same as the URL: <http://www.google.com/>.
 
-  [1]: <http://www.texts.io/>
+  [^6]: <http://www.texts.io/>
 
 You can include e-mail links: <sheremetyev@gmail.com>. Local files can be
-[referenced][2]. It is possible to [reference]{mylabel} any location in the
+referenced [^7]. It is possible to reference [#mylabel] any location in the
 document.
 
-  [2]: <basic.pdf>
+  [^7]: <basic.pdf>
 
-{mylabel}
+[#mylabel]
 For example, this text is referenced in previous paragraph.
 
 Images
 ======
 
-{fig:logo}
-![Texts Logo](<Texts_Logo.png>)
+[#logo]
+![](<Texts_Logo.png>)
 
   ~ Texts editor logo
 
 Tables
 ======
 
-{tab:example}
+[#table-example]
 --------- -------- -------- ---------------------------------------------------
 Day       Min Temp Max Temp Summary
 
@@ -117,15 +123,15 @@ Wednesday 10C      21C      Rain will still linger for the morning. Conditions
 Bibliography
 ============
 
-You define bibliographic sources at the bottom of the file and
-use [@lamport94, @goossens93] them anywhere in the text.
+You define bibliographic sources at the bottom of the file and use [@lamport94]
+[@goossens93] them anywhere in the text.
 
 Lists
 =====
 
-  * First bulleted item.
+  * [todo] First bulleted item.
 
-  * Second bulleted item.
+  * [done] Second bulleted item.
 
       * Subitem.
 
@@ -138,6 +144,10 @@ Lists
      1. Subitem.
 
          1. Subsubitem.
+
+[ ] Todo item
+
+[x] Done item
 
 First
 

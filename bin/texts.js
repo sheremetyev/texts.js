@@ -44,7 +44,7 @@ var writer = require('../lib/writer/' + parsed.to);
 if (parsed.argv.remain.length) {
   // process files
   parsed.argv.remain.forEach(function(inputFile) {
-    var input = fs.readFileSync(inputFile);
+    var input = fs.readFileSync(inputFile, 'utf8');
     var text = reader(input);
     var output = writer(text, writerOptions);
     io.writeOutput(output);

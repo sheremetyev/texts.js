@@ -1,0 +1,25 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+Simple <http://www.texts.io/>.
+
+Reference [style][1].
+
+[1]: <http://www.texts.io/>
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Simple "],
+    ["url", "http://www.texts.io/"],
+    ["plain", "."]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Reference "],
+    ["label", "style"],
+    ["label", "1"],
+    ["plain", "."]
+  ],
+  ["note", { "level": 0 },
+    ["label", "1"],
+    ["url", "http://www.texts.io/"]
+  ]
+]

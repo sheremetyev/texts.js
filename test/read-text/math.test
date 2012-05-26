@@ -1,0 +1,18 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+Inline $E=mc^2$.
+
+$$
+E=mc^2
+$$
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Inline "],
+    ["math", "E=mc^2"],
+    ["plain", "."]
+  ],
+  ["verbatim", { "level": 0 },
+    ["plain", "E=mc^2"]
+  ]
+]

@@ -5,6 +5,10 @@ Simple <http://www.texts.io/>.
 Reference [style][1].
 
 [1]: <http://www.texts.io/>
+
+Simplified [reference] style.
+
+[reference]: <http://www.texts.io/>
 >>>JSON
 ["text",
   ["para", { "level": 0 },
@@ -20,6 +24,15 @@ Reference [style][1].
   ],
   ["note", { "level": 0 },
     ["label", "1"],
+    ["url", "http://www.texts.io/"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Simplified "],
+    ["label", "reference"],
+    ["plain", " style."]
+  ],
+  ["note", { "level": 0 },
+    ["label", "reference"],
     ["url", "http://www.texts.io/"]
   ]
 ]

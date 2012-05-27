@@ -16,6 +16,6 @@ Subheading
     ["plain", "Subheading"]
   ],
   ["heading", { "level": 3 },
-    ["plain", "Subsubeading"]
+    ["plain", "Subsubheading"]
   ]
 ]

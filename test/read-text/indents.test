@@ -1,30 +1,9 @@
 node ../../bin/texts.js --from text --to textjson
 <<<
- Single space indent is ignored.
-
-  Double space indent is ignored.
-
-   Triple space indent is ignored.
-
     Four space indent makes next level.
-
-Only first line indent
-    matters.
 >>>JSON
 ["text",
-  ["para", { "level": 0 },
-    ["plain", "Single space indent is ignored."]
-  ],
-  ["para", { "level": 0 },
-    ["plain", "Double space indent is ignored."]
-  ],
-  ["para", { "level": 0 },
-    ["plain", "Triple space indent is ignored."]
-  ],
   ["para", { "level": 1 },
     ["plain", "Four space indent makes next level."]
-  ],
-  ["para", { "level": 0 },
-    ["plain", "Only first line indent matters."]
   ]
 ]

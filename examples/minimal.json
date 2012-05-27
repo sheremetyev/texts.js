@@ -144,11 +144,11 @@
   ],
 
   ["col", { "level": 2 },
-    ["plain", "11C"]
+    ["plain", "11°C"]
   ],
 
   ["col", { "level": 2 },
-    ["plain", "22C"]
+    ["plain", "22°C"]
   ],
 
   ["col", { "level": 2 },
@@ -160,11 +160,11 @@
   ],
 
   ["col", { "level": 2 },
-    ["plain", "9C"]
+    ["plain", "9°C"]
   ],
 
   ["col", { "level": 2 },
-    ["plain", "19C"]
+    ["plain", "19°C"]
   ],
 
   ["col", { "level": 2 },
@@ -176,11 +176,11 @@
   ],
 
   ["col", { "level": 2 },
-    ["plain", "10C"]
+    ["plain", "10°C"]
   ],
 
   ["col", { "level": 2 },
-    ["plain", "21C"]
+    ["plain", "21°C"]
   ],
 
   ["col", { "level": 2 },

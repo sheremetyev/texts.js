@@ -1,0 +1,12 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+First line with two spaces  
+second line.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "First line with two spaces"],
+    ["break", "\n"],
+    ["plain", "second line."]
+  ]
+]

@@ -123,3 +123,18 @@ Should TeX ligatures be ``used''—they will be printed \<\<as is\>\>.
 TeX special symbols are automatically escaped: %, $, {, }, _, #, &, \\, ~, ^.
 
 HTML entites don't have to be escaped: &, <, >.
+
+Future Extensions
+=================
+
+* Definition lists.
+
+* Titles for images, tables and formulas.
+
+* Cross-references.
+
+* Bibliographic citations.
+
+* Comments.
+
+* Custom labels for blocks.

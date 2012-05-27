@@ -1,23 +1,71 @@
 Document
-  = blocks:Block*
+  = blocks:(b:Block (EOL / EOF) { return b; })*
   { return ['text'].concat(blocks); }
 
 Block
-  = lines:(l:Line NewLine { return l; })+ BlankLine?
-  { return ['para', { level : 0 }].concat(lines); }
+  = Heading
+  / Para
 
-Line
-  = chars:(!NewLine c:. { return c; })+
-  { return ['plain', chars.join('')]; }
+/*
+  / Verbatim
+  / Formula
+  / Quote
+  / Divider
+  / Bulleted
+  / Numbered
+  / Image
+  / Note
+  / Table
+*/
 
-BlankLine
-  = Space* NewLine
+Inline
+  = Plain
 
-Space
-  = ' '
+/*
+  / Emph
+  / Strong
+  / Code
+  / Label
+  / Url
+*/
 
-NewLine
-  = '\n' / '\r' '\n'?
+/* Basic elements */
 
 EOF
   = !.
+
+EOL
+  = '\n' / '\r' '\n'?
+
+Break
+  = '  ' EOL
+  { return ['break', '\n']; }
+
+/* Blocks */
+
+Heading
+  = Heading1
+  / Heading2
+  / Heading3
+
+Heading1
+  = inlines:Inline+ EOL '='+ EOL
+  { return ['heading', { 'level': 1 }].concat(inlines); }
+
+Heading2
+  = inlines:Inline+ EOL '-'+ EOL
+  { return ['heading', { 'level': 2 }].concat(inlines); }
+
+Heading3
+  = '### ' inlines:Inline+ EOL
+  { return ['heading', { 'level': 3 }].concat(inlines); }
+
+Para
+  = inlines:(Inline / Break)* EOL
+  { return ['para', { 'level': 0 }].concat(inlines);}
+
+/* Inlines */
+
+Plain
+  = chars:(!EOL c:. { return c; })+
+  { return ['plain', chars.join('')]; };

@@ -5,12 +5,12 @@ Document
 Block
   = Heading
   / Verbatim
+  / Divider
   / Para
 
 /*
   / Formula
   / Quote
-  / Divider
   / Bulleted
   / Numbered
   / Image
@@ -72,6 +72,10 @@ VerbatimBreak
   = !(EOL Tildes) EOL
   { return ['break', '\n']; }
 
+Divider
+  = Dashes EOL
+  { return ['divider', { 'level': 0 }]; }  
+
 Para
   = inlines:(Inline / Break)* EOL
   { return ['para', { 'level': 0 }].concat(inlines);}
@@ -84,3 +88,6 @@ Plain
 
 Tildes
   = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+
+Dashes
+  = '--------------------------------------------------------------------------------'

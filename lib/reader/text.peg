@@ -112,7 +112,7 @@ Url
   { return ['url', chars.join('')]; };
 
 Plain
-  = chars:(!EOL !'`' !'*' !'[' !'<' c:Char { return c; })+
+  = chars:(!EOL !'`' !'*' !'[' !'<' !Break c:Char { return c; })+
   { return ['plain', chars.join('')]; };
 
 Char

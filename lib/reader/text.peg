@@ -92,25 +92,35 @@ Para
 /************************************ Inlines ***************************************/
 
 Code
-  = '`' chars:(!EOL !'`' c:. { return c; })+ '`'
+  = '`' chars:(!EOL !'`' c:Char { return c; })+ '`'
   { return ['code', chars.join('')]; };
 
 Strong
-  = '**' chars:(!EOL !'**' c:. { return c; })+ '**'
+  = '**' chars:(!EOL !'**' c:Char { return c; })+ '**'
   { return ['strong', chars.join('')]; };
 
 Emph
-  = '*' chars:(!EOL !'*' c:. { return c; })+ '*'
+  = '*' chars:(!EOL !'*' c:Char { return c; })+ '*'
   { return ['emph', chars.join('')]; };
 
 Label
-  = '[' chars:(!EOL !']' c:. { return c; })+ ']'
+  = '[' chars:(!EOL !']' c:Char { return c; })+ ']'
   { return ['label', chars.join('')]; };
 
 Url
-  = '<' chars:(!EOL !'>' c:. { return c; })+ '>'
+  = '<' chars:(!EOL !'>' c:Char { return c; })+ '>'
   { return ['url', chars.join('')]; };
 
 Plain
-  = chars:(!EOL !'`' !'*' !'[' !'<' c:. { return c; })+
+  = chars:(!EOL !'`' !'*' !'[' !'<' c:Char { return c; })+
   { return ['plain', chars.join('')]; };
+
+Char
+  = '\\*' { return '*'; }
+  / '\\`' { return '`'; }
+  / '\\<' { return '<'; }
+  / '\\>' { return '>'; }
+  / '\\[' { return '['; }
+  / '\\]' { return ']'; }
+  / '\\\\' { return '\\'; }
+  / c:.  { return c; }

@@ -29,7 +29,7 @@ Inline
   / Url
 */
 
-/* Basic elements */
+/******************************* Basic elements *************************************/
 
 EOF
   = !.
@@ -41,7 +41,15 @@ Break
   = '  ' EOL
   { return ['break', '\n']; }
 
-/* Blocks */
+Tildes
+  = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+
+Dashes
+  = '--------------------------------------------------------------------------------'
+
+/*********************************** Blocks *****************************************/
+
+/*** Headings ***/
 
 Heading
   = Heading1
@@ -60,6 +68,8 @@ Heading3
   = '### ' inlines:Inline+ EOL
   { return ['heading', { 'level': 3 }].concat(inlines); }
 
+/*** Verbatim ***/
+
 Verbatim
   = Tildes EOL inlines:(VerbatimLine / VerbatimBreak)* EOL Tildes EOL
   { return ['verbatim', { 'level': 0 }].concat(inlines); }
@@ -72,6 +82,8 @@ VerbatimBreak
   = !(EOL Tildes) EOL
   { return ['break', '\n']; }
 
+/*** Others ***/
+
 Divider
   = Dashes EOL
   { return ['divider', { 'level': 0 }]; }  
@@ -80,14 +92,8 @@ Para
   = inlines:(Inline / Break)* EOL
   { return ['para', { 'level': 0 }].concat(inlines);}
 
-/* Inlines */
+/************************************ Inlines ***************************************/
 
 Plain
   = chars:(!EOL c:. { return c; })+
   { return ['plain', chars.join('')]; };
-
-Tildes
-  = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-
-Dashes
-  = '--------------------------------------------------------------------------------'

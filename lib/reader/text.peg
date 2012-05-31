@@ -19,15 +19,12 @@ Block
 */
 
 Inline
-  = Plain
-
-/*
-  / Emph
+  = Code
   / Strong
-  / Code
+  / Emph
   / Label
   / Url
-*/
+  / Plain
 
 /******************************* Basic elements *************************************/
 
@@ -94,6 +91,26 @@ Para
 
 /************************************ Inlines ***************************************/
 
+Code
+  = '`' chars:(!EOL !'`' c:. { return c; })+ '`'
+  { return ['code', chars.join('')]; };
+
+Strong
+  = '**' chars:(!EOL !'**' c:. { return c; })+ '**'
+  { return ['strong', chars.join('')]; };
+
+Emph
+  = '*' chars:(!EOL !'*' c:. { return c; })+ '*'
+  { return ['emph', chars.join('')]; };
+
+Label
+  = '[' chars:(!EOL !']' c:. { return c; })+ ']'
+  { return ['label', chars.join('')]; };
+
+Url
+  = '<' chars:(!EOL !'>' c:. { return c; })+ '>'
+  { return ['url', chars.join('')]; };
+
 Plain
-  = chars:(!EOL c:. { return c; })+
+  = chars:(!EOL !'`' !'*' !'[' !'<' c:. { return c; })+
   { return ['plain', chars.join('')]; };

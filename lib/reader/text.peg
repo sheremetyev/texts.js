@@ -4,10 +4,10 @@ Document
 
 Block
   = Heading
+  / Verbatim
   / Para
 
 /*
-  / Verbatim
   / Formula
   / Quote
   / Divider
@@ -60,6 +60,18 @@ Heading3
   = '### ' inlines:Inline+ EOL
   { return ['heading', { 'level': 3 }].concat(inlines); }
 
+Verbatim
+  = Tildes EOL inlines:(VerbatimLine / VerbatimBreak)* EOL Tildes EOL
+  { return ['verbatim', { 'level': 0 }].concat(inlines); }
+
+VerbatimLine
+  = !Tildes chars:(!EOL c:. { return c; })+
+  { return ['plain', chars.join('')]; };
+
+VerbatimBreak
+  = !(EOL Tildes) EOL
+  { return ['break', '\n']; }
+
 Para
   = inlines:(Inline / Break)* EOL
   { return ['para', { 'level': 0 }].concat(inlines);}
@@ -69,3 +81,6 @@ Para
 Plain
   = chars:(!EOL c:. { return c; })+
   { return ['plain', chars.join('')]; };
+
+Tildes
+  = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'

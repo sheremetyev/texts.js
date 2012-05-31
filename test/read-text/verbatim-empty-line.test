@@ -1,0 +1,16 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+next line is empty
+
+third line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>>>JSON
+["text",
+  ["verbatim", { "level": 0 },
+    ["plain", "next line is empty"],
+    ["break", "\n"],
+    ["break", "\n"],
+    ["plain", "third line"]
+  ]
+]

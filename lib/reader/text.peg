@@ -38,6 +38,9 @@ Break
   = '  ' EOL
   { return ['break', '\n']; }
 
+Indent
+  = '    '
+
 Tildes
   = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 
@@ -86,8 +89,8 @@ Divider
   { return ['divider', { 'level': 0 }]; }  
 
 Para
-  = inlines:(Inline / Break)* EOL
-  { return ['para', { 'level': 0 }].concat(inlines);}
+  = indents:Indent* inlines:(Inline / Break)* EOL
+  { return ['para', { 'level': indents.length }].concat(inlines); }
 
 /************************************ Inlines ***************************************/
 

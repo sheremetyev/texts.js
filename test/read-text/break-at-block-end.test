@@ -1,0 +1,16 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+First block ends with two spaces  
+
+
+Second block.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "First block ends with two spaces"],
+    ["break", "\n"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Second block."]
+  ]
+]

@@ -10,13 +10,13 @@ Block
   / Table
   / Note
   / Image
+  / Bulleted
+  / Numbered
   / Para
   / Empty
 
 /*
   / Quote
-  / Bulleted
-  / Numbered
 */
 
 Inline
@@ -106,6 +106,19 @@ FormulaLine
 FormulaBreak
   = !(EOL '$$') EOL
   { return ['break', '\n']; }
+
+/*** Lists ***/
+
+Bulleted
+  = indents:Indent*  '* ' inlines:(Inline / Break)+
+  { return [['item', { 'level': indents.length + 1 }].concat(inlines)]; }
+
+Numbered
+  = indents:Indent*  Digit+ '. ' inlines:(Inline / Break)+
+  { return [['numitem', { 'level': indents.length + 1 }].concat(inlines)]; }
+
+Digit
+  = [0-9]
 
 /*** Others ***/
 

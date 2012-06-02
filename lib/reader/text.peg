@@ -1,6 +1,6 @@
 Document
   = blocks:(b:Block BlockEnd { return b; })*
-  { return ['text'].concat(blocks); }
+  { return [].concat.apply(['text'], blocks); }
 
 Block
   = Heading
@@ -62,27 +62,27 @@ Heading
 
 Heading1
   = inlines:Inline+ Heading1Bottom
-  { return ['heading', { 'level': 1 }].concat(inlines); }
+  { return [['heading', { 'level': 1 }].concat(inlines)]; }
 
 Heading1Bottom
   = EOL '='+ &BlockEnd
 
 Heading2
   = inlines:Inline+ Heading2Bottom
-  { return ['heading', { 'level': 2 }].concat(inlines); }
+  { return [['heading', { 'level': 2 }].concat(inlines)]; }
 
 Heading2Bottom
   = EOL '-'+ &BlockEnd
 
 Heading3
   = '### ' inlines:Inline+
-  { return ['heading', { 'level': 3 }].concat(inlines); }
+  { return [['heading', { 'level': 3 }].concat(inlines)]; }
 
 /*** Verbatim ***/
 
 Verbatim
   = Tildes EOL inlines:(VerbatimLine / VerbatimBreak)* EOL Tildes
-  { return ['verbatim', { 'level': 0 }].concat(inlines); }
+  { return [['verbatim', { 'level': 0 }].concat(inlines)]; }
 
 VerbatimLine
   = !Tildes chars:(!EOL c:. { return c; })+
@@ -96,15 +96,15 @@ VerbatimBreak
 
 Divider
   = Dashes
-  { return ['divider', { 'level': 0 }]; }  
+  { return [['divider', { 'level': 0 }]]; }  
 
 Para
   = indents:Indent* inlines:(Inline / Break)+
-  { return ['para', { 'level': indents.length }].concat(inlines); }
+  { return [['para', { 'level': indents.length }].concat(inlines)]; }
 
 Empty
   = &BlockEnd
-  { return ['para', { 'level': 0 }]; }
+  { return [['para', { 'level': 0 }]]; }
 
 /*** Tables ***/
 

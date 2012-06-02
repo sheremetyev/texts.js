@@ -204,7 +204,7 @@ Math
   { return ['math', chars.join('')]; };
 
 Plain
-  = chars:(!'`' !'*' !'[' !'<' !'$' c:Char { return c; })+
+  = chars:(!Code !Strong !Emph !Label !Url !Math c:Char { return c; })+
   { return ['plain', chars.join('')]; };
 
 Char

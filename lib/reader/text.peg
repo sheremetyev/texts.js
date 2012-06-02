@@ -109,32 +109,34 @@ Empty
 /************************************ Inlines ***************************************/
 
 Code
-  = '`' chars:(!BlockEnd !Break !'`' c:Char { return c; })+ '`'
+  = '`' chars:(!'`' c:Char { return c; })+ '`'
   { return ['code', chars.join('')]; };
 
 Strong
-  = '**' chars:(!BlockEnd !Break !'**' c:Char { return c; })+ '**'
+  = '**' chars:(!'**' c:Char { return c; })+ '**'
   { return ['strong', chars.join('')]; };
 
 Emph
-  = '*' chars:(!BlockEnd !Break !'*' c:Char { return c; })+ '*'
+  = '*' chars:(!'*' c:Char { return c; })+ '*'
   { return ['emph', chars.join('')]; };
 
 Label
-  = '[' chars:(!BlockEnd !Break !']' c:Char { return c; })+ ']'
+  = '[' chars:(!']' c:Char { return c; })+ ']'
   { return ['label', chars.join('')]; };
 
 Url
-  = '<' chars:(!BlockEnd !Break !'>' c:Char { return c; })+ '>'
+  = '<' chars:(!'>' c:Char { return c; })+ '>'
   { return ['url', chars.join('')]; };
 
 Plain
-  = chars:(!BlockEnd !Break !'`' !'*' !'[' !'<' c:Char { return c; })+
+  = chars:(!'`' !'*' !'[' !'<' c:Char { return c; })+
   { return ['plain', chars.join('')]; };
 
 Char
   = !Heading1Bottom
     !Heading2Bottom
+    !BlockEnd
+    !Break
   c:( '\\*' { return '*'; }
     / '\\`' { return '`'; }
     / '\\<' { return '<'; }

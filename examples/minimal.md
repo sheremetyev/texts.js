@@ -66,20 +66,22 @@ Images
 Tables
 ======
 
---------- -------- -------- ----------------------------------------------------
-Day       Min Temp Max Temp Summary
-
-Monday    11°C     22°C     A clear day with lots of sunshine. However, the
-                            strong breeze will bring down the temperatures.
-
-Tuesday   9°C      19°C     Cloudy with rain, across many northern regions.
-                            Clear spells across most of Scotland and Northern
-                            Ireland, but rain reaching the far northwest.
-
-Wednesday 10°C     21°C     Rain will still linger for the morning. Conditions
-                            will improve by early afternoon and continue
-                            throughout the evening.
----------------------------------------------------------------------------------
++-----------+----------+----------+--------------------------------------------+
+| Day       | Min Temp | Max Temp | Summary                                    |
++-----------+----------+----------+--------------------------------------------+
+| Monday    | 11°C     | 22°C     | A clear day with lots of sunshine. However,|
+|           |          |          | the strong breeze will bring down the      |
+|           |          |          | temperatures.                              |
++-----------+----------+----------+--------------------------------------------+
+| Tuesday   | 9°C      | 19°C     | Cloudy with rain, across many northern     |
+|           |          |          | regions. Clear spells across most of       |
+|           |          |          | Scotland and Northern Ireland, but rain    |
+|           |          |          | reaching the far northwest.                |
++-----------+----------+----------+--------------------------------------------+
+| Wednesday | 10°C     | 21°C     | Rain will still linger for the morning.    |
+|           |          |          | Conditions will improve by early afternoon |
+|           |          |          | and continue throughout the evening.       |
++-----------+----------+----------+--------------------------------------------+
 
 Lists
 =====

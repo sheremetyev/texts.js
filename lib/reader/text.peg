@@ -7,6 +7,7 @@ Block
   / Verbatim
   / Divider
   / Table
+  / Note
   / Para
   / Empty
 
@@ -16,7 +17,6 @@ Block
   / Bulleted
   / Numbered
   / Image
-  / Note
 */
 
 Inline
@@ -101,6 +101,10 @@ Divider
 Para
   = indents:Indent* inlines:(Inline / Break)+
   { return [['para', { 'level': indents.length }].concat(inlines)]; }
+
+Note
+  = label:Label ': ' inlines:(Inline / Break)+
+  { return [['note', { 'level': 0 }, label].concat(inlines)]; }
 
 Empty
   = &BlockEnd

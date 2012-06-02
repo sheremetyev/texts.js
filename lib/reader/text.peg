@@ -1,5 +1,5 @@
 Document
-  = blocks:(b:Block (EOL / EOF) { return b; })*
+  = blocks:(b:Block BlockEnd { return b; })*
   { return ['text'].concat(blocks); }
 
 Block
@@ -7,6 +7,7 @@ Block
   / Verbatim
   / Divider
   / Para
+  / Empty
 
 /*
   / Formula
@@ -34,6 +35,9 @@ EOF
 EOL
   = '\n' / '\r' '\n'?
 
+BlockEnd
+  = (EOL EOL) / (EOL EOF)
+
 Break
   = '  ' EOL
   { return ['break', '\n']; }
@@ -57,21 +61,21 @@ Heading
   / Heading3
 
 Heading1
-  = inlines:Inline+ EOL '='+ EOL
+  = inlines:Inline+ EOL '='+
   { return ['heading', { 'level': 1 }].concat(inlines); }
 
 Heading2
-  = inlines:Inline+ EOL '-'+ EOL
+  = inlines:Inline+ EOL '-'+
   { return ['heading', { 'level': 2 }].concat(inlines); }
 
 Heading3
-  = '### ' inlines:Inline+ EOL
+  = '### ' inlines:Inline+
   { return ['heading', { 'level': 3 }].concat(inlines); }
 
 /*** Verbatim ***/
 
 Verbatim
-  = Tildes EOL inlines:(VerbatimLine / VerbatimBreak)* EOL Tildes EOL
+  = Tildes EOL inlines:(VerbatimLine / VerbatimBreak)* EOL Tildes
   { return ['verbatim', { 'level': 0 }].concat(inlines); }
 
 VerbatimLine
@@ -85,37 +89,41 @@ VerbatimBreak
 /*** Others ***/
 
 Divider
-  = Dashes EOL
+  = Dashes
   { return ['divider', { 'level': 0 }]; }  
 
 Para
-  = indents:Indent* inlines:(Inline / Break)* EOL
+  = indents:Indent* inlines:(Inline / Break)+
   { return ['para', { 'level': indents.length }].concat(inlines); }
+
+Empty
+  = &BlockEnd
+  { return ['para', { 'level': 0 }]; }
 
 /************************************ Inlines ***************************************/
 
 Code
-  = '`' chars:(!EOL !'`' c:Char { return c; })+ '`'
+  = '`' chars:(!BlockEnd !Break !'`' c:Char { return c; })+ '`'
   { return ['code', chars.join('')]; };
 
 Strong
-  = '**' chars:(!EOL !'**' c:Char { return c; })+ '**'
+  = '**' chars:(!BlockEnd !Break !'**' c:Char { return c; })+ '**'
   { return ['strong', chars.join('')]; };
 
 Emph
-  = '*' chars:(!EOL !'*' c:Char { return c; })+ '*'
+  = '*' chars:(!BlockEnd !Break !'*' c:Char { return c; })+ '*'
   { return ['emph', chars.join('')]; };
 
 Label
-  = '[' chars:(!EOL !']' c:Char { return c; })+ ']'
+  = '[' chars:(!BlockEnd !Break !']' c:Char { return c; })+ ']'
   { return ['label', chars.join('')]; };
 
 Url
-  = '<' chars:(!EOL !'>' c:Char { return c; })+ '>'
+  = '<' chars:(!BlockEnd !Break !'>' c:Char { return c; })+ '>'
   { return ['url', chars.join('')]; };
 
 Plain
-  = chars:(!EOL !'`' !'*' !'[' !'<' !Break c:Char { return c; })+
+  = chars:(!BlockEnd !Break !'`' !'*' !'[' !'<' c:Char { return c; })+
   { return ['plain', chars.join('')]; };
 
 Char
@@ -126,4 +134,5 @@ Char
   / '\\[' { return '['; }
   / '\\]' { return ']'; }
   / '\\\\' { return '\\'; }
+  / (EOL Indent*) { return ' '; }
   / c:.  { return c; }

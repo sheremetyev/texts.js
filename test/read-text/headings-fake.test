@@ -1,0 +1,18 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+Heading
+=======
+it is not
+
+Subheading
+----------
+it is not
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Heading ======= it is not"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Subheading ---------- it is not"]
+  ]
+]

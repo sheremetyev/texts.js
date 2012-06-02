@@ -61,12 +61,18 @@ Heading
   / Heading3
 
 Heading1
-  = inlines:Inline+ EOL '='+
+  = inlines:Inline+ Heading1Bottom
   { return ['heading', { 'level': 1 }].concat(inlines); }
 
+Heading1Bottom
+  = EOL '='+ &BlockEnd
+
 Heading2
-  = inlines:Inline+ EOL '-'+
+  = inlines:Inline+ Heading2Bottom
   { return ['heading', { 'level': 2 }].concat(inlines); }
+
+Heading2Bottom
+  = EOL '-'+ &BlockEnd
 
 Heading3
   = '### ' inlines:Inline+
@@ -127,12 +133,15 @@ Plain
   { return ['plain', chars.join('')]; };
 
 Char
-  = '\\*' { return '*'; }
-  / '\\`' { return '`'; }
-  / '\\<' { return '<'; }
-  / '\\>' { return '>'; }
-  / '\\[' { return '['; }
-  / '\\]' { return ']'; }
-  / '\\\\' { return '\\'; }
-  / (EOL Indent*) { return ' '; }
-  / c:.  { return c; }
+  = !Heading1Bottom
+    !Heading2Bottom
+  c:( '\\*' { return '*'; }
+    / '\\`' { return '`'; }
+    / '\\<' { return '<'; }
+    / '\\>' { return '>'; }
+    / '\\[' { return '['; }
+    / '\\]' { return ']'; }
+    / '\\\\' { return '\\'; }
+    / (EOL Indent*) { return ' '; }
+    / c:.  { return c; }
+  ) { return c; }

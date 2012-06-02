@@ -110,18 +110,36 @@ Empty
 
 Table
   = rows:TableRow+ TableDivider
+  { return [].concat.apply([], rows); }
 
 TableDivider
   = '+' ('-'+ '+')+
 
 TableRow
   = TableDivider EOL lines:TableLine+
+  {
+    var cells = [];
+    lines.forEach(function (line) {
+      line.forEach(function (cell, index) {
+        cells[index] = ((cells[index] || '') + ' ' + cell.trim()).trim();
+      });
+    });
+    
+    var row = []
+    row.push(['row', { 'level': 1 }, ['plain', cells.shift()] ]);
+    cells.forEach(function (cell) {
+      row.push(['col', { 'level': 2 }, ['plain', cell] ]);
+    });
+    return row;
+  }
 
 TableLine
-  = '|' clines:(TableCellLine '|')+ EOL
+  = '|' cells:(TableCellLine)+ EOL
+  { return cells; }
 
 TableCellLine
-  = chars:(!'|' !EOL c:.)+
+  = chars:(!'|' !EOL c:. { return c; })+ '|'
+  { return chars.join(''); }
 
 /************************************ Inlines ***************************************/
 

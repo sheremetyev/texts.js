@@ -5,6 +5,7 @@ Document
 Block
   = Heading
   / Verbatim
+  / Formula
   / Divider
   / Table
   / Note
@@ -13,7 +14,6 @@ Block
   / Empty
 
 /*
-  / Formula
   / Quote
   / Bulleted
   / Numbered
@@ -25,6 +25,7 @@ Inline
   / Emph
   / Label
   / Url
+  / Math
   / Plain
 
 /******************************* Basic elements *************************************/
@@ -90,6 +91,20 @@ VerbatimLine
 
 VerbatimBreak
   = !(EOL Tildes) EOL
+  { return ['break', '\n']; }
+
+/*** Formula ***/
+
+Formula
+  = '$$' EOL inlines:(FormulaLine / FormulaBreak)* EOL '$$'
+  { return [['formula', { 'level': 0 }].concat(inlines)]; }
+
+FormulaLine
+  = !'$$' chars:(!EOL c:. { return c; })+
+  { return ['plain', chars.join('')]; };
+
+FormulaBreak
+  = !(EOL '$$') EOL
   { return ['break', '\n']; }
 
 /*** Others ***/
@@ -171,8 +186,12 @@ Url
   = '<' chars:(!'>' c:Char { return c; })+ '>'
   { return ['url', chars.join('')]; };
 
+Math
+  = '$' chars:(!'$' c:Char { return c; })+ '$'
+  { return ['math', chars.join('')]; };
+
 Plain
-  = chars:(!'`' !'*' !'[' !'<' c:Char { return c; })+
+  = chars:(!'`' !'*' !'[' !'<' !'$' c:Char { return c; })+
   { return ['plain', chars.join('')]; };
 
 Char
@@ -186,6 +205,7 @@ Char
     / '\\>' { return '>'; }
     / '\\[' { return '['; }
     / '\\]' { return ']'; }
+    / '\\$' { return '$'; }
     / '\\\\' { return '\\'; }
     / (EOL Indent*) { return ' '; }
     / c:.  { return c; }

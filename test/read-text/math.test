@@ -12,7 +12,7 @@ $$
     ["math", "E=mc^2"],
     ["plain", "."]
   ],
-  ["verbatim", { "level": 0 },
+  ["formula", { "level": 0 },
     ["plain", "E=mc^2"]
   ]
 ]

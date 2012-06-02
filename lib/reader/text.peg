@@ -6,6 +6,7 @@ Block
   = Heading
   / Verbatim
   / Divider
+  / Table
   / Para
   / Empty
 
@@ -16,7 +17,6 @@ Block
   / Numbered
   / Image
   / Note
-  / Table
 */
 
 Inline
@@ -105,6 +105,23 @@ Para
 Empty
   = &BlockEnd
   { return ['para', { 'level': 0 }]; }
+
+/*** Tables ***/
+
+Table
+  = rows:TableRow+ TableDivider
+
+TableDivider
+  = '+' ('-'+ '+')+
+
+TableRow
+  = TableDivider EOL lines:TableLine+
+
+TableLine
+  = '|' clines:(TableCellLine '|')+ EOL
+
+TableCellLine
+  = chars:(!'|' !EOL c:.)+
 
 /************************************ Inlines ***************************************/
 

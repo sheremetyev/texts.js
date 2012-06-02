@@ -8,6 +8,7 @@ Block
   / Divider
   / Table
   / Note
+  / Image
   / Para
   / Empty
 
@@ -16,7 +17,6 @@ Block
   / Quote
   / Bulleted
   / Numbered
-  / Image
 */
 
 Inline
@@ -105,6 +105,10 @@ Para
 Note
   = label:Label ': ' inlines:(Inline / Break)+
   { return [['note', { 'level': 0 }, label].concat(inlines)]; }
+
+Image
+  = '![](' url:Url ')'
+  { return [['image', { 'level': 0 }, url ]]; }
 
 Empty
   = &BlockEnd

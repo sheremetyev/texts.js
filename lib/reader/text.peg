@@ -212,14 +212,10 @@ Char
     !Heading2Bottom
     !BlockEnd
     !Break
-  c:( '\\*' { return '*'; }
-    / '\\`' { return '`'; }
-    / '\\<' { return '<'; }
-    / '\\>' { return '>'; }
-    / '\\[' { return '['; }
-    / '\\]' { return ']'; }
-    / '\\$' { return '$'; }
-    / '\\\\' { return '\\'; }
+  c:( ('\\' s:Special) { return s; }
     / (EOL Indent*) { return ' '; }
     / c:.  { return c; }
   ) { return c; }
+
+Special
+  = [*`<>$\\[\]]

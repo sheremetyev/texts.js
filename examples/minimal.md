@@ -2,7 +2,7 @@ Minimal Texts.js Sample
 =======================
 
 This document shows what syntax must be supported in texts.js to be compatible
-with Markdown ([pandoc] dialect).
+with Markdown ([pandoc][pandoc] dialect).
 
 [pandoc]: <http://johnmacfarlane.net/pandoc/>
 

@@ -6,11 +6,12 @@
 
   ["para", { "level": 0 },
     ["plain", "This document shows what syntax must be supported in texts.js to be compatible with Markdown ("],
-    ["label", "pandoc"],
+    ["linktext", "pandoc"],
+    ["linkref", "pandoc"],
     ["plain", " dialect)."]
   ],
 
-  ["note", { "level": 0, "id": "pandoc" },
+  ["link", { "level": 0, "id": "pandoc" },
     ["url", "http://johnmacfarlane.net/pandoc/"]
   ],
 
@@ -70,11 +71,11 @@
 
   ["para", { "level": 0 },
     ["plain", "Footnotes can be placed anywhere"],
-    ["label", "^1"],
+    ["noteref", "1"],
     ["plain", " in the source file but appear at the bottom of the page."]
   ],
 
-  ["note", { "level": 0, "id": "^1" },
+  ["note", { "level": 0, "id": "1" },
     ["plain", "Yes, right here."]
   ],
 
@@ -84,13 +85,13 @@
 
   ["para", { "level": 0 },
     ["plain", "You can add arbitrary hyperlinks. Link "],
-    ["label", "text"],
-    ["label", "1"],
+    ["linktext", "text"],
+    ["linkref", "1"],
     ["plain", " can differ from it's URL or be the same as the URL: "],
     ["url", "http://www.google.com/"]
   ],
 
-  ["note", { "level": 0, "id": "1" },
+  ["link", { "level": 0, "id": "1" },
     ["url", "http://www.texts.io/"]
   ],
 
@@ -98,12 +99,12 @@
     ["plain", "You can include e-mail links: "],
     ["url", "sheremetyev@gmail.com"],
     ["plain", ". Local files can be "],
-    ["label", "referenced"],
-    ["label", "2"],
+    ["linktext", "referenced"],
+    ["linkref", "2"],
     ["plain", " as well."]
   ],
 
-  ["note", { "level": 0, "id": "2" },
+  ["link", { "level": 0, "id": "2" },
     ["url", "basic.pdf"]
   ],
 

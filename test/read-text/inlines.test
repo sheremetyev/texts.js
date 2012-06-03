@@ -1,6 +1,6 @@
 node ../../bin/texts.js --from text --to textjson
 <<<
-Plain *emphasis* plain **strong** plain `code` plain [label] plain <url>.
+Plain *emphasis* plain **strong** plain `code` plain [link][1] plain [^1] plain <url>.
 >>>JSON
 ["text",
   ["para", { "level": 0 },
@@ -11,7 +11,10 @@ Plain *emphasis* plain **strong** plain `code` plain [label] plain <url>.
     ["plain", " plain "],
     ["code", "code"],
     ["plain", " plain "],
-    ["label", "label"],
+    ["linktext", "link"],
+    ["linkref", "1"],
+    ["plain", " plain "],
+    ["noteref", "1"],
     ["plain", " plain "],
     ["url", "url"],
     ["plain", "."]

@@ -7,10 +7,10 @@ Reference [^1].
 ["text",
   ["para", { "level": 0 },
     ["plain", "Reference "],
-    ["label", "^1"],
+    ["noteref", "1"],
     ["plain", "."]
   ],
-  ["note", { "level": 0, "id": "^1" },
+  ["note", { "level": 0, "id": "1" },
     ["plain", "Footnote."]
   ]
 ]

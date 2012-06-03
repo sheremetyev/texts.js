@@ -5,10 +5,6 @@ Simple <http://www.texts.io/>.
 Reference [style][1].
 
 [1]: <http://www.texts.io/>
-
-Simplified [reference] style.
-
-[reference]: <http://www.texts.io/>
 >>>JSON
 ["text",
   ["para", { "level": 0 },
@@ -18,19 +14,11 @@ Simplified [reference] style.
   ],
   ["para", { "level": 0 },
     ["plain", "Reference "],
-    ["label", "style"],
-    ["label", "1"],
+    ["linktext", "style"],
+    ["linkref", "1"],
     ["plain", "."]
   ],
-  ["note", { "level": 0, "id": "1" },
-    ["url", "http://www.texts.io/"]
-  ],
-  ["para", { "level": 0 },
-    ["plain", "Simplified "],
-    ["label", "reference"],
-    ["plain", " style."]
-  ],
-  ["note", { "level": 0, "id": "reference" },
+  ["link", { "level": 0, "id": "1" },
     ["url", "http://www.texts.io/"]
   ]
 ]

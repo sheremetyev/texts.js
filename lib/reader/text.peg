@@ -9,6 +9,7 @@ Block
   / Divider
   / Table
   / Note
+  / Link
   / Image
   / Bulleted
   / Numbered
@@ -23,7 +24,8 @@ Inline
   = Code
   / Strong
   / Emph
-  / Label
+  / NoteRef
+  / LinkRef
   / Url
   / Math
   / Plain
@@ -135,7 +137,15 @@ Note
   { return [['note', { 'level': 0, 'id': label }].concat(inlines)]; }
 
 NoteLabel
-  = '[' chars:(!']' !EOL c:. { return c; })+ ']: '
+  = '[^' chars:(!']' !EOL c:. { return c; })+ ']: '
+  { return chars.join(''); };
+
+Link
+  = label:LinkLabel inlines:(Inline / Break)+
+  { return [['link', { 'level': 0, 'id': label }].concat(inlines)]; }
+
+LinkLabel
+  = '[' !'^' chars:(!']' !EOL c:. { return c; })+ ']: '
   { return chars.join(''); };
 
 Image
@@ -195,9 +205,14 @@ Emph
   = '*' chars:(!'*' c:Char { return c; })+ '*'
   { return ['emph', chars.join('')]; };
 
-Label
-  = '[' chars:(!']' c:Char { return c; })+ ']'
-  { return ['label', chars.join('')]; };
+LinkRef
+  = '[' text:(!']' c:Char { return c; })+ ']' ' '*
+    '[' !'^' ref:(!']' c:Char { return c; })+ ']'
+  { return ['linkref', ref.join('')]; };
+
+NoteRef
+  = '[^' ref:(!']' c:Char { return c; })+ ']'
+  { return ['noteref', ref.join('')]; };
 
 Url
   = '<' chars:(!'>' c:Char { return c; })+ '>'
@@ -208,7 +223,7 @@ Math
   { return ['math', chars.join('')]; };
 
 Plain
-  = chars:(!Code !Strong !Emph !Label !Url !Math c:Char { return c; })+
+  = chars:(!Code !Strong !Emph !NoteRef !LinkRef !Url !Math c:Char { return c; })+
   { return ['plain', chars.join('')]; };
 
 Char

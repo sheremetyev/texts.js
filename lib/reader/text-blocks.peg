@@ -180,9 +180,9 @@ TableRow
     });
     
     var row = []
-    row.push(['row', { 'level': 1 }, ['plain', cells.shift()] ]);
+    row.push(['row', { 'level': 1 }, cells.shift() ]);
     cells.forEach(function (cell) {
-      row.push(['col', { 'level': 2 }, ['plain', cell] ]);
+      row.push(['col', { 'level': 2 }, cell ]);
     });
     return row;
   }

@@ -157,8 +157,8 @@ LinkLabel
   { return chars.join(''); };
 
 Image
-  = '![](' url:Url ')'
-  { return [['image', { 'level': 0 }, url ]]; }
+  = '![](<' url:(!'>' !EOL c:. { return c; })+ '>)'
+  { return [['image', { 'level': 0 }, ['url', url.join('')] ]]; }
 
 Empty
   = &BlockEnd

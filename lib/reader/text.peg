@@ -131,8 +131,12 @@ Para
   { return [['para', { 'level': indents.length }].concat(inlines)]; }
 
 Note
-  = label:Label ': ' inlines:(Inline / Break)+
-  { return [['note', { 'level': 0 }, label].concat(inlines)]; }
+  = label:NoteLabel inlines:(Inline / Break)+
+  { return [['note', { 'level': 0, 'id': label }].concat(inlines)]; }
+
+NoteLabel
+  = '[' chars:(!']' !EOL c:. { return c; })+ ']: '
+  { return chars.join(''); };
 
 Image
   = '![](' url:Url ')'

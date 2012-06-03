@@ -30,6 +30,14 @@ Inline
   / Math
   / Plain
 
+Inlines
+  = inlines:Inline+
+  { return inlines; }
+
+InlinesWithBreaks
+  = inlines:(Inline / Break)+
+  { return inlines; }
+
 /******************************* Basic elements *************************************/
 
 EOF
@@ -64,21 +72,21 @@ Heading
   / Heading3
 
 Heading1
-  = inlines:Inline+ Heading1Bottom
+  = inlines:Inlines Heading1Bottom
   { return [['heading', { 'level': 1 }].concat(inlines)]; }
 
 Heading1Bottom
   = EOL '='+ &BlockEnd
 
 Heading2
-  = inlines:Inline+ Heading2Bottom
+  = inlines:Inlines Heading2Bottom
   { return [['heading', { 'level': 2 }].concat(inlines)]; }
 
 Heading2Bottom
   = EOL '-'+ &BlockEnd
 
 Heading3
-  = '### ' inlines:Inline+
+  = '### ' inlines:Inlines
   { return [['heading', { 'level': 3 }].concat(inlines)]; }
 
 /*** Verbatim ***/
@@ -112,11 +120,11 @@ FormulaBreak
 /*** Lists ***/
 
 Bulleted
-  = indents:Indent*  '* ' inlines:(Inline / Break)+
+  = indents:Indent*  '* ' inlines:InlinesWithBreaks
   { return [['item', { 'level': indents.length + 1 }].concat(inlines)]; }
 
 Numbered
-  = indents:Indent*  Digit+ '. ' inlines:(Inline / Break)+
+  = indents:Indent*  Digit+ '. ' inlines:InlinesWithBreaks
   { return [['numitem', { 'level': indents.length + 1 }].concat(inlines)]; }
 
 Digit
@@ -129,11 +137,11 @@ Divider
   { return [['divider', { 'level': 0 }]]; }  
 
 Para
-  = indents:Indent* inlines:(Inline / Break)+
+  = indents:Indent* inlines:InlinesWithBreaks
   { return [['para', { 'level': indents.length }].concat(inlines)]; }
 
 Note
-  = label:NoteLabel inlines:(Inline / Break)+
+  = label:NoteLabel inlines:InlinesWithBreaks
   { return [['note', { 'level': 0, 'id': label }].concat(inlines)]; }
 
 NoteLabel
@@ -141,7 +149,7 @@ NoteLabel
   { return chars.join(''); };
 
 Link
-  = label:LinkLabel inlines:(Inline / Break)+
+  = label:LinkLabel inlines:InlinesWithBreaks
   { return [['link', { 'level': 0, 'id': label }].concat(inlines)]; }
 
 LinkLabel

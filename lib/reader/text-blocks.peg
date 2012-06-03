@@ -13,12 +13,9 @@ Block
   / Image
   / Bulleted
   / Numbered
+  / Quote
   / Para
   / Empty
-
-/*
-  / Quote
-*/
 
 InlinesWithBreaks
   = inlines:(Inline / Break)+
@@ -159,6 +156,22 @@ Image
 Empty
   = &BlockEnd
   { return [['para', { 'level': 0 }]]; }
+
+/*** Quotes ***/
+
+Quote
+  = &'> ' inlines:(QuoteInline / Break)+
+  { return [['quote', { 'level': 1 }].concat(inlines)]; }
+
+QuoteInline
+  = lines:('> ' chars:QuoteChar+ { return chars.join(''); })+
+  { return lines.join(''); }
+
+QuoteChar
+  = !BlockEnd !Break
+  c:( (EOL Indent* '> ') { return ' '; }
+    / c:.  { return c; }
+  ) { return c; }
 
 /*** Tables ***/
 

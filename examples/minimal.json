@@ -11,7 +11,8 @@
     ["plain", " dialect)."]
   ],
 
-  ["link", { "level": 0, "id": "pandoc" },
+  ["link", { "level": 0 },
+    ["id", "pandoc"],
     ["url", "http://johnmacfarlane.net/pandoc/"]
   ],
 
@@ -75,7 +76,8 @@
     ["plain", " in the source file but appear at the bottom of the page."]
   ],
 
-  ["note", { "level": 0, "id": "1" },
+  ["note", { "level": 0 },
+    ["id", "1"],
     ["plain", "Yes, right here."]
   ],
 
@@ -91,7 +93,8 @@
     ["url", "http://www.google.com/"]
   ],
 
-  ["link", { "level": 0, "id": "1" },
+  ["link", { "level": 0 },
+    ["id", "1"],
     ["url", "http://www.texts.io/"]
   ],
 
@@ -104,7 +107,8 @@
     ["plain", " as well."]
   ],
 
-  ["link", { "level": 0, "id": "2" },
+  ["link", { "level": 0 },
+    ["id", "2"],
     ["url", "basic.pdf"]
   ],
 

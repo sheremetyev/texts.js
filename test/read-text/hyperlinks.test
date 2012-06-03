@@ -18,7 +18,8 @@ Reference [style][1].
     ["linkref", "1"],
     ["plain", "."]
   ],
-  ["link", { "level": 0, "id": "1" },
+  ["link", { "level": 0 },
+    ["id", "1"],
     ["url", "http://www.texts.io/"]
   ]
 ]

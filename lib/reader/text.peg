@@ -142,19 +142,19 @@ Para
 
 Note
   = label:NoteLabel inlines:InlinesWithBreaks
-  { return [['note', { 'level': 0, 'id': label }].concat(inlines)]; }
+  { return [['note', { 'level': 0 }, label].concat(inlines)]; }
 
 NoteLabel
   = '[^' chars:(!']' !EOL c:. { return c; })+ ']: '
-  { return chars.join(''); };
+  { return ['id', chars.join('')]; };
 
 Link
   = label:LinkLabel inlines:InlinesWithBreaks
-  { return [['link', { 'level': 0, 'id': label }].concat(inlines)]; }
+  { return [['link', { 'level': 0 }, label].concat(inlines)]; }
 
 LinkLabel
   = '[' !'^' chars:(!']' !EOL c:. { return c; })+ ']: '
-  { return chars.join(''); };
+  { return ['id', chars.join('')]; };
 
 Image
   = '![](<' url:(!'>' !EOL c:. { return c; })+ '>)'

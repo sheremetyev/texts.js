@@ -1,6 +1,6 @@
-Document
+Blocks
   = blocks:(b:Block BlockEnd { return b; })*
-  { return [].concat.apply(['text'], blocks); }
+  { return [].concat.apply([], blocks); }
 
 Block
   = Heading
@@ -20,23 +20,9 @@ Block
   / Quote
 */
 
-Inline
-  = Code
-  / Strong
-  / Emph
-  / NoteRef
-  / LinkRef
-  / Url
-  / Math
-  / Plain
-
-Inlines
-  = inlines:Inline+
-  { return [].concat.apply([], inlines); }
-
 InlinesWithBreaks
   = inlines:(Inline / Break)+
-  { return [].concat.apply([], inlines); }
+  { return inlines; }
 
 /******************************* Basic elements *************************************/
 
@@ -51,10 +37,20 @@ BlockEnd
 
 Break
   = '  ' EOL
-  { return [['break', '\n']]; }
+  { return ['break', '\n']; }
 
 Indent
   = '    '
+
+Inline
+  = chars:Char+
+  { return chars.join(''); };
+
+Char
+  = !Heading1Bottom !Heading2Bottom !BlockEnd !Break
+  c:( (EOL Indent*) { return ' '; }
+    / c:.  { return c; }
+  ) { return c; }
 
 Tildes
   = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
@@ -72,22 +68,22 @@ Heading
   / Heading3
 
 Heading1
-  = inlines:Inlines Heading1Bottom
-  { return [['heading', { 'level': 1 }].concat(inlines)]; }
+  = inlines:Inline Heading1Bottom
+  { return [['heading', { 'level': 1 }, inlines]]; }
 
 Heading1Bottom
   = EOL '='+ &BlockEnd
 
 Heading2
-  = inlines:Inlines Heading2Bottom
-  { return [['heading', { 'level': 2 }].concat(inlines)]; }
+  = inlines:Inline Heading2Bottom
+  { return [['heading', { 'level': 2 }, inlines]]; }
 
 Heading2Bottom
   = EOL '-'+ &BlockEnd
 
 Heading3
-  = '### ' inlines:Inlines
-  { return [['heading', { 'level': 3 }].concat(inlines)]; }
+  = '### ' inlines:Inline
+  { return [['heading', { 'level': 3 }, inlines]]; }
 
 /*** Verbatim ***/
 
@@ -198,51 +194,3 @@ TableLine
 TableCellLine
   = chars:(!'|' !EOL c:. { return c; })+ '|'
   { return chars.join(''); }
-
-/************************************ Inlines ***************************************/
-
-Code
-  = '`' chars:(!'`' c:Char { return c; })+ '`'
-  { return [['code', chars.join('')]]; };
-
-Strong
-  = '**' chars:(!'**' c:Char { return c; })+ '**'
-  { return [['strong', chars.join('')]]; };
-
-Emph
-  = '*' chars:(!'*' c:Char { return c; })+ '*'
-  { return [['emph', chars.join('')]]; };
-
-LinkRef
-  = '[' text:(!']' c:Char { return c; })+ ']' ' '*
-    '[' !'^' ref:(!']' c:Char { return c; })+ ']'
-  { return [['linktext', text.join('')], ['linkref', ref.join('')]]; };
-
-NoteRef
-  = '[^' ref:(!']' c:Char { return c; })+ ']'
-  { return [['noteref', ref.join('')]]; };
-
-Url
-  = '<' chars:(!'>' c:Char { return c; })+ '>'
-  { return [['url', chars.join('')]]; };
-
-Math
-  = '$' chars:(!'$' c:Char { return c; })+ '$'
-  { return [['math', chars.join('')]]; };
-
-Plain
-  = chars:(!Code !Strong !Emph !NoteRef !LinkRef !Url !Math c:Char { return c; })+
-  { return [['plain', chars.join('')]]; };
-
-Char
-  = !Heading1Bottom
-    !Heading2Bottom
-    !BlockEnd
-    !Break
-  c:( ('\\' s:Special) { return s; }
-    / (EOL Indent*) { return ' '; }
-    / c:.  { return c; }
-  ) { return c; }
-
-Special
-  = [*`<>$\\[\]]

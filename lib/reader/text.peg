@@ -216,7 +216,7 @@ Emph
 LinkRef
   = '[' text:(!']' c:Char { return c; })+ ']' ' '*
     '[' !'^' ref:(!']' c:Char { return c; })+ ']'
-  { return [['linkref', ref.join('')]]; };
+  { return [['linktext', text.join('')], ['linkref', ref.join('')]]; };
 
 NoteRef
   = '[^' ref:(!']' c:Char { return c; })+ ']'

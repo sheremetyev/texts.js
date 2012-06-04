@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from textjson --to text
+<<<
+["text",
+  ["quote", { "level": 2 },
+    ["plain", "Quotation text should be wrapped at 80 character border as well, with the ‘greater’ sign at the start of each line."]
+  ]
+]
+>>>
+      > Quotation text should be wrapped at 80 character border as well, with
+      > the ‘greater’ sign at the start of each line.

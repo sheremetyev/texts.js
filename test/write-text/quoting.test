@@ -1,9 +1,0 @@
-node ../../bin/texts.js --from textjson --to text
-<<<
-["text",
-  ["quote", { "level": 1 },
-    ["plain", "Quotation text."]
-  ]
-]
->>>
-> Quotation text.

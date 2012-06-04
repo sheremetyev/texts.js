@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from textjson --to text
+<<<
+["text",
+  ["item", { "level": 1 },
+    ["plain", "This line should be indented 4 spaces and split at 80 characters. This line should be split at 80 characters."]
+  ]
+]
+>>>
+  * This line should be indented 4 spaces and split at 80 characters. This line
+    should be split at 80 characters.

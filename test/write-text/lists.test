@@ -1,0 +1,19 @@
+node ../../bin/texts.js --from textjson --to text
+<<<
+["text",
+  ["item", { "level": 1 },
+    ["plain", "First."]
+  ],
+  ["numitem", { "level": 2 },
+    ["plain", "Second."]
+  ],
+  ["item", { "level": 3 },
+    ["plain", "Third."]
+  ]
+]
+>>>
+* First.
+
+    1. Second.
+
+        * Third.

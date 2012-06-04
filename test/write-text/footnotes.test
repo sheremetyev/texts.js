@@ -1,0 +1,17 @@
+node ../../bin/texts.js --from textjson --to text
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Reference "],
+    ["noteref", "1"],
+    ["plain", "."]
+  ],
+  ["note", { "level": 0 },
+    ["id", "1"],
+    ["plain", "Footnote."]
+  ]
+]
+>>>
+Reference [^1].
+
+[^1]: Footnote.

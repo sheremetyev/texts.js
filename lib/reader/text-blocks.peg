@@ -113,11 +113,11 @@ FormulaBreak
 /*** Lists ***/
 
 Bulleted
-  = indents:Indent*  '* ' inlines:InlinesWithBreaks
+  = indents:Indent*  '  * ' inlines:InlinesWithBreaks
   { return [['item', { 'level': indents.length + 1 }].concat(inlines)]; }
 
 Numbered
-  = indents:Indent*  Digit+ '. ' inlines:InlinesWithBreaks
+  = indents:Indent*  (' ' / Digit) Digit+ '. ' inlines:InlinesWithBreaks
   { return [['numitem', { 'level': indents.length + 1 }].concat(inlines)]; }
 
 Digit

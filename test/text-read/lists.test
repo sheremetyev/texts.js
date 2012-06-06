@@ -1,10 +1,10 @@
 node ../../bin/texts.js --from text --to textjson
 <<<
-* First.
+  * First.
 
-    1. Second.
+     1. Second.
 
-        * Third.
+          * Third.
 >>>JSON
 ["text",
   ["item", { "level": 1 },

@@ -1,0 +1,16 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+  * First.
+    Second.
+
+99. First.
+    Second.
+>>>JSON
+["text",
+  ["item", { "level": 1 },
+    ["plain", "First. Second."]
+  ],
+  ["numitem", { "level": 1 },
+    ["plain", "First. Second."]
+  ]
+]

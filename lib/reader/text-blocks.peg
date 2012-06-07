@@ -1,3 +1,13 @@
+{
+  var unindent = function(inlines, level) {
+    return inlines.map(function (inline) {
+      if (inline[0] === 'plain')
+        return ['plain', inline[1].substr(level * 4)];
+      return inline;
+    });
+  };
+}
+
 Blocks
   = blocks:(b:Block BlockEnd { return b; })*
   { return [].concat.apply([], blocks); }
@@ -50,7 +60,7 @@ Char
   ) { return c; }
 
 Tildes
-  = '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+  = '~~~~'+
 
 Dashes
   = '--------------------------------------------------------------------------------'
@@ -85,29 +95,29 @@ Heading3
 /*** Verbatim ***/
 
 Verbatim
-  = Tildes EOL inlines:(VerbatimLine / VerbatimBreak)* EOL Tildes
-  { return [['verbatim', { 'level': 0 }].concat(inlines)]; }
+  = indents:Indent* Tildes EOL inlines:(VerbatimLine / VerbatimBreak)* EOL Indent* Tildes
+  { return [['verbatim', { 'level': indents.length }].concat(unindent(inlines, indents.length))]; }
 
 VerbatimLine
-  = !Tildes chars:(!EOL c:. { return c; })+
+  = !(Indent* Tildes) chars:(!EOL c:. { return c; })+
   { return ['plain', chars.join('')]; };
 
 VerbatimBreak
-  = !(EOL Tildes) EOL
+  = !(EOL Indent* Tildes) EOL
   { return ['break', '\n']; }
 
 /*** Formula ***/
 
 Formula
-  = '$$' EOL inlines:(FormulaLine / FormulaBreak)* EOL '$$'
-  { return [['formula', { 'level': 0 }].concat(inlines)]; }
+  = indents:Indent* '$$' EOL inlines:(FormulaLine / FormulaBreak)* EOL indents:Indent* '$$'
+  { return [['formula', { 'level': indents.length }].concat(unindent(inlines, indents.length))]; }
 
 FormulaLine
-  = !'$$' chars:(!EOL c:. { return c; })+
+  = !(indents:Indent* '$$') chars:(!EOL c:. { return c; })+
   { return ['plain', chars.join('')]; };
 
 FormulaBreak
-  = !(EOL '$$') EOL
+  = !(EOL indents:Indent* '$$') EOL
   { return ['break', '\n']; }
 
 /*** Lists ***/

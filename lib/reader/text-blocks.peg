@@ -160,16 +160,16 @@ Empty
 /*** Quotes ***/
 
 Quote
-  = &'> ' inlines:(QuoteInline / Break)+
+  = &'  > ' inlines:(QuoteInline / Break)+
   { return [['quote', { 'level': 1 }].concat(inlines)]; }
 
 QuoteInline
-  = lines:('> ' chars:QuoteChar+ { return chars.join(''); })+
+  = lines:('  > ' chars:QuoteChar+ { return chars.join(''); })+
   { return lines.join(''); }
 
 QuoteChar
   = !BlockEnd !Break
-  c:( (EOL Indent* '> ') { return ' '; }
+  c:( (EOL Indent* '  > ') { return ' '; }
     / c:.  { return c; }
   ) { return c; }
 

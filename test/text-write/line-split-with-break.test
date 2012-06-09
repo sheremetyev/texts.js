@@ -1,0 +1,14 @@
+node ../../bin/texts.js --from textjson --to text
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "This line should be split at 80 characters. This line should be split at 80 characters and end with a break."],
+    ["break", "\n"],
+    ["plain", "This line should be split at 80 characters. This line should be split at 80 characters."]
+  ]
+]
+>>>
+This line should be split at 80 characters. This line should be split at 80
+characters and end with a break.  
+This line should be split at 80 characters. This line should be split at 80
+characters.

@@ -8,6 +8,7 @@ Inline
   / Emph
   / NoteRef
   / LinkRef
+  / Label
   / Url
   / Math
   / Plain
@@ -33,6 +34,10 @@ NoteRef
   = '[^' ref:(!']' c:Char { return c; })+ ']'
   { return [['noteref', ref.join('')]]; };
 
+Label
+  = '[' !'^' text:(!']' c:Char { return c; })+ ']'
+  { return [['label', text.join('')]]; };
+
 Url
   = '<' chars:(!'>' c:Char { return c; })+ '>'
   { return [['url', chars.join('')]]; };
@@ -42,7 +47,7 @@ Math
   { return [['math', chars.join('')]]; };
 
 Plain
-  = chars:(!Code !Strong !Emph !NoteRef !LinkRef !Url !Math c:Char { return c; })+
+  = chars:(!Code !Strong !Emph !NoteRef !LinkRef !Label !Url !Math c:Char { return c; })+
   { return [['plain', chars.join('')]]; };
 
 Char

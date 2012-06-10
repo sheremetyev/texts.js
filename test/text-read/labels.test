@@ -1,0 +1,11 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+[label] at the beginning and label at the [end]
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["label", "label"],
+    ["plain", " at the beginning and label at the "],
+    ["label", "end"]
+  ]
+]

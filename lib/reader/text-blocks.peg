@@ -13,8 +13,7 @@ Blocks
   { return [].concat.apply([], blocks); }
 
 Block
-  = Heading
-  / Verbatim
+  = Verbatim
   / Formula
   / Divider
   / Table
@@ -24,6 +23,7 @@ Block
   / Bulleted
   / Numbered
   / Quote
+  / Heading
   / Para
   / Empty
 

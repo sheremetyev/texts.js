@@ -1,0 +1,16 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+markup should no be parsed inside verbatim
+==========================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>>>JSON
+["text",
+  ["verbatim", { "level": 0 },
+    ["plain", "markup should no be parsed inside verbatim"],
+    ["break", "\n"],
+    ["plain", "=========================================="],
+    ["break", "\n"]
+  ]
+]

@@ -25,7 +25,7 @@ Emph
   { return [['emph', chars.join('')]]; };
 
 LinkRef
-  = '[' text:(!']' c:Char { return c; })+ ']' ' '*
+  = '[' text:(!']' c:Char { return c; })+ ']'
     '[' !'^' ref:(!']' c:Char { return c; })+ ']'
   { return [['linktext', text.join('')], ['linkref', ref.join('')]]; };
 

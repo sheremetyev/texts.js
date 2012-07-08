@@ -11,7 +11,7 @@ Reference [^1].
     ["plain", "."]
   ],
   ["note", { "level": 0 },
-    ["id", "1"],
+    ["noteref", "1"],
     ["plain", "Footnote."]
   ]
 ]

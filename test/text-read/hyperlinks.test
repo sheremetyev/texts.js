@@ -21,7 +21,7 @@ Not a [reference] [link] due to the space.
     ["plain", "."]
   ],
   ["link", { "level": 0 },
-    ["id", "1"],
+    ["linkref", "1"],
     ["url", "http://www.texts.io/"]
   ],
   ["para", { "level": 0 },

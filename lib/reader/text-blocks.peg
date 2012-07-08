@@ -149,7 +149,7 @@ Note
 
 NoteLabel
   = '[^' chars:(!']' !EOL c:. { return c; })+ ']: '
-  { return ['id', chars.join('')]; };
+  { return ['noteref', chars.join('')]; };
 
 Link
   = label:LinkLabel inlines:InlinesWithBreaks
@@ -157,7 +157,7 @@ Link
 
 LinkLabel
   = '[' !'^' chars:(!']' !EOL c:. { return c; })+ ']: '
-  { return ['id', chars.join('')]; };
+  { return ['linkref', chars.join('')]; };
 
 Image
   = '![](<' url:(!'>' !EOL c:. { return c; })+ '>)'

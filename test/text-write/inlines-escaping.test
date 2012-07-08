@@ -6,4 +6,4 @@ node ../../bin/texts.js --from textjson --to text
   ]
 ]
 >>>
-Plain \*emphasis\* \*\*strong\*\* \`code\` \[label\] \<url\> \$math\$ \\.
+Plain \*emphasis\* \*\*strong\*\* \`code\` [label] \<url\> \$math\$ \\.

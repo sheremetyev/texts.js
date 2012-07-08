@@ -25,10 +25,6 @@ Not a [reference] [link] due to the space.
     ["url", "http://www.texts.io/"]
   ],
   ["para", { "level": 0 },
-    ["plain", "Not a "],
-    ["label", "reference"],
-    ["plain", " "],
-    ["label", "link"],
-    ["plain", " due to the space."]
+    ["plain", "Not a [reference] [link] due to the space."]
   ]
 ]

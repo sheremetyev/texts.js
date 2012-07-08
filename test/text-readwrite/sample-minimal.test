@@ -104,7 +104,7 @@ as less as €10. Ellipsis… in the text should be a Unicode character.
 
 Should TeX ligatures be \`\`used''—they will be printed \<\<as is\>\>.
 
-TeX special symbols are automatically escaped: %, $, {, }, _, #, &, \\, ~, ^.
+TeX special symbols are automatically escaped: %, \$, {, }, _, #, &, \\, ~, ^.
 
 HTML entites don't have to be escaped: &, <, >.
 

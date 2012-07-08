@@ -192,35 +192,35 @@
     ["plain", "Lists"]
   ],
 
-  ["item", { "level": 1 },
+  ["bulleted", { "level": 1 },
     ["plain", "First bulleted item."]
   ],
 
-  ["item", { "level": 1 },
+  ["bulleted", { "level": 1 },
     ["plain", "Second bulleted item."]
   ],
 
-  ["item", { "level": 2 },
+  ["bulleted", { "level": 2 },
     ["plain", "Subitem."]
   ],
 
-  ["item", { "level": 3 },
+  ["bulleted", { "level": 3 },
     ["plain", "Subsubitem."]
   ],
 
-  ["numitem", { "level": 1 },
+  ["numbered", { "level": 1 },
     ["plain", "First numbered item."]
   ],
 
-  ["numitem", { "level": 1 },
+  ["numbered", { "level": 1 },
     ["plain", "Second numbered item."]
   ],
 
-  ["numitem", { "level": 2 },
+  ["numbered", { "level": 2 },
     ["plain", "Subitem."]
   ],
 
-  ["numitem", { "level": 3 },
+  ["numbered", { "level": 3 },
     ["plain", "Subsubitem."]
   ],
 

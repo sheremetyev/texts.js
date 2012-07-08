@@ -1,13 +1,13 @@
 node ../../bin/texts.js --from textjson --to text
 <<<
 ["text",
-  ["numitem", { "level": 1 },
+  ["numbered", { "level": 1 },
     ["plain", "First."]
   ],
   ["para", { "level": 1 },
     ["plain", "Second."]
   ],
-  ["numitem", { "level": 1 },
+  ["numbered", { "level": 1 },
     ["plain", "Third."]
   ]
 ]

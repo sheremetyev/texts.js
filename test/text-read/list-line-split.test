@@ -7,10 +7,10 @@ node ../../bin/texts.js --from text --to textjson
     Second.
 >>>JSON
 ["text",
-  ["item", { "level": 1 },
+  ["bulleted", { "level": 1 },
     ["plain", "First. Second."]
   ],
-  ["numitem", { "level": 1 },
+  ["numbered", { "level": 1 },
     ["plain", "First. Second."]
   ]
 ]

@@ -124,11 +124,11 @@ FormulaBreak
 
 Bulleted
   = indents:Indent*  '  * ' inlines:InlinesWithBreaks
-  { return [['item', { 'level': indents.length + 1 }].concat(inlines)]; }
+  { return [['bulleted', { 'level': indents.length + 1 }].concat(inlines)]; }
 
 Numbered
   = indents:Indent*  (' ' / Digit) Digit+ '. ' inlines:InlinesWithBreaks
-  { return [['numitem', { 'level': indents.length + 1 }].concat(inlines)]; }
+  { return [['numbered', { 'level': indents.length + 1 }].concat(inlines)]; }
 
 Digit
   = [0-9]

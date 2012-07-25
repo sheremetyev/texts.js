@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Load MathJax for math display -->
+  <script type="text/javascript"
+     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <title></title>
+</head>
+<body>
+
+<h1>Minimal Texts.js Sample</h1>
+
+<p>This document shows what syntax must be supported in texts.js to be
+compatible with Markdown (<a href="http://johnmacfarlane.net/pandoc/">pandoc</a>
+dialect).</p>
+
+<h1>Headings</h1>
+
+<h2>Subsection Heading</h2>
+
+<h3>Subsubsection</h3>
+
+<h1>Text Formatting</h1>
+
+<p>You can use <em>emphasis</em> and <strong>strong</strong> emphasis. Inline
+<code>code</code> will use monspaced font.</p>
+
+<pre><code>
+Code blocks use monospaced font as well and preserve line
+breaks
+</code></pre>
+
+<h1>Math</h1>
+
+<p>
+Math formulas can be used inside paragraph like \(E=mc^2\) or on a separate line
+like the following one.
+</p>
+
+<figure>
+\[
+1+\frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots =
+\prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},
+\quad\quad \text{for $|q|&lt;1$}
+\]
+</figure>
+
+<h1>Footnotes</h1>
+
+<p>Footnotes are placed anywhere<sup><a href="#fn1">1</a></sup> in the source
+file but appear at the bottom of the page.</p>
+
+<h1>Hyperlinks</h1>
+
+<p>You can add arbitrary hyperlinks. Link
+<a href="http://www.texts.io/">text</a> can differ from it's URL or be the same
+as the URL: <a href="http://www.google.com/">http://www.google.com/</a>.</p>
+
+<p>You can include e-mail links:
+<a href="mailto:sheremetyev@gmail.com">sheremetyev@gmail.com</a>. Local files
+can be <a href="./basic.pdf">referenced</a> as well.</p>
+
+<h1>Images</h1>
+
+<figure>
+<img src="Texts_Logo.png">
+</figure>
+
+<h1>Tables</h1>
+
+<figure>
+<table>
+  <tr>
+    <td>Day</td>
+    <td>Min Temp</td>
+    <td>Max Temp</td>
+    <td>Summary</td>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>11C</td>
+    <td>22C</td>
+    <td>A clear day with lots of sunshine.  However, the strong breeze will bring down the temperatures.</td>
+  </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td>9C</td>
+    <td>19C</td>
+    <td>Cloudy with rain, across many northern regions. Clear spells across most of Scotland and Northern Ireland, but rain reaching the far northwest.</td>
+  </tr>
+  <tr>
+    <td>Wednesday</td>
+    <td>10C</td>
+    <td>21C</td>
+    <td>Rain will still linger for the morning. Conditions will improve by early afternoon and continue throughout the evening.</td>
+  </tr>
+</table>
+</figure>
+
+<h1>Lists</h1>
+
+<ul>
+  <li>First bulleted item.</li>
+  <li>Second bulleted item.</li>
+  <ul>
+    <li>Subitem.</li>
+    <ul>
+      <li>Subsubitem.</li>
+    </ul>
+  </ul>
+</ul>
+
+<ol>
+  <li>First numbered item.</li>
+  <li>Second numbered item.</li>
+  <ol>
+    <li>Subitem.</li>
+    <ol>
+      <li>Subsubitem.</li>
+    </ol>
+  </ol>
+</ol>
+
+<h1>Quoting</h1>
+
+<blockquote>
+<p>Quoted text can include only inline text styles.</p>
+</blockquote>
+
+<blockquote>
+<p>Headings shouldn’t be used.</p>
+</blockquote>
+
+<h1>Symbol Escaping</h1>
+
+<p>No-break space (Unicode U+00A0) will be converted to tilde symbol for TeX.</p>
+
+<p>XeTeX doesn't need TeX ligatures for quotation marks, em-dash and other typographic symbols—they can be ‘used’ “directly”. Euro symbol can be used for as less as €10. Ellipsis… in the text should be a Unicode character.</p>
+
+<p>Should TeX ligatures be ``used''—they will be printed &lt;&lt;as is&gt;&gt;.</p>
+
+<p>TeX special symbols are automatically escaped: %, $, {, }, _, #, &amp;, \, ~, ^.</p>
+
+<p>HTML entites don't have to be escaped: &amp;, &lt;, &gt;.</p>
+
+<h1>Future Extensions</h1>
+
+<ul>
+
+<li>Definition lists.</li>
+
+<li>Titles for images, tables and formulas.</li>
+
+<li>Cross-references.</li>
+
+<li>Bibliogralihic citations.</li>
+
+<li>Comments.</li>
+
+<li>Custom labels for blocks.</li>
+
+</ul>
+
+<hr>
+
+<ol>  
+  <li id="fn1">
+    <p>Yes right here.</p>
+  </li>
+</ol>  
+
+</body>
+</html>

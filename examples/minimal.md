@@ -86,28 +86,28 @@ Tables
 Lists
 =====
 
-* First bulleted item.
+  * First bulleted item.
 
-* Second bulleted item.
+  * Second bulleted item.
 
-    * Subitem.
+      * Subitem.
 
-        * Subsubitem.
+          * Subsubitem.
 
-1. First numbered item.
+ 1. First numbered item.
 
-2. Second numbered item.
+ 2. Second numbered item.
 
-    1. Subitem.
+     1. Subitem.
 
-        1. Subsubitem.
+         1. Subsubitem.
 
 Quoting
 =======
 
-> Quoted text can include only inline text styles.
->
-> Headings shouldn’t be used.
+  > Quoted text can include only inline text styles.
+
+  > Headings shouldn’t be used.
 
 --------------------------------------------------------------------------------
 
@@ -120,23 +120,23 @@ XeTeX doesn't need TeX ligatures for quotation marks, em-dash and other
 typographic symbols—they can be ‘used’ “directly”. Euro symbol can be used for
 as less as €10. Ellipsis… in the text should be a Unicode character.
 
-Should TeX ligatures be ``used''—they will be printed \<\<as is\>\>.
+Should TeX ligatures be \`\`used''—they will be printed \<\<as is\>\>.
 
-TeX special symbols are automatically escaped: %, $, {, }, _, #, &, \\, ~, ^.
+TeX special symbols are automatically escaped: %, \$, {, }, _, #, &, \\, ~, ^.
 
-HTML entites don't have to be escaped: &, <, >.
+HTML entites don't have to be escaped: &, \<, \>.
 
 Future Extensions
 =================
 
-* Definition lists.
+  * Definition lists.
 
-* Titles for images, tables and formulas.
+  * Titles for images, tables and formulas.
 
-* Cross-references.
+  * Cross-references.
 
-* Bibliographic citations.
+  * Bibliographic citations.
 
-* Comments.
+  * Comments.
 
-* Custom labels for blocks.
+  * Custom labels for blocks.

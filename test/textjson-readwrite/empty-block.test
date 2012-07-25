@@ -1,0 +1,8 @@
+node ../../bin/texts.js --from textjson --to textjson
+<<<>>>
+["text",
+
+  ["plain", { "level": 0 }
+  ]
+
+]

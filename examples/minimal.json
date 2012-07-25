@@ -36,7 +36,7 @@
     ["plain", "You can use "],
     ["emph", "emphasis"],
     ["plain", " and "],
-    ["emph", "strong"],
+    ["strong", "strong"],
     ["plain", " emphasis. Inline "],
     ["code", "code"],
     ["plain", " will use monospaced font."]
@@ -58,7 +58,7 @@
     ["plain", " or on a separate line like the following one."]
   ],
 
-  ["displaymath", { "level": 0 },
+  ["formula", { "level": 0 },
     ["plain", "1+\\frac{q^2}{(1-q)}+\\frac{q^6}{(1-q)(1-q^2)}+\\cdots ="],
     ["break", "\n"],
     ["plain", "\\prod_{j=0}^{\\infty}\\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},"],
@@ -71,7 +71,7 @@
   ],
 
   ["para", { "level": 0 },
-    ["plain", "Footnotes can be placed anywhere"],
+    ["plain", "Footnotes are placed anywhere"],
     ["noteref", "1"],
     ["plain", " in the source file but appear at the bottom of the page."]
   ],
@@ -90,7 +90,8 @@
     ["linktext", "text"],
     ["linkref", "1"],
     ["plain", " can differ from it's URL or be the same as the URL: "],
-    ["url", "http://www.google.com/"]
+    ["url", "http://www.google.com/"],
+    ["plain", "."]
   ],
 
   ["link", { "level": 0 },
@@ -153,7 +154,7 @@
   ],
 
   ["col", { "level": 2 },
-    ["plain", "A clear day with lots of sunshine.  However, the strong breeze will bring down the temperatures."]
+    ["plain", "A clear day with lots of sunshine. However, the strong breeze will bring down the temperatures."]
   ],
 
   ["row", { "level": 1 },
@@ -228,11 +229,11 @@
     ["plain", "Quoting"]
   ],
 
-  ["quotation", { "level": 1 },
+  ["quote", { "level": 1 },
     ["plain", "Quoted text can include only inline text styles."]
   ],
 
-  ["quotation", { "level": 1 },
+  ["quote", { "level": 1 },
     ["plain", "Headings shouldn’t be used."]
   ],
 
@@ -261,6 +262,34 @@
 
   ["para", { "level": 0 },
     ["plain", "HTML entites don't have to be escaped: &, <, >."]
+  ],
+
+  ["heading", { "level": 1 },
+    ["plain", "Future Extensions"]
+  ],
+
+  ["bulleted", { "level": 1 },
+    ["plain", "Definition lists."]
+  ],
+
+  ["bulleted", { "level": 1 },
+    ["plain", "Titles for images, tables and formulas."]
+  ],
+
+  ["bulleted", { "level": 1 },
+    ["plain", "Cross-references."]
+  ],
+
+  ["bulleted", { "level": 1 },
+    ["plain", "Bibliographic citations."]
+  ],
+
+  ["bulleted", { "level": 1 },
+    ["plain", "Comments."]
+  ],
+
+  ["bulleted", { "level": 1 },
+    ["plain", "Custom labels for blocks."]
   ]
 
 ]

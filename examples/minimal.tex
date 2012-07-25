@@ -1,0 +1,190 @@
+\documentclass[10pt]{article}
+
+% set smaller margins
+\usepackage[a4paper,margin=1in]{geometry}
+
+% use standard math symbols
+\usepackage{amssymb}
+
+% for \text inside formulas and for \eqref
+\usepackage{amsmath}
+
+% enable full XeLaTeX power
+\usepackage{xltxtra}
+
+% select widely available fonts
+\setmainfont{Palatino}
+
+% set paragraph margins
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+
+% prevent overfull lines
+\setlength{\emergencystretch}{3em}
+
+% for \includegraphics
+\usepackage{graphicx}
+
+% for exact placement of figures
+\usepackage{float}
+
+% for hyperlinks
+\usepackage[colorlinks,urlcolor=blue,filecolor=blue,linkcolor=black,citecolor=black]{hyperref}
+\usepackage[all]{hypcap}
+\urlstyle{same}
+
+\begin{document}
+
+\section{Minimal Texts.js Sample}
+
+This document shows what syntax must be supported in texts.js to be compatible
+with Markdown (\href{http://johnmacfarlane.net/pandoc/}{pandoc} dialect).
+
+\section{Headings}
+
+\subsection{Subsection Heading}
+
+\subsubsection{Subsubsection}
+
+\section{Text Formatting}
+
+You can use \emph{emphasis} and \textbf{strong} emphasis. Inline \texttt{code}
+will use monspaced font.
+
+\begin{verbatim}
+Code blocks use monospaced font as well and preserve line
+breaks
+\end{verbatim}
+
+\section{Math}
+
+Math formulas can be used inside paragraph like $E=mc^2$ or on a separate line like the following one.
+
+\begin{equation}
+1+\frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots =
+\prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},
+\quad\quad \text{for $|q|<1$}
+\end{equation}
+
+\section{Footnotes}
+
+Footnotes are placed anywhere\footnote{Yes right here.} in the source file but
+appear at the bottom of the page.
+
+\section{Hyperlinks}
+
+You can add arbitrary hyperlinks. Link \href{http://www.texts.io/}{text} can
+differ from it's URL or be the same as the URL: \url{http://www.google.com/}.
+
+You can include e-mail links:
+\href{mailto:sheremetyev@gmail.com}{sheremetyev@gmail.com}. Local files can be
+\href{run:basic.pdf}{referenced} as well.
+
+\section{Images}
+
+\begin{figure}[H]
+\centering
+\includegraphics{Texts_Logo.png}
+\end{figure}
+
+\section{Tables}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ | l | l | l | p{8cm} |}
+\hline
+Day & Min Temp & Max Temp & Summary \\ \hline
+Monday & 11C & 22C & A clear day with lots of sunshine.  However, the strong breeze will bring down the temperatures. \\ \hline
+Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells across most of Scotland and Northern Ireland, but rain reaching the far northwest. \\ \hline
+Wednesday & 10C & 21C & Rain will still linger for the morning. Conditions will improve by early afternoon and continue throughout the evening. \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Lists}
+
+\begin{itemize}
+
+\item First bulleted item.
+
+\item Second bulleted item.
+
+    \begin{itemize}
+
+    \item Subitem.
+
+        \begin{itemize}
+
+        \item Subsubitem.
+
+        \end{itemize}
+
+    \end{itemize}
+
+\end{itemize}
+
+
+\begin{enumerate}
+
+\item First numbered item.
+
+\item Second numbered item.
+
+    \begin{enumerate}
+
+    \item Subitem.
+
+        \begin{enumerate}
+
+        \item Subsubitem.
+
+        \end{enumerate}
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\section{Quoting}
+
+\begin{quotation}
+Quoted text can include only inline text styles.
+\end{quotation}
+
+\begin{quotation}
+Headings shouldn’t be used.
+\end{quotation}
+
+\section{Symbol Escaping}
+
+No-break space (Unicode U+00A0) will be converted to tilde symbol for TeX.
+
+\XeTeX{} doesn't need \TeX{} ligatures for quotation marks, em-dash and other
+typographic symbols—they can be ‘used’ “directly”. Euro symbol can be used for
+as less as €10. Ellipsis… in the text should be a Unicode character.
+
+Should \TeX{} ligatures be ``used''—they will be printed <<as is>>.
+
+\TeX{} special symbols are automatically escaped: \%, \$, \{, \}, \_, \#,
+\&, \textbackslash, \textasciitilde, \textasciicircum.
+
+HTML entites don't have to be escaped: \&, <, >.
+
+\section{Future Extensions}
+
+\begin{itemize}
+
+\item Definition lists.
+
+\item Titles for images, tables and formulas.
+
+\item Cross-references.
+
+\item Bibliographic citations.
+
+\item Comments.
+
+\item Custom labels for blocks.
+
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,27 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["row", { "level": 1 },
+    ["plain", "One"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Two"]
+  ],
+  ["row", { "level": 1 },
+    ["plain", "Three"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Four"]
+  ]
+]
+>>>
+\begin{table}[H]
+\centering
+\begin{tabular}{ | l | l |}
+\hline
+One & Two \\
+\hline
+Three & Four \\
+\hline
+\end{tabular}
+\end{table}

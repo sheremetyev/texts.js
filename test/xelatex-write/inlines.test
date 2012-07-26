@@ -1,0 +1,15 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Plain "],
+    ["emph", "emphasis"],
+    ["plain", " plain "],
+    ["strong", "strong"],
+    ["plain", " plain "],
+    ["code", "code"],
+    ["plain", "."]
+  ]
+]
+>>>
+Plain \emph{emphasis} plain \textbf{strong} plain \texttt{code}.

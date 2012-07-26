@@ -1,0 +1,9 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Plain *emphasis* **strong** `code` [label] <url> $math$ \\."]
+  ]
+]
+>>>
+Plain *emphasis* **strong** `code` [label] <url> \$math\$ \textbackslash.

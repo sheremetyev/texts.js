@@ -1,0 +1,12 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["quote", { "level": 1 },
+    ["plain", "Quotation text should be wrapped at 80 character border as well. And there is no need for additional indent."]
+  ]
+]
+>>>
+\begin{quotation}
+Quotation text should be wrapped at 80 character border as well. And there is no
+need for additional indent.
+\end{quotation}

@@ -1,0 +1,18 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["verbatim", { "level": 1 },
+    ["plain", "code"]
+  ],
+  ["formula", { "level": 1 },
+    ["plain", "E=mc^2"]
+  ]
+]
+>>>
+\begin{verbatim}
+code
+\end{verbatim}
+
+\begin{equation}
+E=mc^2
+\end{equation}

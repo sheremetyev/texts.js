@@ -1,0 +1,28 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Simple "],
+    ["url", "http://www.texts.io/"],
+    ["plain", "."]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Reference "],
+    ["linktext", "style"],
+    ["linkref", "1"],
+    ["plain", "."]
+  ],
+  ["link", { "level": 0 },
+    ["linkref", "1"],
+    ["url", "http://www.texts.io/"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Not a [reference] [link] due to the space."]
+  ]
+]
+>>>
+Simple \url{http://www.texts.io/}.
+
+Reference \href{http://www.texts.io/}{style}.
+
+Not a [reference] [link] due to the space.

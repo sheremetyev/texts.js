@@ -1,0 +1,23 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["numbered", { "level": 1 },
+    ["plain", "First."]
+  ],
+  ["para", { "level": 1 },
+    ["plain", "Second."]
+  ],
+  ["numbered", { "level": 1 },
+    ["plain", "Third."]
+  ]
+]
+>>>
+\begin{enumerate}
+
+\item First.
+
+Second.
+
+\item Third.
+
+\end{enumerate}

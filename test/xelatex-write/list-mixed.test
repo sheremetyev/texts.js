@@ -1,0 +1,31 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["bulleted", { "level": 1 },
+    ["plain", "First."]
+  ],
+  ["numbered", { "level": 2 },
+    ["plain", "Second."]
+  ],
+  ["bulleted", { "level": 3 },
+    ["plain", "Third."]
+  ]
+]
+>>>
+\begin{itemize}
+
+\item First.
+
+    \begin{enumerate}
+
+    \item Second.
+
+        \begin{itemize}
+
+        \item Third.
+
+        \end{itemize}
+
+    \end{enumerate}
+
+\end{itemize}

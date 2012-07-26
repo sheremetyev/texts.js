@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "This line should be split at 80 characters. This line should be split at 80 characters."]
+  ]
+]
+>>>
+This line should be split at 80 characters. This line should be split at 80
+characters.

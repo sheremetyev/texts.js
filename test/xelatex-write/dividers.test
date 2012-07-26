@@ -1,0 +1,8 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["divider", { "level": 0 }
+  ]
+]
+>>>
+\hrulefill

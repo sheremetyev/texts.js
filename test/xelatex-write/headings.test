@@ -2,8 +2,18 @@ node ../../bin/texts.js --from textjson --to xelatex
 <<<
 ["text",
   ["heading", { "level": 1 },
-    ["plain", "main section"]
+    ["plain", "Heading"]
+  ],
+  ["heading", { "level": 2 },
+    ["plain", "Subheading"]
+  ],
+  ["heading", { "level": 3 },
+    ["plain", "Subsubheading"]
   ]
 ]
 >>>
-\section{main section}
+\section{Heading}
+
+\subsection{Subheading}
+
+\subsubsection{Subsubheading}

@@ -1,0 +1,12 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["image", { "level": 0 },
+    ["url", "Image.png"]
+  ]
+]
+>>>
+\begin{figure}[H]
+\centering
+\includegraphics{Image.png}
+\end{figure}

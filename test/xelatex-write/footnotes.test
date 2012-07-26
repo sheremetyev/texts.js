@@ -3,13 +3,11 @@ node ../../bin/texts.js --from textjson --to xelatex
 ["text",
   ["para", { "level": 0 },
     ["plain", "Main text"],
-    ["ref", "mynote"],
+    ["noteref", "mynote"],
     ["plain", "."]
   ],
-  ["labels", {},
-    ["label", "mynote"]
-  ],
   ["note", {},
+    ["noteref", "mynote"],
     ["plain", "Footnote text."]
   ]
 ]

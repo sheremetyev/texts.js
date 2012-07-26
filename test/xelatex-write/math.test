@@ -6,11 +6,13 @@ node ../../bin/texts.js --from textjson --to xelatex
     ["math", "2+2=4"],
     ["plain", "."]
   ],
-  ["displaymath", { "level": 0 },
+  ["formula", { "level": 0 },
     ["plain", "E=mc^2"]
   ]
 ]
 >>>
 text $2+2=4$.
 
-\[E=mc^2\]
+\begin{equation}
+E=mc^2
+\end{equation}

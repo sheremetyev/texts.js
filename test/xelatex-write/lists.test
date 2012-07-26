@@ -1,13 +1,13 @@
 node ../../bin/texts.js --from textjson --to xelatex
 <<<
 ["text",
-  ["listitem", { "level": 1 },
+  ["bulleted", { "level": 1 },
     ["plain", "first item"]
   ],
-  ["listitem", { "level": 1 },
+  ["bulleted", { "level": 1 },
     ["plain", "second item"]
   ],
-  ["listitem", { "level": 2 },
+  ["bulleted", { "level": 2 },
     ["plain", "nested item"]
   ]
 ]

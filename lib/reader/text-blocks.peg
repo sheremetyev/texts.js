@@ -16,7 +16,6 @@ Block
   = Verbatim
   / Formula
   / Divider
-  / Table
   / Note
   / Link
   / Image
@@ -182,38 +181,3 @@ QuoteChar
   c:( (EOL Indent* '  > ') { return ' '; }
     / c:.  { return c; }
   ) { return c; }
-
-/*** Tables ***/
-
-Table
-  = rows:TableRow+ TableDivider
-  { return [].concat.apply([], rows); }
-
-TableDivider
-  = '+' ('-'+ '+')+
-
-TableRow
-  = TableDivider EOL lines:TableLine+
-  {
-    var cells = [];
-    lines.forEach(function (line) {
-      line.forEach(function (cell, index) {
-        cells[index] = ((cells[index] || '') + ' ' + cell.trim()).trim();
-      });
-    });
-    
-    var row = []
-    row.push(['row', { 'level': 1 }, cells.shift() ]);
-    cells.forEach(function (cell) {
-      row.push(['col', { 'level': 2 }, cell ]);
-    });
-    return row;
-  }
-
-TableLine
-  = '|' cells:(TableCellLine)+ EOL
-  { return cells; }
-
-TableCellLine
-  = chars:(!'|' !EOL c:. { return c; })+ '|'
-  { return chars.join(''); }

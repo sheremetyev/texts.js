@@ -2,7 +2,7 @@ node ../../bin/texts.js --from textjson --to xelatex
 <<<
 ["text",
   ["para", { "level": 0 },
-    ["plain", "This line has inline formatting that should be split at 80 characters. "],
+    ["plain", "This line has inline formatting that should be split soon soon soon. "],
     ["emph",  "This line"],
     ["plain", " should be split at 80 characters."]
   ]

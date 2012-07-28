@@ -1,0 +1,18 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["numbered", { "level": 1 },
+    ["plain", "First."]
+  ],
+  ["heading", { "level": 1 },
+    ["plain", "Heading"]
+  ]
+]
+>>>
+\begin{enumerate}
+
+\item First.
+
+\end{enumerate}
+
+\section{Heading}

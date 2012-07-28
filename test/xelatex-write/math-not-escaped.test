@@ -1,0 +1,16 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["math", "\\frac{1}{x}"]
+  ],
+  ["formula", { "level": 0 },
+    ["plain", "\\frac{1}{x} \\text{for $|x|<1$}"]
+  ]
+]
+>>>
+$\frac{1}{x}$
+
+\begin{equation}
+\frac{1}{x} \text{for $|x|<1$}
+\end{equation}

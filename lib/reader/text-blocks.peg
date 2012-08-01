@@ -143,24 +143,24 @@ Para
   { return [['para', { 'level': indents.length }].concat(inlines)]; }
 
 Note
-  = label:NoteLabel inlines:InlinesWithBreaks
-  { return [['note', { 'level': 0 }, label].concat(inlines)]; }
+  = indents:Indent* label:NoteLabel inlines:InlinesWithBreaks
+  { return [['note', { 'level': indents.length }, label].concat(inlines)]; }
 
 NoteLabel
   = '[^' chars:(!']' !EOL c:. { return c; })+ ']: '
   { return ['noteref', chars.join('')]; };
 
 Link
-  = label:LinkLabel inlines:InlinesWithBreaks
-  { return [['link', { 'level': 0 }, label].concat(inlines)]; }
+  = indents:Indent* label:LinkLabel inlines:InlinesWithBreaks
+  { return [['link', { 'level': indents.length }, label].concat(inlines)]; }
 
 LinkLabel
   = '[' !'^' chars:(!']' !EOL c:. { return c; })+ ']: '
   { return ['linkref', chars.join('')]; };
 
 Image
-  = '![](<' url:(!'>' !EOL c:. { return c; })+ '>)'
-  { return [['image', { 'level': 0 }, ['url', url.join('')] ]]; }
+  = indents:Indent* '![](<' url:(!'>' !EOL c:. { return c; })+ '>)'
+  { return [['image', { 'level': indents.length }, ['url', url.join('')] ]]; }
 
 Empty
   = &BlockEnd

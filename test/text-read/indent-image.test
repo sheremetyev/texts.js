@@ -1,0 +1,9 @@
+node ../../bin/texts.js --from text --to textjson
+<<<
+    ![](<Image.png>)
+>>>JSON
+["text",
+  ["image", { "level": 1 },
+    ["url", "Image.png"]
+  ]
+]

@@ -1,0 +1,16 @@
+node ../../bin/texts.js --from textjson --to text
+<<<
+["text",
+  ["note", { "level": 1 },
+    ["noteref", "1"],
+    ["plain", "Footnote."]
+  ],
+  ["link", { "level": 1 },
+    ["linkref", "2"],
+    ["url", "http://www.texts.io/"]
+  ]
+]
+>>>
+    [^1]: Footnote.
+
+    [2]: <http://www.texts.io/>

@@ -64,6 +64,11 @@ indentation in Markdown can represent either structure (second paragraph in a
 list) or style (verbatim block). In Text format indentation represents text
 structure only.
 
+Files in the Text format can be edited in any plain text editor or in a WYSIWYM
+editor [Texts][1].
+
+[1]: <http://www.texts.io/>
+
 TextJSON
 --------
 

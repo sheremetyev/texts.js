@@ -6,4 +6,4 @@ node ../../bin/texts.js --from textjson --to xelatex
   ]
 ]
 >>>
-Plain *emphasis* **strong** `code` [label] <url> \$math\$ \textbackslash.
+Plain *emphasis* **strong** `code` [label] <url> \$math\$ \textbackslash{}.

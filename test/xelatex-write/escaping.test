@@ -6,4 +6,4 @@ node ../../bin/texts.js --from textjson --to xelatex
   ]
 ]
 >>>
-\% \$ \{ \} \_ \# \& \textbackslash \textasciitilde \textasciicircum
+\% \$ \{ \} \_ \# \& \textbackslash{} \textasciitilde{} \textasciicircum{}

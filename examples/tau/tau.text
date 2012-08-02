@@ -10,15 +10,6 @@ the circle constant is $\pi$—but, as mathematician [Bob Palais][1] notes in hi
 delightful article “$\pi$ Is Wrong!”,[^2] $\pi$ *is wrong*. It’s time to set
 things right.
 
-[1]: <http://www.math.utah.edu/~palais>
-
-[^2]: Palais, Robert. “$\pi$ Is Wrong!”, *The Mathematical Intelligencer*,
-Volume 23, Number 3, 2001, pp. 7–8. Many of the arguments in *The Tau Manifesto*
-are based on or are inspired by “$\pi$ Is Wrong!”. It is available online at
-[http://bit.ly/pi-is-wrong][3].
-
-[3]: <http://www.math.utah.edu/~palais/pi.html>
-
 (*Note*: Mathematically sophisticated readers, including those already familiar
 with *The Tau Manifesto*, can skip directly to Section 5, which is part of a
 revision released on Tau Day, 2012. This new section builds an irrefutable case
@@ -31,8 +22,6 @@ We begin repairing the damage wrought by $\pi$ by first understanding the
 notorious number itself. The traditional definition for the circle constant sets
 $\pi$ (pi) equal to the ratio of a circle’s circumference to its diameter:[^4]
 
-[^4]: The symbol $\equiv$ means “is defined as”.
-
 $$
 \pi \equiv \frac{C}{D} = 3.14159265\ldots
 $$
@@ -40,10 +29,6 @@ $$
 The number $\pi$ has many remarkable properties—among other things, it is
 [irrational][5] and indeed [transcendental][6]—and its presence in mathematical
 formulas is widespread.
-
-[5]: <http://en.wikipedia.org/wiki/Irrational_number>
-
-[6]: <http://en.wikipedia.org/wiki/Transcendental_number>
 
 It should be obvious that $\pi$ is not “wrong” in the sense of being factually
 incorrect; the number $\pi$ is perfectly well-defined, and it has all the
@@ -98,6 +83,37 @@ $\pi$. (I mean, [books][10]!) And irrational devotion to $\pi$ has spread even
 to the highest levels of geekdom; for example, on “Pi Day” 2010 [Google][11]
 *changed its logo* to honor $\pi$ (Figure 2).
 
+![](<figures/google-pi-day.png>)
+
+Figure 2: The Google logo on March 14 (3/14), 2010 (“Pi Day”).
+
+Meanwhile, some people memorize dozens, hundreds, even [thousands][12] of digits
+of this mystical number. What kind of sad sack memorizes even 40 digits of $\pi$
+(Figure 3)?[^13]
+
+![](<figures/futurama-math-lecture.png>)
+
+Figure 3: Michael Hartl proves [Matt Groening][17] wrong by reciting $\pi$ to 40
+decimal places.
+
+Truly, proponents of $\tau$ face a mighty opponent. And yet, we have a powerful
+ally—for the truth is on our side.
+
+[1]: <http://www.math.utah.edu/~palais>
+
+[^2]: Palais, Robert. “$\pi$ Is Wrong!”, *The Mathematical Intelligencer*,
+Volume 23, Number 3, 2001, pp. 7–8. Many of the arguments in *The Tau Manifesto*
+are based on or are inspired by “$\pi$ Is Wrong!”. It is available online at
+[http://bit.ly/pi-is-wrong][3].
+
+[3]: <http://www.math.utah.edu/~palais/pi.html>
+
+[^4]: The symbol $\equiv$ means “is defined as”.
+
+[5]: <http://en.wikipedia.org/wiki/Irrational_number>
+
+[6]: <http://en.wikipedia.org/wiki/Transcendental_number>
+
 [7]: <http://www.amazon.com/exec/obidos/ISBN=0802713327/parallaxproductiA/>
 
 [8]: <http://www.amazon.com/Pi-Sky-Counting-Thinking-Being/dp/0198539568>
@@ -107,14 +123,6 @@ to the highest levels of geekdom; for example, on “Pi Day” 2010 [Google][11]
 [10]: <http://www.amazon.com/exec/obidos/ISBN=0387989463/parallaxproductiA/>
 
 [11]: <http://www.google.com/>
-
-![](<figures/google-pi-day.png>)
-
-Figure 2: The Google logo on March 14 (3/14), 2010 (“Pi Day”).
-
-Meanwhile, some people memorize dozens, hundreds, even [thousands][12] of digits
-of this mystical number. What kind of sad sack memorizes even 40 digits of $\pi$
-(Figure 3)?[^13]
 
 [12]: <http://en.wikipedia.org/wiki/Lu_Chao>
 
@@ -131,12 +139,4 @@ and to help them get over their math anxiety. She is also the maintainer of the
 
 [16]: <http://www.futuramamath.com/>
 
-![](<figures/futurama-math-lecture.png>)
-
-Figure 3: Michael Hartl proves [Matt Groening][17] wrong by reciting $\pi$ to 40
-decimal places.
-
 [17]: <http://en.wikipedia.org/wiki/Matt_Groening>
-
-Truly, proponents of $\tau$ face a mighty opponent. And yet, we have a powerful
-ally—for the truth is on our side.

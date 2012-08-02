@@ -1,0 +1,9 @@
+node ../../bin/texts.js --from textjson --to xelatex
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["url", "http://www.texts.io/~user?a=1&b=2#hash"]
+  ]
+]
+>>>
+\url{http://www.texts.io/~user?a=1&b=2#hash}

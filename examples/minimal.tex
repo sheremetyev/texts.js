@@ -13,7 +13,8 @@
 \usepackage{xltxtra}
 
 % select widely available fonts
-\setmainfont{Palatino}
+\setmainfont{Georgia}
+\setmonofont{Courier New}
 
 % set paragraph margins
 \setlength{\parindent}{0pt}
@@ -49,7 +50,7 @@ with Markdown (\href{http://johnmacfarlane.net/pandoc/}{pandoc} dialect).
 \section{Text Formatting}
 
 You can use \emph{emphasis} and \textbf{strong} emphasis. Inline \texttt{code}
-will use monspaced font.
+will use monospaced font.
 
 \begin{verbatim}
 Code blocks use monospaced font as well and preserve line
@@ -58,7 +59,8 @@ breaks
 
 \section{Math}
 
-Math formulas can be used inside paragraph like $E=mc^2$ or on a separate line like the following one.
+Math formulas can be used inside paragraph like $E=mc^2$ or on a separate line
+like the following one.
 
 \begin{equation}
 1+\frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots =
@@ -68,7 +70,7 @@ Math formulas can be used inside paragraph like $E=mc^2$ or on a separate line l
 
 \section{Footnotes}
 
-Footnotes are placed anywhere\footnote{Yes right here.} in the source file but
+Footnotes are placed anywhere\footnote{Yes, right here.} in the source file but
 appear at the bottom of the page.
 
 \section{Hyperlinks}
@@ -76,9 +78,8 @@ appear at the bottom of the page.
 You can add arbitrary hyperlinks. Link \href{http://www.texts.io/}{text} can
 differ from it's URL or be the same as the URL: \url{http://www.google.com/}.
 
-You can include e-mail links:
-\href{mailto:sheremetyev@gmail.com}{sheremetyev@gmail.com}. Local files can be
-\href{run:basic.pdf}{referenced} as well.
+You can include e-mail links: \url{sheremetyev@gmail.com}. Local files can be
+\href{basic.pdf}{referenced} as well.
 
 \section{Images}
 
@@ -108,7 +109,6 @@ You can include e-mail links:
     \end{itemize}
 
 \end{itemize}
-
 
 \begin{enumerate}
 
@@ -140,18 +140,20 @@ Quoted text can include only inline text styles.
 Headings shouldn’t be used.
 \end{quotation}
 
+\hrulefill
+
 \section{Symbol Escaping}
 
 No-break space (Unicode U+00A0) will be converted to tilde symbol for TeX.
 
-\XeTeX{} doesn't need \TeX{} ligatures for quotation marks, em-dash and other
+XeTeX doesn't need TeX ligatures for quotation marks, em-dash and other
 typographic symbols—they can be ‘used’ “directly”. Euro symbol can be used for
 as less as €10. Ellipsis… in the text should be a Unicode character.
 
-Should \TeX{} ligatures be ``used''—they will be printed <<as is>>.
+Should TeX ligatures be ``used''—they will be printed <<as is>>.
 
-\TeX{} special symbols are automatically escaped: \%, \$, \{, \}, \_, \#,
-\&, \textbackslash, \textasciitilde, \textasciicircum.
+TeX special symbols are automatically escaped: \%, \$, \{, \}, \_, \#, \&,
+\textbackslash{}, \textasciitilde{}, \textasciicircum{}.
 
 HTML entites don't have to be escaped: \&, <, >.
 

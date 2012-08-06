@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from textjson --to text
+node ../../bin/texts.js --from json --to text
 <<<
 ["text",
   ["image", { "level": 0 },

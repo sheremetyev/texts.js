@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from textjson --to text | node ../../bin/texts.js --from text --to textjson
+node ../../bin/texts.js --from json --to text | node ../../bin/texts.js --from text --to json
 <<<>>>JSON
 ["text",
   ["bulleted", { "level": 0 },

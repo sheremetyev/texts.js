@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from textjson --to xelatex
+node ../../bin/texts.js --from json --to xelatex
 <<<
 ["text",
   ["verbatim", { "level": 1 },

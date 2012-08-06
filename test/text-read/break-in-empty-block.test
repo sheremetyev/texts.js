@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from text --to textjson
+node ../../bin/texts.js --from text --to json
 <<<
   
 

@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from textjson --to html5
+node ../../bin/texts.js --from json --to html5
 <<<
 ["text",
   ["heading", { "level": 1 },

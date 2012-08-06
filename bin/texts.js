@@ -3,8 +3,8 @@
 var nopt = require('nopt');
 var options = {
   'help': Boolean,
-  'from' : [ 'textjson', 'text' ],
-  'to' :   [ 'textjson', 'text', 'xelatex', 'html5' ],
+  'from' : [ 'json', 'text' ],
+  'to' :   [ 'json', 'text', 'xelatex', 'html5' ],
   'standalone' : Boolean,
 };
 var shorthands = {

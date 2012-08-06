@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from text --to textjson
+node ../../bin/texts.js --from text --to json
 <<<
 Plain *emphasis* plain **strong** plain `code` plain [link][1] plain [^1] plain <url>.
 >>>JSON

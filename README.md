@@ -83,7 +83,7 @@ attribute “level” with zero being the level of the main text, positive level
 for nested elements and negative levels for headings.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$ texts --from text --to textjson
+$ texts --from text --to json
 *Hello* world!
 ^D
 ["text",

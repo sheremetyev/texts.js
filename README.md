@@ -14,10 +14,10 @@ Usage
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $ npm install texts
-$ texts
+$ texts --from text --to html5
 *Hello* world!
 ^D
-<p><i>Hello<i> world!</p>
+<p><em>Hello<em> world!</p>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For information on options use the following command.
@@ -83,13 +83,15 @@ attribute “level” with zero being the level of the main text, positive level
 for nested elements and negative levels for headings.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-$ texts --to textjson
+$ texts --from text --to textjson
 *Hello* world!
 ^D
 ["text",
+
   ["para", { "level": 0 },
     ["emph", "Hello"],
     ["plain", " world!"]
   ]
+
 ]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

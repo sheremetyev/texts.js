@@ -1,34 +1,34 @@
 node ../../bin/texts.js --from textjson --to text
 <<<
 ["text",
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Item."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Item."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Item."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Item."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Item."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Item."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Item."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Item."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Item."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Last item."]
   ]
 ]

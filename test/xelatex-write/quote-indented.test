@@ -1,7 +1,7 @@
 node ../../bin/texts.js --from textjson --to xelatex
 <<<
 ["text",
-  ["quote", { "level": 2 },
+  ["quote", { "level": 1 },
     ["plain", "Extra levels of indentation are ignored when not in lists."]
   ]
 ]

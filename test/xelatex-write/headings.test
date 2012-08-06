@@ -1,13 +1,13 @@
 node ../../bin/texts.js --from textjson --to xelatex
 <<<
 ["text",
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Heading"]
   ],
-  ["heading", { "level": 2 },
+  ["heading", { "level": -2 },
     ["plain", "Subheading"]
   ],
-  ["heading", { "level": 3 },
+  ["heading", { "level": -1 },
     ["plain", "Subsubheading"]
   ]
 ]

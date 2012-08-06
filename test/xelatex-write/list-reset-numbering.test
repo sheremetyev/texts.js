@@ -1,13 +1,13 @@
 node ../../bin/texts.js --from textjson --to xelatex
 <<<
 ["text",
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "First."]
   ],
   ["para", { "level": 0 },
     ["plain", "Second."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Third."]
   ]
 ]

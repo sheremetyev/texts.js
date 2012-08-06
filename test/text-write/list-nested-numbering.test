@@ -1,19 +1,19 @@
 node ../../bin/texts.js --from textjson --to text
 <<<
 ["text",
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "First."]
   ],
-  ["numbered", { "level": 2 },
+  ["numbered", { "level": 1 },
     ["plain", "Second."]
   ],
-  ["numbered", { "level": 2 },
+  ["numbered", { "level": 1 },
     ["plain", "Third."]
   ],
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Fourth."]
   ],
-  ["numbered", { "level": 2 },
+  ["numbered", { "level": 1 },
     ["plain", "Fifth."]
   ]
 ]

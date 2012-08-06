@@ -75,21 +75,21 @@ Heading
 
 Heading1
   = inlines:Inline Heading1Bottom
-  { return [['heading', { 'level': 1 }, inlines]]; }
+  { return [['heading', { 'level': -3 }, inlines]]; }
 
 Heading1Bottom
   = EOL '='+ &BlockEnd
 
 Heading2
   = inlines:Inline Heading2Bottom
-  { return [['heading', { 'level': 2 }, inlines]]; }
+  { return [['heading', { 'level': -2 }, inlines]]; }
 
 Heading2Bottom
   = EOL '-'+ &BlockEnd
 
 Heading3
   = '### ' inlines:Inline
-  { return [['heading', { 'level': 3 }, inlines]]; }
+  { return [['heading', { 'level': -1 }, inlines]]; }
 
 /*** Verbatim ***/
 
@@ -123,11 +123,11 @@ FormulaBreak
 
 Bulleted
   = indents:Indent*  '  * ' inlines:InlinesWithBreaks
-  { return [['bulleted', { 'level': indents.length + 1 }].concat(inlines)]; }
+  { return [['bulleted', { 'level': indents.length }].concat(inlines)]; }
 
 Numbered
   = indents:Indent*  (' ' / Digit) Digit+ '. ' inlines:InlinesWithBreaks
-  { return [['numbered', { 'level': indents.length + 1 }].concat(inlines)]; }
+  { return [['numbered', { 'level': indents.length }].concat(inlines)]; }
 
 Digit
   = [0-9]
@@ -170,7 +170,7 @@ Empty
 
 Quote
   = &'  > ' inlines:(QuoteInline / Break)+
-  { return [['quote', { 'level': 1 }].concat(inlines)]; }
+  { return [['quote', { 'level': 0 }].concat(inlines)]; }
 
 QuoteInline
   = lines:('  > ' chars:QuoteChar+ { return chars.join(''); })+

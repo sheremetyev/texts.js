@@ -4,7 +4,7 @@ node ../../bin/texts.js --from text --to textjson
   > text.
 >>>JSON
 ["text",
-  ["quote", { "level": 1 },
+  ["quote", { "level": 0 },
     ["plain", "Quotation text."]
   ]
 ]

@@ -6,7 +6,7 @@ node ../../bin/texts.js --from textjson --to xelatex
     ["noteref", "mynote"],
     ["plain", "."]
   ],
-  ["note", {},
+  ["note", { "level": 0 },
     ["noteref", "mynote"],
     ["plain", "Footnote text."]
   ]

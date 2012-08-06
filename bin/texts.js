@@ -15,7 +15,7 @@ var shorthands = {
 };
 var parsed = nopt(options, shorthands);
 
-if (parsed.help) {
+if (parsed.help || !parsed.from || !parsed.to) {
   console.log([
     'Usage: texts [OPTIONS] [FILES]',
     '',
@@ -28,8 +28,6 @@ if (parsed.help) {
   process.exit(1);
 }
 
-parsed.from = parsed.from || 'textjson';
-parsed.to   = parsed.to   || 'html5';
 parsed.standalone = parsed.standalone || false;
 
 var writerOptions = { standalone: parsed.standalone };

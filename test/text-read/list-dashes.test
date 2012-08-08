@@ -1,19 +1,19 @@
-node ../../bin/texts.js --from json --to text
+node ../../bin/texts.js --from text --to json
 <<<
+  - First.
+
+      - Second.
+
+          - Third.
+>>>JSON
 ["text",
   ["bulleted", { "level": 0 },
     ["plain", "First."]
   ],
-  ["numbered", { "level": 1 },
+  ["bulleted", { "level": 1 },
     ["plain", "Second."]
   ],
   ["bulleted", { "level": 2 },
     ["plain", "Third."]
   ]
 ]
->>>
-  - First.
-
-     1. Second.
-
-          - Third.

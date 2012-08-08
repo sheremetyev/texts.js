@@ -122,7 +122,7 @@ FormulaBreak
 /*** Lists ***/
 
 Bulleted
-  = indents:Indent*  '  * ' inlines:InlinesWithBreaks
+  = indents:Indent*  ('  - ' / '  * ') inlines:InlinesWithBreaks
   { return [['bulleted', { 'level': indents.length }].concat(inlines)]; }
 
 Numbered

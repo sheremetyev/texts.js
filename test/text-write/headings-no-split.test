@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from json --to text
+<<<
+["text",
+  ["heading", { "level": -3 },
+    ["plain", "Heading should not be splitted even it if is a long one. Otherwise other parsers don't recognize it."]
+  ]
+]
+>>>
+Heading should not be splitted even it if is a long one. Otherwise other parsers don't recognize it.
+====================================================================================================

@@ -1,0 +1,14 @@
+node ../../bin/texts.js --from json --to text
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["emph", "only required symbols (like * here) are escaped"],
+    ["plain", " "],
+    ["code", "others * can be $ left [as] is"],
+    ["plain", " "],
+    ["math", "especially * in `math` \\ regions"]
+  ]
+]
+>>>
+*only required symbols (like \* here) are escaped* `others * can be $ left [as]
+is` $especially * in `math` \ regions$

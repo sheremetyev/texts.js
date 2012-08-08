@@ -1,0 +1,11 @@
+node ../../bin/texts.js --from json --to text
+<<<
+["text",
+  ["link", { "level": 0 },
+    ["linkref", "something"],
+    ["plain", "The first line contains long prefix due to the note reference but should be split at 80 characters anyway."]
+  ]
+]
+>>>
+[something]: The first line contains long prefix due to the note reference but
+should be split at 80 characters anyway.

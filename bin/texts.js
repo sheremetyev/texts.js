@@ -6,6 +6,7 @@ var options = {
   'from' : [ 'json', 'text' ],
   'to' :   [ 'json', 'text', 'xelatex', 'html5' ],
   'standalone' : Boolean,
+  'wrap' : Boolean,
 };
 var shorthands = {
   'h' : '--help',
@@ -23,14 +24,16 @@ if (parsed.help || !parsed.from || !parsed.to) {
     '  -f FORMAT             --from=FORMAT',
     '  -t FORMAT             --to=FORMAT',
     '  -s                    --standalone',
+    '                        --no-wrap',
     '  -h                    --help',
   ].join('\n'));
   process.exit(1);
 }
 
 parsed.standalone = parsed.standalone || false;
+parsed.wrap = (typeof parsed.wrap !== 'undefined') ? parsed.wrap : true;
 
-var writerOptions = { standalone: parsed.standalone };
+var writerOptions = { standalone: parsed.standalone, wrap: parsed.wrap };
 
 // option parsing completed
 

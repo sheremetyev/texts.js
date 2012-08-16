@@ -1,0 +1,9 @@
+node ../../bin/texts.js --from json --to text --no-wrap
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "This line should not be split at 80 characters. This line should not be split at 80 characters."]
+  ]
+]
+>>>
+This line should not be split at 80 characters. This line should not be split at 80 characters.

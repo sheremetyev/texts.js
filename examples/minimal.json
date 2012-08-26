@@ -1,6 +1,6 @@
 ["text",
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Minimal Texts.js Sample"]
   ],
 
@@ -16,19 +16,19 @@
     ["url", "http://johnmacfarlane.net/pandoc/"]
   ],
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Headings"]
   ],
 
-  ["heading", { "level": 2 },
+  ["heading", { "level": -2 },
     ["plain", "Subsection Heading"]
   ],
 
-  ["heading", { "level": 3 },
+  ["heading", { "level": -1 },
     ["plain", "Subsubsection"]
   ],
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Text Formatting"]
   ],
 
@@ -48,7 +48,7 @@
     ["plain", "breaks"]
   ],
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Math"]
   ],
 
@@ -66,7 +66,7 @@
     ["plain", "\\quad\\quad \\text{for $|q|<1$}"]
   ],
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Footnotes"]
   ],
 
@@ -81,7 +81,7 @@
     ["plain", "Yes, right here."]
   ],
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Hyperlinks"]
   ],
 
@@ -113,7 +113,7 @@
     ["url", "basic.pdf"]
   ],
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Images"]
   ],
 
@@ -121,58 +121,58 @@
     ["url", "Texts_Logo.png"]
   ],
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Lists"]
   ],
 
-  ["bulleted", { "level": 1 },
+  ["bulleted", { "level": 0 },
     ["plain", "First bulleted item."]
   ],
 
-  ["bulleted", { "level": 1 },
+  ["bulleted", { "level": 0 },
     ["plain", "Second bulleted item."]
   ],
 
-  ["bulleted", { "level": 2 },
+  ["bulleted", { "level": 1 },
     ["plain", "Subitem."]
   ],
 
-  ["bulleted", { "level": 3 },
+  ["bulleted", { "level": 2 },
     ["plain", "Subsubitem."]
   ],
 
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "First numbered item."]
   ],
 
-  ["numbered", { "level": 1 },
+  ["numbered", { "level": 0 },
     ["plain", "Second numbered item."]
   ],
 
-  ["numbered", { "level": 2 },
+  ["numbered", { "level": 1 },
     ["plain", "Subitem."]
   ],
 
-  ["numbered", { "level": 3 },
+  ["numbered", { "level": 2 },
     ["plain", "Subsubitem."]
   ],
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Quoting"]
   ],
 
-  ["quote", { "level": 1 },
+  ["quote", { "level": 0 },
     ["plain", "Quoted text can include only inline text styles."]
   ],
 
-  ["quote", { "level": 1 },
+  ["quote", { "level": 0 },
     ["plain", "Headings shouldn’t be used."]
   ],
 
   ["divider", { "level": 0 }
   ],
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Symbol Escaping"]
   ],
 
@@ -196,31 +196,31 @@
     ["plain", "HTML entites don't have to be escaped: &, <, >."]
   ],
 
-  ["heading", { "level": 1 },
+  ["heading", { "level": -3 },
     ["plain", "Future Extensions"]
   ],
 
-  ["bulleted", { "level": 1 },
+  ["bulleted", { "level": 0 },
     ["plain", "Definition lists."]
   ],
 
-  ["bulleted", { "level": 1 },
+  ["bulleted", { "level": 0 },
     ["plain", "Titles for images, tables and formulas."]
   ],
 
-  ["bulleted", { "level": 1 },
+  ["bulleted", { "level": 0 },
     ["plain", "Cross-references."]
   ],
 
-  ["bulleted", { "level": 1 },
+  ["bulleted", { "level": 0 },
     ["plain", "Bibliographic citations."]
   ],
 
-  ["bulleted", { "level": 1 },
+  ["bulleted", { "level": 0 },
     ["plain", "Comments."]
   ],
 
-  ["bulleted", { "level": 1 },
+  ["bulleted", { "level": 0 },
     ["plain", "Custom labels for blocks."]
   ]
 

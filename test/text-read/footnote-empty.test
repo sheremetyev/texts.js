@@ -1,0 +1,9 @@
+node ../../bin/texts.js --from text --to json
+<<<
+[^1]:
+>>>JSON
+["text",
+  ["note", { "level": 0 },
+    ["noteref", "1"]
+  ]
+]

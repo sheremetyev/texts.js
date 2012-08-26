@@ -135,11 +135,11 @@ FormulaBreak
 /*** Lists ***/
 
 Bulleted
-  = indents:Indent* NotIndent? ('- ' / '* ') ' '* inlines:InlinesWithBreaks
+  = indents:Indent* NotIndent? ('-' / '*') ' '+ inlines:InlinesWithBreaks
   { return [['bulleted', { 'level': indents.length }].concat(inlines)]; }
 
 Numbered
-  = indents:Indent* NotIndent? Digit+ '. '  ' '* inlines:InlinesWithBreaks
+  = indents:Indent* NotIndent? Digit+ '.'  ' '+ inlines:InlinesWithBreaks
   { return [['numbered', { 'level': indents.length }].concat(inlines)]; }
 
 Digit

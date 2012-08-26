@@ -6,5 +6,5 @@ node ../../bin/texts.js --from json --to text
   ]
 ]
 >>>
-      > Quotation text should be wrapped at 80 character border as well, with
-      > the ‘greater’ sign at the start of each line.
+    >   Quotation text should be wrapped at 80 character border as well, with
+    >   the ‘greater’ sign at the start of each line.

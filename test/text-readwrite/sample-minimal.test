@@ -68,28 +68,28 @@ Images
 Lists
 =====
 
-  - First bulleted item.
+-   First bulleted item.
 
-  - Second bulleted item.
+-   Second bulleted item.
 
-      - Subitem.
+    -   Subitem.
 
-          - Subsubitem.
+        -   Subsubitem.
 
- 1. First numbered item.
+1.  First numbered item.
 
- 2. Second numbered item.
+2.  Second numbered item.
 
-     1. Subitem.
+    1.  Subitem.
 
-         1. Subsubitem.
+        1.  Subsubitem.
 
 Quoting
 =======
 
-  > Quoted text can include only inline text styles.
+>   Quoted text can include only inline text styles.
 
-  > Headings shouldn’t be used.
+>   Headings shouldn’t be used.
 
 --------------------------------------------------------------------------------
 
@@ -111,14 +111,14 @@ HTML entites don't have to be escaped: &, <, >.
 Future Extensions
 =================
 
-  - Definition lists.
+-   Definition lists.
 
-  - Titles for images, tables and formulas.
+-   Titles for images, tables and formulas.
 
-  - Cross-references.
+-   Cross-references.
 
-  - Bibliographic citations.
+-   Bibliographic citations.
 
-  - Comments.
+-   Comments.
 
-  - Custom labels for blocks.
+-   Custom labels for blocks.

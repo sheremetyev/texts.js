@@ -6,5 +6,5 @@ node ../../bin/texts.js --from json --to text
   ]
 ]
 >>>
-  - This line should be indented 4 spaces and split at 80 characters. This line
+-   This line should be indented 4 spaces and split at 80 characters. This line
     should be split at 80 characters.

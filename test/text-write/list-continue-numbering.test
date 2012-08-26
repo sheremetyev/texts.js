@@ -12,8 +12,8 @@ node ../../bin/texts.js --from json --to text
   ]
 ]
 >>>
- 1. First.
+1.  First.
 
     Second.
 
- 2. Third.
+2.  Third.

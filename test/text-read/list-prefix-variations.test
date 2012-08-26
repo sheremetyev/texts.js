@@ -1,0 +1,49 @@
+node ../../bin/texts.js --from text --to json
+<<<
+   - Zeroth.
+
+  - First.
+
+ -  Second.
+
+-   Third.
+
+ 1. Fourth.
+
+1.  Fifth.
+
+100. Sixth.
+
+  1. Seventh.
+
+   1. Eighth.
+>>>JSON
+["text",
+  ["bulleted", { "level": 0 },
+    ["plain", "Zeroth."]
+  ],
+  ["bulleted", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["bulleted", { "level": 0 },
+    ["plain", "Second."]
+  ],
+  ["bulleted", { "level": 0 },
+    ["plain", "Third."]
+  ],
+  ["numbered", { "level": 0 },
+    ["plain", "Fourth."]
+  ],
+  ["numbered", { "level": 0 },
+    ["plain", "Fifth."]
+  ],
+  ["numbered", { "level": 0 },
+    ["plain", "Sixth."]
+  ],
+  ["numbered", { "level": 0 },
+    ["plain", "Seventh."]
+  ],
+  ["numbered", { "level": 0 },
+    ["plain", "Eighth."]
+  ]
+]

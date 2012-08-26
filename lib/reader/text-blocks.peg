@@ -74,7 +74,9 @@ Dashes
 Heading
   = Heading1
   / Heading2
-  / Heading3
+  / Heading1Atx
+  / Heading2Atx
+  / Heading3Atx
 
 Heading1
   = inlines:Inline Heading1Bottom
@@ -90,7 +92,15 @@ Heading2
 Heading2Bottom
   = EOL '-'+ &BlockEnd
 
-Heading3
+Heading1Atx
+  = '# ' inlines:Inline
+  { return [['heading', { 'level': -3 }, inlines]]; }
+
+Heading2Atx
+  = '## ' inlines:Inline
+  { return [['heading', { 'level': -2 }, inlines]]; }
+
+Heading3Atx
   = '### ' inlines:Inline
   { return [['heading', { 'level': -1 }, inlines]]; }
 

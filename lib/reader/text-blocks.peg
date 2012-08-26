@@ -182,15 +182,15 @@ Empty
 /*** Quotes ***/
 
 Quote
-  = &'  > ' inlines:(QuoteInline / Break)+
+  = &(NotIndent? '>' ' '+) inlines:(QuoteInline / Break)+
   { return [['quote', { 'level': 0 }].concat(inlines)]; }
 
 QuoteInline
-  = lines:('  > ' chars:QuoteChar+ { return chars.join(''); })+
+  = lines:(NotIndent? '>' ' '+ chars:QuoteChar+ { return chars.join(''); })+
   { return lines.join(''); }
 
 QuoteChar
   = !BlockEnd !Break
-  c:( (EOL Indent* '  > ') { return ' '; }
+  c:( (EOL Indent* NotIndent? '>' ' '+) { return ' '; }
     / c:.  { return c; }
   ) { return c; }

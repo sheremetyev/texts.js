@@ -1,0 +1,34 @@
+node ../../bin/texts.js --from text --to json
+<<<
+> One
+
+>  Two
+
+>   Three
+
+ >  Four
+
+  > Five
+
+   > Six
+>>>JSON
+["text",
+  ["quote", { "level": 0 },
+    ["plain", "One"]
+  ],
+  ["quote", { "level": 0 },
+    ["plain", "Two"]
+  ],
+  ["quote", { "level": 0 },
+    ["plain", "Three"]
+  ],
+  ["quote", { "level": 0 },
+    ["plain", "Four"]
+  ],
+  ["quote", { "level": 0 },
+    ["plain", "Five"]
+  ],
+  ["quote", { "level": 0 },
+    ["plain", "Six"]
+  ]
+]

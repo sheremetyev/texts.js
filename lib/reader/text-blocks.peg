@@ -160,7 +160,7 @@ Note
   { return [['note', { 'level': indents.length }, label].concat(inlines)]; }
 
 NoteLabel
-  = '[^' chars:(!']' !EOL c:. { return c; })+ ']: '
+  = '[^' chars:(!']' !EOL c:. { return c; })* ']: '
   { return ['noteref', chars.join('')]; };
 
 Link
@@ -168,7 +168,7 @@ Link
   { return [['link', { 'level': indents.length }, label].concat(inlines)]; }
 
 LinkLabel
-  = '[' !'^' chars:(!']' !EOL c:. { return c; })+ ']: '
+  = '[' !'^' chars:(!']' !EOL c:. { return c; })* ']: '
   { return ['linkref', chars.join('')]; };
 
 Image

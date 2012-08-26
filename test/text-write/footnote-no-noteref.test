@@ -1,0 +1,12 @@
+node ../../bin/texts.js --from json --to text
+<<<
+["text",
+  ["note", { "level": 0 },
+    ["plain", "Footnote."]
+  ],
+  ["note", { "level": 0 }]
+]
+>>>
+[^]: Footnote.
+
+[^]: 

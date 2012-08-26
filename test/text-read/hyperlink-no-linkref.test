@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from text --to json
+<<<
+[]: <http://www.texts.io/>
+>>>JSON
+["text",
+  ["link", { "level": 0 },
+    ["linkref", ""],
+    ["url", "http://www.texts.io/"]
+  ]
+]

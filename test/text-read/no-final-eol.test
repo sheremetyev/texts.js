@@ -1,0 +1,8 @@
+node ../../bin/texts.js --from text --to json
+<<<
+No EOL.>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "No EOL."]
+  ]
+]

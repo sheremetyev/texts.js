@@ -9,8 +9,8 @@
 }
 
 Blocks
-  = blocks:(b:Block BlockEnd { return b; })*
-  { return [].concat.apply([], blocks); }
+  = first:Block? blocks:(FinalEOL { return []; } / BlockEnd b:Block { return b; })*
+  { return [].concat.apply(first, blocks); }
 
 Block
   = Verbatim
@@ -38,7 +38,10 @@ EOL
   = '\n' / '\r' '\n'?
 
 BlockEnd
-  = (EOL EOL) / (EOL EOF)
+  = EOL EOL
+
+FinalEOL
+  = EOL EOF
 
 Break
   = '  ' EOL
@@ -55,7 +58,7 @@ Inline
   { return chars.join(''); };
 
 Char
-  = !Heading1Bottom !Heading2Bottom !BlockEnd !Break
+  = !Heading1Bottom !Heading2Bottom !BlockEnd !Break !FinalEOL
   c:( (EOL Indent*) { return ' '; }
     / c:.  { return c; }
   ) { return c; }
@@ -185,7 +188,7 @@ QuoteInline
   { return lines.join(''); }
 
 QuoteChar
-  = !BlockEnd !Break
+  = !BlockEnd !Break !FinalEOL
   c:( (EOL Indent* NotIndent? '>' ' '+) { return ' '; }
     / c:.  { return c; }
   ) { return c; }

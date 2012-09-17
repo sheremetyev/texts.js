@@ -1,0 +1,19 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+1.  First.
+
+    1.  Second.
+
+        1.  Third.
+>>>JSON
+["text",
+  ["numbered", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["numbered", { "level": 1 },
+    ["plain", "Second."]
+  ],
+  ["numbered", { "level": 2 },
+    ["plain", "Third."]
+  ]
+]

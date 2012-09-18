@@ -15,8 +15,6 @@ Plain *`emphasis code`* plain `**code strong**` plain [*link emphasis*][1] plain
     ["linkref", "1"],
     ["plain", " plain "],
     ["linktext", "emphasis link"],
-    ["linkref", "1"],
-    ["plain", " plain "],
     ["linkref", "2"],
     ["plain", "."]
   ],

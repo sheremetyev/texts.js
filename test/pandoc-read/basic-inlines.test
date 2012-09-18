@@ -19,7 +19,7 @@ Plain *emphasis* plain **strong** plain `code` plain [link][1] plain [^1] plain
     ["linktext", "link"],
     ["linkref", "1"],
     ["plain", " plain "],
-    ["noteref", "1"],
+    ["noteref", "2"],
     ["plain", " plain "],
     ["url", "http://texts.io"],
     ["plain", "."]
@@ -29,7 +29,7 @@ Plain *emphasis* plain **strong** plain `code` plain [link][1] plain [^1] plain
     ["plain", "Link."]
   ],
   ["note", { "level": 0 },
-    ["noteref", "1"],
+    ["noteref", "2"],
     ["plain", "Footnote."]
   ]
 ]

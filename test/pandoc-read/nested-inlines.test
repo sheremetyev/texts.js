@@ -2,7 +2,7 @@ pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to js
 <<<
 Plain *`emphasis code`* plain `**code strong**` plain [*link emphasis*][1] plain *[emphasis link][1]*.
 
-[1]: Link.
+[1]: http://texts.io
 >>>JSON
 ["text",
   ["para", { "level": 0 },
@@ -20,10 +20,10 @@ Plain *`emphasis code`* plain `**code strong**` plain [*link emphasis*][1] plain
   ],
   ["link", { "level": 0 },
     ["linkref", "1"],
-    ["plain", "Link."]
+    ["url", "http://texts.io"]
   ],
   ["link", { "level": 0 },
     ["linkref", "2"],
-    ["plain", "Link."]
+    ["url", "http://texts.io"]
   ]
 ]

@@ -3,7 +3,7 @@ pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to js
 Plain *emphasis* plain **strong** plain `code` plain [link][1] plain [^1] plain
 <http://texts.io>.
 
-[1]: Link.
+[1]: http://texts.io
 
 [^1]: Footnote.
 >>>JSON
@@ -26,7 +26,7 @@ Plain *emphasis* plain **strong** plain `code` plain [link][1] plain [^1] plain
   ],
   ["link", { "level": 0 },
     ["linkref", "1"],
-    ["plain", "Link."]
+    ["url", "http://texts.io"]
   ],
   ["note", { "level": 0 },
     ["noteref", "2"],

@@ -1,6 +1,7 @@
 pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
 <<<
-Plain *emphasis* plain **strong** plain `code` plain [link][1] plain [^1] plain <url>.
+Plain *emphasis* plain **strong** plain `code` plain [link][1] plain [^1] plain
+<http://texts.io>.
 
 [1]: Link.
 
@@ -20,7 +21,7 @@ Plain *emphasis* plain **strong** plain `code` plain [link][1] plain [^1] plain 
     ["plain", " plain "],
     ["noteref", "1"],
     ["plain", " plain "],
-    ["url", "url"],
+    ["url", "http://texts.io"],
     ["plain", "."]
   ],
   ["link", { "level": 0 },

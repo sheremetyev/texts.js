@@ -9,7 +9,7 @@ Plain *`emphasis code`* plain `**code strong**` plain [*link emphasis*][1] plain
     ["plain", "Plain "],
     ["emph", "emphasis code"],
     ["plain", " plain "],
-    ["code", "code strong"],
+    ["code", "**code strong**"],
     ["plain", " plain "],
     ["linktext", "link emphasis"],
     ["linkref", "1"],
@@ -17,11 +17,15 @@ Plain *`emphasis code`* plain `**code strong**` plain [*link emphasis*][1] plain
     ["linktext", "emphasis link"],
     ["linkref", "1"],
     ["plain", " plain "],
-    ["noteref", "1"],
+    ["linkref", "2"],
     ["plain", "."]
   ],
   ["link", { "level": 0 },
     ["linkref", "1"],
+    ["plain", "Link."]
+  ],
+  ["link", { "level": 0 },
+    ["linkref", "2"],
     ["plain", "Link."]
   ]
 ]

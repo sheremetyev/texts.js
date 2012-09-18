@@ -1,0 +1,28 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+Reference [^1].
+
+[^1]: Footnote.
+
+Inline ^[Footnote].
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Reference "],
+    ["noteref", "1"],
+    ["plain", "."]
+  ],
+  ["note", { "level": 0 },
+    ["noteref", "1"],
+    ["plain", "Footnote."]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Inline "],
+    ["noteref", "2"],
+    ["plain", "."]
+  ],
+  ["note", { "level": 0 },
+    ["noteref", "2"],
+    ["plain", "Footnote."]
+  ]
+]

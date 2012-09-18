@@ -1,0 +1,34 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+Plain *emphasis* plain **strong** plain `code` plain [link][1] plain [^1] plain <url>.
+
+[1]: Link.
+
+[^1]: Footnote.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Plain "],
+    ["emph", "emphasis"],
+    ["plain", " plain "],
+    ["strong", "strong"],
+    ["plain", " plain "],
+    ["code", "code"],
+    ["plain", " plain "],
+    ["linktext", "link"],
+    ["linkref", "1"],
+    ["plain", " plain "],
+    ["noteref", "1"],
+    ["plain", " plain "],
+    ["url", "url"],
+    ["plain", "."]
+  ],
+  ["link", { "level": 0 },
+    ["linkref", "1"],
+    ["plain", "Link."]
+  ],
+  ["note", { "level": 0 },
+    ["noteref", "1"],
+    ["plain", "Footnote."]
+  ]
+]

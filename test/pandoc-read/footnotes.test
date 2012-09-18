@@ -4,7 +4,7 @@ Reference [^1].
 
 [^1]: Footnote.
 
-Inline ^[Footnote].
+Inline ^[Footnote.].
 >>>JSON
 ["text",
   ["para", { "level": 0 },

@@ -7,7 +7,7 @@ Plain *`emphasis code`* plain `**code strong**` plain [*link emphasis*][1] plain
 ["text",
   ["para", { "level": 0 },
     ["plain", "Plain "],
-    ["emph", "emphasis code"],
+    ["code", "emphasis code"],
     ["plain", " plain "],
     ["code", "**code strong**"],
     ["plain", " plain "],

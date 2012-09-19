@@ -1,0 +1,14 @@
+node ../../bin/texts.js --from pandoc --to json
+<<<
+[{"docTitle":[],"docAuthors":[],"docDate":[]},
+ [{"Para":[{"Str":"Text"},"LineBreak",{"Str":" "},"LineBreak",{"Str":"text."}]}]]
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Text"],
+    ["break", "\n"],
+    ["plain", " "],
+    ["break", "\n"],
+    ["plain", "text."]
+  ]
+]

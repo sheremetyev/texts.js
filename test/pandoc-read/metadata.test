@@ -1,0 +1,20 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+% Title
+% Author1;Author2
+% Date
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Title"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Author1"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Author2"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Date"]
+  ]
+]

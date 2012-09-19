@@ -1,0 +1,18 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+Text [link $x$ link][1].
+
+[1]: http://texts.io
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Text "],
+    ["linktext", "link x link"],
+    ["linkref", "1"],
+    ["plain", "."]
+  ],
+  ["link", { "level": 0 },
+    ["linkref", "1"],
+    ["url", "http://texts.io"]
+  ]
+]

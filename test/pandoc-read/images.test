@@ -1,0 +1,20 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+Text ![la lune](lalune.jpg "Voyage to the moon") text.
+
+![This is the caption](/url/of/image.png)
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Text "]
+  ],
+  ["image", { "level": 0 },
+    ["url", "lalune.jpg"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", " text."]
+  ],
+  ["image", { "level": 0 },
+    ["url", "/url/of/image.png"]
+  ]
+]

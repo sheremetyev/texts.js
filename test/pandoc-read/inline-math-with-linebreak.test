@@ -1,0 +1,12 @@
+pandoc --from latex --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+Text $a \in
+b$ text.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Text "],
+    ["math", "a \\in b"],
+    ["plain", " text."]
+  ]
+]

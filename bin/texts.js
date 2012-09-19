@@ -3,7 +3,7 @@
 var nopt = require('nopt');
 var options = {
   'help': Boolean,
-  'from' : [ 'json', 'text' ],
+  'from' : [ 'json', 'text', 'pandoc' ],
   'to' :   [ 'json', 'text', 'xelatex', 'html5' ],
   'standalone' : Boolean,
   'wrap' : Boolean,

@@ -1,0 +1,18 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+Text $$E=mc^2$$ $$E=mc^2$$ text.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Text "]
+  ],
+  ["formula", { "level": 0 },
+    ["plain", "E=mc^2"]
+  ],
+  ["formula", { "level": 0 },
+    ["plain", "E=mc^2"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", " text."]
+  ]
+]

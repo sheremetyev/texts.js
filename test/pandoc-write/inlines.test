@@ -1,0 +1,15 @@
+node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdown
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Plain "],
+    ["emph", "emphasis"],
+    ["plain", " plain "],
+    ["strong", "strong"],
+    ["plain", " plain "],
+    ["code", "code"],
+    ["plain", " plain."]
+  ]
+]
+>>>
+Plain *emphasis* plain **strong** plain `code` plain.

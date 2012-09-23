@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdown
+node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdown --reference-links
 <<<
 ["text",
   ["para", { "level": 0 },
@@ -16,8 +16,8 @@ node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdo
   ]
 ]
 >>>
-Reference [style][1].
-
-[1]: <http://www.texts.io/>
+Reference [style][].
 
 Not a [reference] [link] due to the space.
+
+  [style]: http://www.texts.io/

@@ -2,11 +2,6 @@ node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdo
 <<<
 ["text",
   ["para", { "level": 0 },
-    ["plain", "Simple "],
-    ["url", "http://www.texts.io/"],
-    ["plain", "."]
-  ],
-  ["para", { "level": 0 },
     ["plain", "Reference "],
     ["linktext", "style"],
     ["linkref", "1"],
@@ -21,8 +16,6 @@ node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdo
   ]
 ]
 >>>
-Simple <http://www.texts.io/>.
-
 Reference [style][1].
 
 [1]: <http://www.texts.io/>

@@ -8,5 +8,5 @@ node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdo
   ]
 ]
 >>>
-First line with two spaces  
+First line with two spaces\
 second line.

@@ -1,0 +1,21 @@
+node ../../bin/texts.js --from text --to pandoc | pandoc --from json --to markdown
+<<<
+-   one
+
+    -   two
+
+    three
+
+-   four
+
+five
+>>>
+-   one
+
+    -   two
+
+    three
+
+-   four
+
+five

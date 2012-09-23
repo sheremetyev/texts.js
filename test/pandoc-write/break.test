@@ -1,0 +1,12 @@
+node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdown
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "First line with two spaces"],
+    ["break", "\n"],
+    ["plain", "second line."]
+  ]
+]
+>>>
+First line with two spaces\
+second line.

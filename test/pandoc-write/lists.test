@@ -1,0 +1,26 @@
+node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdown
+<<<
+["text",
+  ["bulleted", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["numbered", { "level": 1 },
+    ["plain", "Second."]
+  ],
+  ["bulleted", { "level": 2 },
+    ["plain", "Third."]
+  ],
+  ["numbered", { "level": 1 },
+    ["plain", "Fourth."]
+  ]
+]
+>>>
+-   First.
+
+    1.  Second.
+
+        -   Third.
+
+    2.  Fourth.
+
+

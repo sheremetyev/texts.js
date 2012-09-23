@@ -1,0 +1,23 @@
+node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdown --reference-links
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Reference "],
+    ["linktext", "style"],
+    ["linkref", "1"],
+    ["plain", "."]
+  ],
+  ["link", { "level": 0 },
+    ["linkref", "1"],
+    ["url", "http://www.texts.io/"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Not a [reference] [link] due to the space."]
+  ]
+]
+>>>
+Reference [style][].
+
+Not a [reference] [link] due to the space.
+
+  [style]: http://www.texts.io/

@@ -6,4 +6,4 @@ node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdo
   ]
 ]
 >>>
-![](<Image.png>)
+![](Image.png)

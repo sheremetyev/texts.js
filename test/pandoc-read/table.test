@@ -1,0 +1,17 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
++-----+-----+-------+
+| one | two | three |
++-----+-----+-------+
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "one"]
+  ],
+  ["para", { "level": 1 },
+    ["plain", "two"]
+  ],
+  ["para", { "level": 1 },
+    ["plain", "three"]
+  ]
+]

@@ -1,0 +1,19 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+term
+
+:    definition
+
+:    another definition
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "term"]
+  ],
+  ["para", { "level": 1 },
+    ["plain", "definition"]
+  ],
+  ["para", { "level": 1 },
+    ["plain", "another definition"]
+  ]
+]

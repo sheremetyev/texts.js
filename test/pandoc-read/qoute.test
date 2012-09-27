@@ -1,0 +1,9 @@
+pandoc --smart --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+single 'quoted' and "double" quoted
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "single ‘quoted’ and “double” quoted"]
+  ]
+]

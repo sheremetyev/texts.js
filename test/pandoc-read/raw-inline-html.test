@@ -1,0 +1,9 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+some <b>bold</b> text in HTML
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "some bold text in HTML"]
+  ]
+]

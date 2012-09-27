@@ -1,0 +1,9 @@
+pandoc --from latex --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+see \cite{some} for details
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "see [@cite] for details"]
+  ]
+]

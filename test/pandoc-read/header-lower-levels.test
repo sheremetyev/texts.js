@@ -1,0 +1,19 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+<<<
+#### Level 4
+
+##### Level 5
+
+###### Level 6
+>>>JSON
+["text",
+  ["heading", { "level": -1 },
+    ["plain", "Level 4"]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Level 5"]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Level 6"]
+  ]
+]

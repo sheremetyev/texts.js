@@ -1,0 +1,7 @@
+node ../../bin/texts.js --from json --to text | node ../../bin/texts.js --from text --to json
+<<<>>>JSON
+["text",
+  ["heading", { "level": -3 },
+    ["plain", "Heading"]
+  ]
+]

@@ -85,14 +85,14 @@ Heading1
   { return [['heading', { 'level': -3 }, inlines]]; }
 
 Heading1Bottom
-  = EOL '='+ &BlockEnd
+  = EOL '='+ &(BlockEnd / FinalEOL)
 
 Heading2
   = inlines:Inline Heading2Bottom
   { return [['heading', { 'level': -2 }, inlines]]; }
 
 Heading2Bottom
-  = EOL '-'+ &BlockEnd
+  = EOL '-'+ &(BlockEnd / FinalEOL)
 
 Heading1Atx
   = '# ' inlines:Inline

@@ -35,29 +35,29 @@ to represent a structure that can be published in any format (provided that the
 format offers enough of expressive means). The major differences from Markdown
 are:
 
-  * no support for inline HTML,
+-   no support for inline HTML,
 
-  * explicit format definition (in form of PEG grammar),
+-   explicit format definition (in form of PEG grammar),
 
-  * single markup for each style.
+-   single markup for each style.
 
 The following paragraph styles are supported:
 
-  * headings,
+-   headings,
 
-  * bulleted and numbered lists,
+-   bulleted and numbered lists,
 
-  * quotations,
+-   quotations,
 
-  * verbatim (code) blocks,
+-   verbatim (code) blocks,
 
-  * math formulas,
+-   math formulas,
 
-  * images,
+-   images,
 
-  * footnotes,
+-   footnotes,
 
-  * hyperlinks.
+-   hyperlinks.
 
 There is also intention to make Text format a bit more rational. For example,
 indentation in Markdown can represent either structure (second paragraph in a

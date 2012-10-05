@@ -2,13 +2,14 @@ pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to js
 <<<
 > Quotation
 text.
-> > Second level
+>
+> > Second level.
 >>>JSON
 ["text",
-  ["quote", { "level": 0 },
+  ["para", { "level": 0 },
     ["plain", "Quotation text."]
   ],
-  ["quote", { "level": 0 },
+  ["para", { "level": 0 },
     ["plain", "Second level."]
   ]
 ]

@@ -4,6 +4,9 @@ pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to js
 >>>JSON
 ["text",
   ["para", { "level": 0 },
-    ["plain", "Heading in HTML"]
+    ["plain", "Heading"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "in HTML"]
   ]
 ]

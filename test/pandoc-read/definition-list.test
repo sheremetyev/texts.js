@@ -10,10 +10,10 @@ term
   ["para", { "level": 0 },
     ["plain", "term"]
   ],
-  ["para", { "level": 1 },
+  ["bulleted", { "level": 0 },
     ["plain", "definition"]
   ],
-  ["para", { "level": 1 },
+  ["bulleted", { "level": 0 },
     ["plain", "another definition"]
   ]
 ]

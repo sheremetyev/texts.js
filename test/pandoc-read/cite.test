@@ -4,6 +4,6 @@ see \cite{some} for details
 >>>JSON
 ["text",
   ["para", { "level": 0 },
-    ["plain", "see [@cite] for details"]
+    ["plain", "see [@some] for details"]
   ]
 ]

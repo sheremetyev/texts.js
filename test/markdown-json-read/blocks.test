@@ -1,0 +1,14 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+First paragraph.
+
+Second paragraph.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "First paragraph."]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Second paragraph."]
+  ]
+]

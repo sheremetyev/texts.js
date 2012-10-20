@@ -1,4 +1,4 @@
-pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc-json --to json
 <<<
 Text ![la lune](lalune.jpg "Voyage to the moon") text.
 

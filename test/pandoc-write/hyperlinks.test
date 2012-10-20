@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdown --reference-links
+node ../../bin/texts.js --from json --to pandoc-json | pandoc --from json --to markdown --reference-links
 <<<
 ["text",
   ["para", { "level": 0 },

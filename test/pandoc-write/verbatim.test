@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from json --to pandoc | pandoc --from json --to markdown
+node ../../bin/texts.js --from json --to pandoc-json | pandoc --from json --to markdown
 <<<
 ["text",
   ["verbatim", { "level": 0 },

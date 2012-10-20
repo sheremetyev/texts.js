@@ -1,4 +1,4 @@
-pandoc --smart --from markdown --to json | node ../../bin/texts.js --from pandoc --to json
+pandoc --smart --from markdown --to json | node ../../bin/texts.js --from pandoc-json --to json
 <<<
 single 'quoted' and "double" quoted
 >>>JSON

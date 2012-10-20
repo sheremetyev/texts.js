@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from pandoc --to json
+node ../../bin/texts.js --from pandoc-json --to json
 <<<
 [{"docTitle":[],"docAuthors":[],"docDate":[]},
  [{"Para":[{"Str":"Text"},"LineBreak",{"Str":" "},"LineBreak",{"Str":"text."}]}]]

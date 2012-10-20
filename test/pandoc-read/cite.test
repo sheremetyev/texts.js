@@ -1,4 +1,4 @@
-pandoc --from latex --to json | node ../../bin/texts.js --from pandoc --to json
+pandoc --from latex --to json | node ../../bin/texts.js --from pandoc-json --to json
 <<<
 see \cite{some} for details
 >>>JSON

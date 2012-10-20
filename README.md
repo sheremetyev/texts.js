@@ -6,8 +6,8 @@ conversion between various “rich” text formats. It does the conversion via
 universal text model (TextJSON, see below) that is rich enough for most of the
 texts, yet simple.
 
-Current version of texts.js supports reading of Text (Markdown subset) and
-writing of Text, HTML5 and XeLaTeX formats.
+Current version of texts.js supports reading of Text (Markdown subset), Pandoc
+JSON and writing of Text, HTML5, XeLaTeX and Pandoc JSON formats.
 
 Usage
 -----
@@ -30,16 +30,15 @@ Text Format
 -----------
 
 Text format produced and recognized by texts.js is similar to Markdown but is
-more general. It is not tied to generation of HTML. The purpose of Text format
-to represent a structure that can be published in any format (provided that the
-format offers enough of expressive means). The major differences from Markdown
-are:
+not tied to the generation of HTML. The purpose of Text format to represent a
+structure that can be published in any text format. The major differences from
+Markdown are:
 
 -   no support for inline HTML,
 
 -   explicit format definition (in form of PEG grammar),
 
--   single markup for each style.
+-   one variation of markup for each style.
 
 The following paragraph styles are supported:
 
@@ -72,13 +71,15 @@ editor [Texts][1].
 TextJSON
 --------
 
-TextJSON is a format of universal text model in **text.js**. It is based on
-JSONML, a format for structured data. Any TextJSON document is a valid JSON
-document and thus can be easily produced or consumed in any programming
+TextJSON is the format of the universal text model in **text.js**. It is based
+on [JsonML][2], format for structured data. Any TextJSON document is a valid
+JSON document and thus can be easily produced or consumed in any programming
 language.
 
+[2]: <http://www.jsonml.org/>
+
 Each TextJSON object is a 2-level structure—an array of blocks, where each block
-is an array of spans. Plus a formal root element “text”. Each block has
+is an array of spans. Above them is a formal root element “text”. Each block has
 attribute “level” with zero being the level of the main text, positive levels
 for nested elements and negative levels for headings.
 

@@ -1,0 +1,24 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+-   First.
+
+    Continuation.
+
+-   Second.
+
+    -   Nested.
+>>>JSON
+["text",
+  ["bulleted", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["para", { "level": 1 },
+    ["plain", "Continuation."]
+  ],
+  ["bulleted", { "level": 0 },
+    ["plain", "Second."]
+  ],
+  ["bulleted", { "level": 1 },
+    ["plain", "Nested."]
+  ]
+]

@@ -1,0 +1,29 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+Plain *`emphasis code`* plain `**code strong**` plain [*link emphasis*][1] plain *[emphasis link][1]*.
+
+[1]: http://texts.io
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Plain "],
+    ["code", "emphasis code"],
+    ["plain", " plain "],
+    ["code", "**code strong**"],
+    ["plain", " plain "],
+    ["linktext", "link emphasis"],
+    ["linkref", "1"],
+    ["plain", " plain "],
+    ["linktext", "emphasis link"],
+    ["linkref", "2"],
+    ["plain", "."]
+  ],
+  ["link", { "level": 0 },
+    ["linkref", "1"],
+    ["url", "http://texts.io"]
+  ],
+  ["link", { "level": 0 },
+    ["linkref", "2"],
+    ["url", "http://texts.io"]
+  ]
+]

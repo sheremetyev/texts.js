@@ -1,0 +1,15 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+plain *emphasis* plain **strong** plain `code` plain
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "plain "],
+    ["emph", "emphasis"],
+    ["plain", " plain "],
+    ["strong", "strong"],
+    ["plain", " plain "],
+    ["code", "code"],
+    ["plain", " plain"]
+  ]
+]

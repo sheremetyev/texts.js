@@ -1,0 +1,9 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+single 'quoted' and "double" quoted -- that's --- something...
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "single ‘quoted’ and “double” quoted – that’s — something…"]
+  ]
+]

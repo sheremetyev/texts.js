@@ -1,0 +1,19 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+1.  First.
+
+    1.  Second.
+
+        1.  Third.
+>>>JSON
+["text",
+  ["numbered", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["numbered", { "level": 1 },
+    ["plain", "Second."]
+  ],
+  ["numbered", { "level": 2 },
+    ["plain", "Third."]
+  ]
+]

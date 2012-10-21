@@ -1,0 +1,17 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+Reference [^1].
+
+[^1]: Footnote.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Reference "],
+    ["noteref", "1"],
+    ["plain", "."]
+  ],
+  ["note", { "level": 0 },
+    ["noteref", "1"],
+    ["plain", "Footnote."]
+  ]
+]

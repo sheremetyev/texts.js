@@ -1,0 +1,26 @@
+node ../../bin/texts.js --from markdown-json --to json
+<<<
+["MARKDOWN",
+    ["UNIMPLEMENTED",
+        ["UNIMPLEMENTED",
+            ["STR", "one"],
+            ["SPACE", " "],
+            ["UNIMPLEMENTED", "two"],
+            ["UNIMPLEMENTED"],
+            ["SPACE", " "],
+            ["UNIMPLEMENTED",
+                ["STR", "three"]
+            ],
+            ["SPACE", " "],
+            ["UNIMPLEMENTED", {},
+                ["STR", "four"]
+            ]
+        ]
+    ]
+]
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "one two three four"]
+  ]
+]

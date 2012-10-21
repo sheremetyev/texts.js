@@ -1,0 +1,11 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+Text <http://texts.io>.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Text "],
+    ["url", "http://texts.io"],
+    ["plain", "."]
+  ]
+]

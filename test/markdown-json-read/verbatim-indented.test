@@ -1,0 +1,15 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+    first line
+
+    third line
+>>>JSON
+["text",
+  ["verbatim", { "level": 0 },
+    ["plain", "first line"],
+    ["break", "\n"],
+    ["plain", ""],
+    ["break", "\n"],
+    ["plain", "third line"]
+  ]
+]

@@ -1,0 +1,32 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+term1
+:    definition
+
+     details
+
+:    another definition
+
+term2
+:    definition
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "term1"]
+  ],
+  ["bulleted", { "level": 0 },
+    ["plain", "definition"]
+  ],
+  ["para", { "level": 1 },
+    ["plain", "details"]
+  ],
+  ["bulleted", { "level": 0 },
+    ["plain", "another definition"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "term2"]
+  ],
+  ["bulleted", { "level": 0 },
+    ["plain", "definition"]
+  ]
+]

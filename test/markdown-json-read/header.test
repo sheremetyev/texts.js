@@ -1,0 +1,51 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+Heading
+=======
+
+Text.
+
+Subheading
+----------
+
+Text.
+
+### Subsubheading
+
+Text.
+
+#### Level 4
+
+##### Level 5
+
+###### Level 6
+>>>JSON
+["text",
+  ["heading", { "level": -3 },
+    ["plain", "Heading"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Text."]
+  ],
+  ["heading", { "level": -2 },
+    ["plain", "Subheading"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Text."]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Subsubheading"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Text."]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Level 4"]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Level 5"]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Level 6"]
+  ]
+]

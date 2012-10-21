@@ -1,0 +1,9 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+![This is the caption](/url/of/image.png)
+>>>JSON
+["text",
+  ["image", { "level": 0 },
+    ["url", "/url/of/image.png"]
+  ]
+]

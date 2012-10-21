@@ -1,0 +1,15 @@
+markdown-json | node ../../bin/texts.js --from markdown-json --to json
+<<<
+Text ![la lune](lalune.jpg "Voyage to the moon") text.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Text "]
+  ],
+  ["image", { "level": 0 },
+    ["url", "lalune.jpg"]
+  ],
+  ["para", { "level": 0 },
+    ["plain", " text."]
+  ]
+]

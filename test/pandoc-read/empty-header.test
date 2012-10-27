@@ -1,0 +1,6 @@
+pandoc --from html --to json | node ../../bin/texts.js --from pandoc-json --to json
+<<<
+<h2></h2>
+>>>JSON
+["text"
+]

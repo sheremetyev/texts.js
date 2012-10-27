@@ -1,0 +1,13 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc-json --to json
+<<<
+text ^[]
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "text "],
+    ["noteref", "1"]
+  ],
+  ["note", { "level": 0 },
+    ["noteref", "1"]
+  ]
+]

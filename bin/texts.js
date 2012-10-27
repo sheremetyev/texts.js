@@ -37,10 +37,21 @@ var writerOptions = { standalone: parsed.standalone, wrap: parsed.wrap };
 
 // option parsing completed
 
-var io = require('../lib/io');
 var fs = require('fs');
 var reader = require('../lib/reader/' + parsed.from);
 var writer = require('../lib/writer/' + parsed.to);
+
+function readInput(cb) {
+  var input = [];
+  process.stdin.on('data', function(data) { input.push(data); });
+  process.stdin.on('end', function() { cb(null, input.join('')); });
+  process.stdin.setEncoding('utf8');
+  process.stdin.resume();
+}
+
+function writeOutput(str) {
+  process.stdout.write(str);
+}
 
 if (parsed.argv.remain.length) {
   // process files
@@ -48,13 +59,13 @@ if (parsed.argv.remain.length) {
     var input = fs.readFileSync(inputFile, 'utf8');
     var text = reader(input);
     var output = writer(text, writerOptions);
-    io.writeOutput(output);
+    writeOutput(output);
   });
 } else {
   // process stdin
-  io.readInput(function (err, input) {
+  readInput(function (err, input) {
     var text = reader(input);
     var output = writer(text, writerOptions);
-    io.writeOutput(output);
+    writeOutput(output);
   });
 }

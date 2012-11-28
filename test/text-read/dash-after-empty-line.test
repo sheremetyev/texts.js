@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from text --to json
+<<<
+
+-
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "-"]
+  ]
+]

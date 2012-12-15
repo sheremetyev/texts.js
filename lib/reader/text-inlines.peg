@@ -6,6 +6,7 @@ Inline
   = Code
   / Strong
   / Emph
+  / LinkInline
   / NoteRef
   / LinkRef
   / Url
@@ -23,6 +24,11 @@ Strong
 Emph
   = '*' chars:(!'*' c:Char { return c; })+ '*'
   { return [['emph', chars.join('')]]; };
+
+LinkInline
+  = '[' text:(!']' c:Char { return c; })+ ']'
+    '(' '<'?  url:(!'>)' !')' c:Char { return c; })+ '>'? ')'
+  { return [['linktext', text.join('')], ['url', url.join('')]]; };
 
 LinkRef
   = '[' text:(!']' c:Char { return c; })+ ']'
@@ -42,7 +48,7 @@ Math
   { return [['math', chars.join('')]]; };
 
 Plain
-  = chars:(!Code !Strong !Emph !NoteRef !LinkRef !Url !Math c:Char { return c; })+
+  = chars:(!Code !Strong !Emph !LinkInline !NoteRef !LinkRef !Url !Math c:Char { return c; })+
   { return [['plain', chars.join('')]]; };
 
 Char

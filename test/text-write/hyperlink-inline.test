@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from json --to text
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["linktext", "link"],
+    ["url", "http://www.texts.io/"]
+  ]
+]
+>>>
+[link](<http://www.texts.io/>)

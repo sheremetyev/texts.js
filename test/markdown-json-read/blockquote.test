@@ -3,13 +3,17 @@ markdown-json | node ../../bin/texts.js --from markdown-json --to json
 > Quotation
 text.
 >
+> continue
 > > Second level.
 >>>JSON
 ["text",
-  ["para", { "level": 0 },
+  ["quote", { "level": 0 },
     ["plain", "Quotation text."]
   ],
-  ["para", { "level": 0 },
+  ["quote", { "level": 0 },
+    ["plain", "continue"]
+  ],
+  ["quote", { "level": 1 },
     ["plain", "Second level."]
   ]
 ]

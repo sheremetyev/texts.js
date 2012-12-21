@@ -1,0 +1,14 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc-json --to json
+<<<
+- item
+
+    > quote
+>>>JSON
+["text",
+  ["bulleted", { "level": 0 },
+    ["plain", "item"]
+  ],
+  ["quote", { "level": 1 },
+    ["plain", "quote"]
+  ]
+]

@@ -1,0 +1,11 @@
+node ../../bin/texts.js --from text --to json
+<<<
+inline [link](http://www.texts.io/)
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "inline "],
+    ["linktext", "link"],
+    ["url", "http://www.texts.io/"]
+  ]
+]

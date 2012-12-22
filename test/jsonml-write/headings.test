@@ -1,0 +1,13 @@
+node ../../bin/texts.js --from json --to jsonml
+<<<
+["text",
+  ["heading", { "level": 1 },
+    ["plain", "one"]
+  ]
+]
+>>>JSON
+[
+  ["h1",
+    "one"
+  ]
+]

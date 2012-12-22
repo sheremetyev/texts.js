@@ -1,13 +1,25 @@
 node ../../bin/texts.js --from json --to jsonml
 <<<
 ["text",
-  ["heading", { "level": 1 },
-    ["plain", "one"]
+  ["heading", { "level": -3 },
+    ["plain", "Heading"]
+  ],
+  ["heading", { "level": -2 },
+    ["plain", "Subheading"]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Subsubheading"]
   ]
 ]
 >>>JSON
 [
   ["h1",
-    "one"
+    "Heading"
+  ],
+  ["h2",
+    "Subheading"
+  ],
+  ["h3",
+    "Subsubheading"
   ]
 ]

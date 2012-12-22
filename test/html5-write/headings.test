@@ -1,9 +1,19 @@
 node ../../bin/texts.js --from json --to html5
 <<<
 ["text",
-  ["heading", { "level": 1 },
-    ["plain", "main section"]
+  ["heading", { "level": -3 },
+    ["plain", "Heading"]
+  ],
+  ["heading", { "level": -2 },
+    ["plain", "Subheading"]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Subsubheading"]
   ]
 ]
 >>>
-<h1>main section</h1>
+<h1>Heading</h1>
+
+<h2>Subheading</h2>
+
+<h3>Subsubheading</h3>

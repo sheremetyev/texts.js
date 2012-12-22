@@ -1,0 +1,9 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["para", { "level": 1 },
+    ["plain", "Indents are ignored outside of the lists."]
+  ]
+]
+>>>
+<p>Indents are ignored outside of the lists.</p>

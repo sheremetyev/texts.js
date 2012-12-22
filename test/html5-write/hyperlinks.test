@@ -1,0 +1,23 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Simple "],
+    ["url", "http://www.texts.io/"],
+    ["plain", "."]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Reference "],
+    ["linktext", "style"],
+    ["linkref", "1"],
+    ["plain", "."]
+  ],
+  ["link", { "level": 0 },
+    ["linkref", "1"],
+    ["url", "http://www.texts.io/"]
+  ]
+]
+>>>
+<p>Simple <a href="http://www.texts.io/">http://www.texts.io/</a>.</p>
+
+<p>Reference <a href="http://www.texts.io/">style</a>.</p>

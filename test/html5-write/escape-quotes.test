@@ -1,0 +1,14 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["linktext", "a 'link' with \"quotes\"!"],
+    ["linkref", "1"]
+  ],
+  ["link", { "level": 0 },
+    ["linkref", "1"],
+    ["url", "javascript:alert(\"hello 'there'!\");"]
+  ]
+]
+>>>
+<p><a href="javascript:alert(&quot;hello &#39;there&#39;!&quot;);">a 'link' with "quotes"!</a></p>

@@ -1,0 +1,20 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "text "],
+    ["math", "2+2=4"],
+    ["plain", "."]
+  ],
+  ["formula", { "level": 0 },
+    ["plain", "E=mc^2"]
+  ]
+]
+>>>
+<p>text \(2+2=4\).</p>
+
+<figure>
+<p>\[
+E=mc^2
+\]</p>
+</figure>

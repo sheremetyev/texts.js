@@ -1,0 +1,31 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["numbered", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["bulleted", { "level": 0 },
+    ["plain", "Second."]
+  ],
+  ["numbered", { "level": 0 },
+    ["plain", "Third."]
+  ]
+]
+>>>
+<ol>
+<li>
+<p>First.</p>
+</li>
+</ol>
+
+<ul>
+<li>
+<p>Second.</p>
+</li>
+</ul>
+
+<ol>
+<li>
+<p>Third.</p>
+</li>
+</ol>

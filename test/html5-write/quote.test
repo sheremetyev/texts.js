@@ -1,0 +1,11 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["quote", { "level": 0 },
+    ["plain", "Quotation text."]
+  ]
+]
+>>>
+<blockquote>
+<p>Quotation text.</p>
+</blockquote>

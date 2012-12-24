@@ -1,0 +1,11 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["image", { "level": 0 },
+    ["url", "Image.png"]
+  ]
+]
+>>>
+<figure>
+<img src="Image.png">
+</figure>

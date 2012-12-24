@@ -1,0 +1,9 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "<&>"]
+  ]
+]
+>>>
+<p>&lt;&amp;&gt;</p>

@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from json --to html5
+node ../../bin/texts.js --from json --to jsonml
 <<<
 ["text",
   ["heading", { "level": -3 },
@@ -11,9 +11,15 @@ node ../../bin/texts.js --from json --to html5
     ["plain", "Subsubheading"]
   ]
 ]
->>>
-<h1>Heading</h1>
-
-<h2>Subheading</h2>
-
-<h3>Subsubheading</h3>
+>>>JSON
+[
+  ["h1",
+    "Heading"
+  ],
+  ["h2",
+    "Subheading"
+  ],
+  ["h3",
+    "Subsubheading"
+  ]
+]

@@ -1,0 +1,21 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Main text"],
+    ["noteref", "mynote"],
+    ["plain", "."]
+  ],
+  ["note", { "level": 0 },
+    ["noteref", "mynote"],
+    ["plain", "Footnote text."]
+  ]
+]
+>>>
+<p>Main text<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<ol class="footnotes">
+<li id="fn:1">
+<p>Footnote text.<a href="#fnref:1" rev="footnote">↩</a></p>
+</li>
+</ol>

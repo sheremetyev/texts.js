@@ -1,0 +1,14 @@
+node ../../bin/texts.js --from text --to json
+<<<
+>   First.
+>
+>   Second.
+>>>JSON
+["text",
+  ["quote", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["quote", { "level": 0 },
+    ["plain", "Second."]
+  ]
+]

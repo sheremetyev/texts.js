@@ -1,0 +1,15 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["quote", { "level": 0 },
+    ["plain", "First."]
+  ],
+  ["quote", { "level": 0 },
+    ["plain", "Second."]
+  ]
+]
+>>>
+<blockquote>
+<p>First.</p>
+<p>Second.</p>
+</blockquote>

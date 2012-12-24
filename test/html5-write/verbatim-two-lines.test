@@ -1,0 +1,13 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["verbatim", { "level": 0 },
+    ["plain", "one"],
+    ["break", "\n"],
+    ["plain", "two"]
+  ]
+]
+>>>
+<pre><code>one
+two
+</code></pre>

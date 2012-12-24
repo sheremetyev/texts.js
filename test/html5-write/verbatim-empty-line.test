@@ -1,0 +1,15 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["verbatim", { "level": 0 },
+    ["plain", "next line is empty"],
+    ["break", "\n"],
+    ["break", "\n"],
+    ["plain", "third line"]
+  ]
+]
+>>>
+<pre><code>next line is empty
+
+third line
+</code></pre>

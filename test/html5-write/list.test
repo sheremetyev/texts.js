@@ -13,20 +13,13 @@ node ../../bin/texts.js --from json --to html5
 ]
 >>>
 <ul>
-
-  <li>
-    <p>first item</p>
-  </li>
-
-  <li>
-    <p>second item</p>
-    <ul>
-
-      <li>
-        <p>nested item</p>
-      </li>
-
-    </ul>
-  </li>
-
+<li>
+<p>first item</p>
+</li><li>
+<p>second item</p><ul>
+<li>
+<p>nested item</p>
+</li>
+</ul>
+</li>
 </ul>

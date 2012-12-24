@@ -13,15 +13,15 @@ node ../../bin/texts.js --from json --to html5
 ]
 >>>
 <ol>
-  <li>
-    <p>First.</p>
-  </li>
-<ol>
+<li>
+<p>First.</p>
+</li>
+</ol>
 
 <p>Second.</p>
 
 <ol>
-  <li>
-    <p>Third.</p>
-  </li>
-<ol>
+<li>
+<p>Third.</p>
+</li>
+</ol>

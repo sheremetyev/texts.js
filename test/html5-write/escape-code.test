@@ -1,7 +1,7 @@
 node ../../bin/texts.js --from json --to html5
 <<<
 ["text",
-  ["varbatim", { "level": 0 },
+  ["verbatim", { "level": 0 },
     ["plain", "<&>"]
   ]
 ]

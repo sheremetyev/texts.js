@@ -11,4 +11,4 @@ node ../../bin/texts.js --from json --to html5
   ]
 ]
 >>>
-<p><a href="javascript:alert(&quot;hello &#39;there&#39;!&quot;);">a 'link' with "quotes"</a></p>
+<p><a href="javascript:alert(&quot;hello &#39;there&#39;!&quot;);">a 'link' with "quotes"!</a></p>

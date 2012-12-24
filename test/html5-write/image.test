@@ -7,5 +7,5 @@ node ../../bin/texts.js --from json --to html5
 ]
 >>>
 <figure>
-  <img src="Image.png">
+<img src="Image.png">
 </figure>

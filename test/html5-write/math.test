@@ -13,6 +13,8 @@ node ../../bin/texts.js --from json --to html5
 >>>
 <p>text \(2+2=4\).</p>
 
-<figure>\[
+<figure>
+<p>\[
 E=mc^2
-\]</figure>
+\]</p>
+</figure>

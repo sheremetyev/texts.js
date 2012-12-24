@@ -7,5 +7,5 @@ node ../../bin/texts.js --from json --to html5
 ]
 >>>
 <blockquote>
-  <p>Quotation text.</p>
-<blockquote>
+<p>Quotation text.</p>
+</blockquote>

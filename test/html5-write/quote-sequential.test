@@ -10,7 +10,6 @@ node ../../bin/texts.js --from json --to html5
 ]
 >>>
 <blockquote>
-  <p>First.</p>
-
-  <p>Second.</p>
-<blockquote>
+<p>First.</p>
+<p>Second.</p>
+</blockquote>

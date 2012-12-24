@@ -12,10 +12,11 @@ node ../../bin/texts.js --from json --to html5
   ]
 ]
 >>>
-<p>Main text<sup><a href="#fn1">1</a></sup>.</p>
+<p>Main text<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
 
-<ol>
-  <li id="fn1">
-    <p>Footnote text.</p>
+<ol class="footnotes">
+  <li id="fn:1">
+    <p>Footnote text.<a href="#fnref:1" rev="footnote">↩</a>
+    </p>
   </li>
 </ol>

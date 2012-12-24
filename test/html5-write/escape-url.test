@@ -1,0 +1,14 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["linktext", "link"],
+    ["linkref", "1"]
+  ],
+  ["link", { "level": 0 },
+    ["linkref", "1"],
+    ["url", "/some/script?foo=1&bar=2"]
+  ]
+]
+>>>
+<p><a href="/some/script?foo=1&amp;bar=2">link</a></p>

@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from json --to xelatex
+<<<
+["text",
+  ["comment", { "level": 0 },
+    ["plain", "Comment text should be wrapped at 80 character border as well. It should be prefixed by % sign."]
+  ]
+]
+>>>
+% Comment text should be wrapped at 80 character border as well. It should be
+% prefixed by \% sign.

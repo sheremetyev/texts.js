@@ -1,0 +1,9 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["comment", { "level": 0 },
+    ["plain", "Comment text."]
+  ]
+]
+>>>
+<!-- Comment text. -->

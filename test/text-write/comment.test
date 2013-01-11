@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from json --to text
+<<<
+["text",
+  ["comment", { "level": 0 },
+    ["plain", "Comment text should be wrapped at 80 character border as well, with the slashes at the start of each line."]
+  ]
+]
+>>>
+//  Comment text should be wrapped at 80 character border as well, with the
+//  slashes at the start of each line.

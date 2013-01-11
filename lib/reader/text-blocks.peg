@@ -22,6 +22,7 @@ Block
   / Bulleted
   / Numbered
   / Quote
+  / Comment
   / Heading
   / Para
 
@@ -190,5 +191,21 @@ QuoteInline
 QuoteChar
   = !BlockEnd !Break !FinalEOL
   c:( (EOL Indent* NotIndent? '>' ' '+) { return ' '; }
+    / c:.  { return c; }
+  ) { return c; }
+
+/*** Comments ***/
+
+Comment
+  = &(NotIndent? '//' ' '+) inlines:(CommentInline / Break)+
+  { return [['comment', { 'level': 0 }].concat(inlines)]; }
+
+CommentInline
+  = lines:(NotIndent? '//' ' '+ chars:CommentChar+ { return chars.join(''); })+
+  { return lines.join(''); }
+
+CommentChar
+  = !BlockEnd !Break !FinalEOL
+  c:( (EOL Indent* NotIndent? '//' ' '+) { return ' '; }
     / c:.  { return c; }
   ) { return c; }

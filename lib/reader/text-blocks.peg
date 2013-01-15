@@ -181,8 +181,8 @@ Image
 /*** Quotes ***/
 
 Quote
-  = &(NotIndent? '>' ' '+) inlines:(QuoteInline / Break)+
-  { return [['quote', { 'level': 0 }].concat(inlines)]; }
+  = indents:Indent* &(NotIndent? '>' ' '+) inlines:(QuoteInline / Break)+
+  { return [['quote', { 'level': indents.length }].concat(inlines)]; }
 
 QuoteInline
   = lines:(NotIndent? '>' ' '+ chars:QuoteChar+ { return chars.join(''); })+

@@ -197,8 +197,8 @@ QuoteChar
 /*** Comments ***/
 
 Comment
-  = &(NotIndent? '//' ' '+) inlines:(CommentInline / Break)+
-  { return [['comment', { 'level': 0 }].concat(inlines)]; }
+  = indents:Indent* &(NotIndent? '//' ' '+) inlines:(CommentInline / Break)+
+  { return [['comment', { 'level': indents.length }].concat(inlines)]; }
 
 CommentInline
   = lines:(NotIndent? '//' ' '+ chars:CommentChar+ { return chars.join(''); })+

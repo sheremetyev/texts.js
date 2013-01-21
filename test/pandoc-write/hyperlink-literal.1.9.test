@@ -1,4 +1,4 @@
-node ../../bin/texts.js --from json --to pandoc-json --pandoc 1.9.4.2 | pandoc --from json --to markdown
+node ../../bin/texts.js --from json --to pandoc-json --pandoc 1.9.4.2 | pandoc-1.9 --from json --to markdown
 <<<
 ["text",
   ["para", { "level": 0 },

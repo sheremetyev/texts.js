@@ -1,0 +1,21 @@
+pandoc-1.9 --from markdown --to json | node ../../bin/texts.js --from pandoc-json --to json
+<<<
+Heading
+=======
+
+Subheading
+----------
+
+### Subsubheading
+>>>JSON
+["text",
+  ["heading", { "level": -3 },
+    ["plain", "Heading"]
+  ],
+  ["heading", { "level": -2 },
+    ["plain", "Subheading"]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Subsubheading"]
+  ]
+]

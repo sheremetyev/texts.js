@@ -5,6 +5,7 @@ var options = {
   'help': Boolean,
   'from' : [ 'json', 'text', 'pandoc-json', 'markdown-json' ],
   'to' :   [ 'json', 'text', 'pandoc-json', 'xelatex', 'jsonml', 'html5' ],
+  'pandoc': String,
   'standalone' : Boolean,
   'wrap' : Boolean,
 };
@@ -32,8 +33,9 @@ if (parsed.help || !parsed.from || !parsed.to) {
 
 parsed.standalone = parsed.standalone || false;
 parsed.wrap = (typeof parsed.wrap !== 'undefined') ? parsed.wrap : true;
+parsed.pandoc = (parsed.pandoc || '1.10').split('.');
 
-var writerOptions = { standalone: parsed.standalone, wrap: parsed.wrap };
+var writerOptions = { standalone: parsed.standalone, wrap: parsed.wrap, pandoc: parsed.pandoc };
 
 // option parsing completed
 

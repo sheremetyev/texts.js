@@ -19,10 +19,10 @@ Block
   / Note
   / Link
   / Image
+  / Heading
   / Bulleted
   / Numbered
   / Quote
-  / Heading
   / Para
 
 InlinesWithBreaks

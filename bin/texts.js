@@ -38,13 +38,16 @@ parsed.pandoc = (parsed.pandoc || '1.10').split('.');
 // option parsing completed
 
 var fs = require('fs');
-var translator = require('../lib/texts.js')(parsed.from, parsed.to, {
-    standalone: parsed.standalone,
-    wrap: parsed.wrap,
-    pandoc: parsed.pandoc
-  });
-translator.pipe(process.stdout);
+var texts = require('../lib/texts.js')
 
+var options = {
+  standalone:   parsed.standalone,
+  wrap:         parsed.wrap,
+  pandoc:       parsed.pandoc,
+};
+
+var translator = texts(parsed.from, parsed.to, options);
+translator.pipe(process.stdout);
 
 if (parsed.argv.remain.length) {
   // process files

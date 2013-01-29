@@ -26,7 +26,8 @@
   "dependencies": {
     "nopt": "1.0.x",
     "pegjs": "0.7.x",
-    "walkdir": "*"
+    "walkdir": "*",
+    "through": "~2.1.0"
   },
   "devDependencies": {
     "tests": "0.4.x"

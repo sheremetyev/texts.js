@@ -35,39 +35,23 @@ parsed.standalone = parsed.standalone || false;
 parsed.wrap = (typeof parsed.wrap !== 'undefined') ? parsed.wrap : true;
 parsed.pandoc = (parsed.pandoc || '1.10').split('.');
 
-var writerOptions = { standalone: parsed.standalone, wrap: parsed.wrap, pandoc: parsed.pandoc };
-
 // option parsing completed
 
 var fs = require('fs');
-var reader = require('../lib/reader/' + parsed.from);
-var writer = require('../lib/writer/' + parsed.to);
+var translator = require('../lib/texts.js')(parsed.from, parsed.to, {
+    standalone: parsed.standalone,
+    wrap: parsed.wrap,
+    pandoc: parsed.pandoc
+  });
+translator.pipe(process.stdout);
 
-function readInput(cb) {
-  var input = [];
-  process.stdin.on('data', function(data) { input.push(data); });
-  process.stdin.on('end', function() { cb(null, input.join('')); });
-  process.stdin.setEncoding('utf8');
-  process.stdin.resume();
-}
-
-function writeOutput(str) {
-  process.stdout.write(str);
-}
 
 if (parsed.argv.remain.length) {
   // process files
   parsed.argv.remain.forEach(function(inputFile) {
-    var input = fs.readFileSync(inputFile, 'utf8');
-    var text = reader(input);
-    var output = writer(text, writerOptions);
-    writeOutput(output);
+    fs.createReadStream(inputFile).pipe(translator);
   });
 } else {
   // process stdin
-  readInput(function (err, input) {
-    var text = reader(input);
-    var output = writer(text, writerOptions);
-    writeOutput(output);
-  });
+  process.stdin.pipe(translator);
 }

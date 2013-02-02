@@ -6,6 +6,11 @@
       return inline;
     });
   };
+
+  var makeRTL = function(block) {
+    block[0][1].direction = 'rtl';
+    return block;
+  };
 }
 
 Blocks
@@ -13,6 +18,10 @@ Blocks
   { return [].concat.apply(first, blocks); }
 
 Block
+  = rlm:RLM? block:BlockNoRLM
+  { return (rlm.length > 0 ? makeRTL(block) : block); }
+
+BlockNoRLM
   = Verbatim
   / Formula
   / Divider
@@ -57,9 +66,13 @@ Inline
   = chars:Char+
   { return chars.join(''); };
 
+RLM
+  = '\u200F'
+
 Char
   = !Heading1Bottom !Heading2Bottom !BlockEnd !Break !FinalEOL
-  c:( (EOL Indent*) { return ' '; }
+  c:( RLM { return ''; } // ignore right-to-left marks inside text
+    / (EOL Indent*) { return ' '; }
     / c:.  { return c; }
   ) { return c; }
 

@@ -1,0 +1,10 @@
+node ../../bin/texts.js --from json --to text
+<<<
+["text",
+  ["para", { "level": 1, "direction": "rtl" },
+    ["plain", "This line should be indented 4 spaces, split at 80 characters and each line should have right-to-left mark."]
+  ]
+]
+>>>
+‏    This line should be indented 4 spaces, split at 80 characters and each line
+‏    should have right-to-left mark.

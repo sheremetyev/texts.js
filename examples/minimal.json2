@@ -1,0 +1,612 @@
+{
+  "tags": [],
+  "blocks": [
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Minimal Texts.js Sample"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "This document shows what syntax must be supported in texts.js to be compatible with Markdown ("
+        },
+        {
+          "tags": [ "linktext" ],
+          "text": "pandoc"
+        },
+        {
+          "tags": [ "linkref" ],
+          "text": "pandoc"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": " dialect)."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "link" ],
+      "spans": [
+        {
+          "tags": [ "linkref" ],
+          "text": "pandoc"
+        },
+        {
+          "tags": [ "url" ],
+          "text": "http://johnmacfarlane.net/pandoc/"
+        }
+      ]
+    },
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Headings"
+        }
+      ]
+    },
+    {
+      "level": -2,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Subsection Heading"
+        }
+      ]
+    },
+    {
+      "level": -1,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Subsubsection"
+        }
+      ]
+    },
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Text Formatting"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "You can use "
+        },
+        {
+          "tags": [ "emph" ],
+          "text": "emphasis"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": " and "
+        },
+        {
+          "tags": [ "strong" ],
+          "text": "strong"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": " emphasis. Inline "
+        },
+        {
+          "tags": [ "code" ],
+          "text": "code"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": " will use monospaced font."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "verbatim" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Code blocks use monospaced font as well and preserve line"
+        },
+        {
+          "tags": [ "break" ],
+          "text": "\n"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": "breaks"
+        }
+      ]
+    },
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Math"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Math formulas can be used inside paragraph like "
+        },
+        {
+          "tags": [ "math" ],
+          "text": "E=mc^2"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": " or on a separate line like the following one."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "formula" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "1+\\frac{q^2}{(1-q)}+\\frac{q^6}{(1-q)(1-q^2)}+\\cdots ="
+        },
+        {
+          "tags": [ "break" ],
+          "text": "\n"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": "\\prod_{j=0}^{\\infty}\\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},"
+        },
+        {
+          "tags": [ "break" ],
+          "text": "\n"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": "\\quad\\quad \\text{for $|q|<1$}"
+        }
+      ]
+    },
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Footnotes"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Footnotes are placed anywhere"
+        },
+        {
+          "tags": [ "noteref" ],
+          "text": "1"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": " in the source file but appear at the bottom of the page."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "note" ],
+      "spans": [
+        {
+          "tags": [ "noteref" ],
+          "text": "1"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": "Yes, right here."
+        }
+      ]
+    },
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Hyperlinks"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "You can add arbitrary hyperlinks. Link "
+        },
+        {
+          "tags": [ "linktext" ],
+          "text": "text"
+        },
+        {
+          "tags": [ "linkref" ],
+          "text": "1"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": " can differ from it's URL or be the same as the URL: "
+        },
+        {
+          "tags": [ "url" ],
+          "text": "http://www.google.com/"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": "."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "link" ],
+      "spans": [
+        {
+          "tags": [ "linkref" ],
+          "text": "1"
+        },
+        {
+          "tags": [ "url" ],
+          "text": "http://www.texts.io/"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "You can include e-mail links: "
+        },
+        {
+          "tags": [ "url" ],
+          "text": "sheremetyev@gmail.com"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": ". Local files can be "
+        },
+        {
+          "tags": [ "linktext" ],
+          "text": "referenced"
+        },
+        {
+          "tags": [ "linkref" ],
+          "text": "2"
+        },
+        {
+          "tags": [ "plain" ],
+          "text": " as well."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "link" ],
+      "spans": [
+        {
+          "tags": [ "linkref" ],
+          "text": "2"
+        },
+        {
+          "tags": [ "url" ],
+          "text": "basic.pdf"
+        }
+      ]
+    },
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Images"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "image" ],
+      "spans": [
+        {
+          "tags": [ "url" ],
+          "text": "Texts_Logo.png"
+        }
+      ]
+    },
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Lists"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "bulleted" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "First bulleted item."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "bulleted" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Second bulleted item."
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "tags": [ "bulleted" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Subitem."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "tags": [ "bulleted" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Subsubitem."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "numbered" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "First numbered item."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "numbered" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Second numbered item."
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "tags": [ "numbered" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Subitem."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "tags": [ "numbered" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Subsubitem."
+        }
+      ]
+    },
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Quoting"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "quote" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Quoted text can include only inline text styles."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "quote" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Headings shouldn’t be used."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "divider" ],
+      "spans": []
+    },
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Symbol Escaping"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "No-break space (Unicode U+00A0) will be converted to tilde symbol for TeX."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "XeTeX doesn't need TeX ligatures for quotation marks, em-dash and other typographic symbols—they can be ‘used’ “directly”. Euro symbol can be used for as less as €10. Ellipsis… in the text should be a Unicode character."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Should TeX ligatures be ``used''—they will be printed <<as is>>."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "TeX special symbols are automatically escaped: %, $, {, }, _, #, &, \\, ~, ^."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "para" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "HTML entites don't have to be escaped: &, <, >."
+        }
+      ]
+    },
+    {
+      "level": -3,
+      "tags": [ "heading" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Future Extensions"
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "bulleted" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Definition lists."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "bulleted" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Titles for images, tables and formulas."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "bulleted" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Cross-references."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "bulleted" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Bibliographic citations."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "bulleted" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Comments."
+        }
+      ]
+    },
+    {
+      "level": 0,
+      "tags": [ "bulleted" ],
+      "spans": [
+        {
+          "tags": [ "plain" ],
+          "text": "Custom labels for blocks."
+        }
+      ]
+    }
+  ]
+}

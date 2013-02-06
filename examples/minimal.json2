@@ -6,17 +6,17 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Minimal Texts.js Sample"
         }
       ]
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "This document shows what syntax must be supported in texts.js to be compatible with Markdown ("
         },
         {
@@ -28,7 +28,7 @@
           "text": "pandoc"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": " dialect)."
         }
       ]
@@ -52,7 +52,7 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Headings"
         }
       ]
@@ -62,7 +62,7 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Subsection Heading"
         }
       ]
@@ -72,7 +72,7 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Subsubsection"
         }
       ]
@@ -82,17 +82,17 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Text Formatting"
         }
       ]
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "You can use "
         },
         {
@@ -100,7 +100,7 @@
           "text": "emphasis"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": " and "
         },
         {
@@ -108,7 +108,7 @@
           "text": "strong"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": " emphasis. Inline "
         },
         {
@@ -116,7 +116,7 @@
           "text": "code"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": " will use monospaced font."
         }
       ]
@@ -126,7 +126,7 @@
       "tags": [ "verbatim" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Code blocks use monospaced font as well and preserve line"
         },
         {
@@ -134,7 +134,7 @@
           "text": "\n"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "breaks"
         }
       ]
@@ -144,17 +144,17 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Math"
         }
       ]
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Math formulas can be used inside paragraph like "
         },
         {
@@ -162,7 +162,7 @@
           "text": "E=mc^2"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": " or on a separate line like the following one."
         }
       ]
@@ -172,7 +172,7 @@
       "tags": [ "formula" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "1+\\frac{q^2}{(1-q)}+\\frac{q^6}{(1-q)(1-q^2)}+\\cdots ="
         },
         {
@@ -180,7 +180,7 @@
           "text": "\n"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "\\prod_{j=0}^{\\infty}\\frac{1}{(1-q^{5j+2})(1-q^{5j+3})},"
         },
         {
@@ -188,7 +188,7 @@
           "text": "\n"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "\\quad\\quad \\text{for $|q|<1$}"
         }
       ]
@@ -198,17 +198,17 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Footnotes"
         }
       ]
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Footnotes are placed anywhere"
         },
         {
@@ -216,7 +216,7 @@
           "text": "1"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": " in the source file but appear at the bottom of the page."
         }
       ]
@@ -230,7 +230,7 @@
           "text": "1"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Yes, right here."
         }
       ]
@@ -240,17 +240,17 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Hyperlinks"
         }
       ]
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "You can add arbitrary hyperlinks. Link "
         },
         {
@@ -262,7 +262,7 @@
           "text": "1"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": " can differ from it's URL or be the same as the URL: "
         },
         {
@@ -270,7 +270,7 @@
           "text": "http://www.google.com/"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "."
         }
       ]
@@ -291,10 +291,10 @@
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "You can include e-mail links: "
         },
         {
@@ -302,7 +302,7 @@
           "text": "sheremetyev@gmail.com"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": ". Local files can be "
         },
         {
@@ -314,7 +314,7 @@
           "text": "2"
         },
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": " as well."
         }
       ]
@@ -338,7 +338,7 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Images"
         }
       ]
@@ -358,7 +358,7 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Lists"
         }
       ]
@@ -368,7 +368,7 @@
       "tags": [ "bulleted" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "First bulleted item."
         }
       ]
@@ -378,7 +378,7 @@
       "tags": [ "bulleted" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Second bulleted item."
         }
       ]
@@ -388,7 +388,7 @@
       "tags": [ "bulleted" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Subitem."
         }
       ]
@@ -398,7 +398,7 @@
       "tags": [ "bulleted" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Subsubitem."
         }
       ]
@@ -408,7 +408,7 @@
       "tags": [ "numbered" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "First numbered item."
         }
       ]
@@ -418,7 +418,7 @@
       "tags": [ "numbered" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Second numbered item."
         }
       ]
@@ -428,7 +428,7 @@
       "tags": [ "numbered" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Subitem."
         }
       ]
@@ -438,7 +438,7 @@
       "tags": [ "numbered" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Subsubitem."
         }
       ]
@@ -448,7 +448,7 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Quoting"
         }
       ]
@@ -458,7 +458,7 @@
       "tags": [ "quote" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Quoted text can include only inline text styles."
         }
       ]
@@ -468,7 +468,7 @@
       "tags": [ "quote" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Headings shouldn’t be used."
         }
       ]
@@ -483,57 +483,57 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Symbol Escaping"
         }
       ]
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "No-break space (Unicode U+00A0) will be converted to tilde symbol for TeX."
         }
       ]
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "XeTeX doesn't need TeX ligatures for quotation marks, em-dash and other typographic symbols—they can be ‘used’ “directly”. Euro symbol can be used for as less as €10. Ellipsis… in the text should be a Unicode character."
         }
       ]
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Should TeX ligatures be ``used''—they will be printed <<as is>>."
         }
       ]
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "TeX special symbols are automatically escaped: %, $, {, }, _, #, &, \\, ~, ^."
         }
       ]
     },
     {
       "level": 0,
-      "tags": [ "para" ],
+      "tags": [],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "HTML entites don't have to be escaped: &, <, >."
         }
       ]
@@ -543,7 +543,7 @@
       "tags": [ "heading" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Future Extensions"
         }
       ]
@@ -553,7 +553,7 @@
       "tags": [ "bulleted" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Definition lists."
         }
       ]
@@ -563,7 +563,7 @@
       "tags": [ "bulleted" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Titles for images, tables and formulas."
         }
       ]
@@ -573,7 +573,7 @@
       "tags": [ "bulleted" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Cross-references."
         }
       ]
@@ -583,7 +583,7 @@
       "tags": [ "bulleted" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Bibliographic citations."
         }
       ]
@@ -593,7 +593,7 @@
       "tags": [ "bulleted" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Comments."
         }
       ]
@@ -603,7 +603,7 @@
       "tags": [ "bulleted" ],
       "spans": [
         {
-          "tags": [ "plain" ],
+          "tags": [],
           "text": "Custom labels for blocks."
         }
       ]

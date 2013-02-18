@@ -1,0 +1,17 @@
+node ../../bin/texts.js --from json --to pandoc-json | pandoc --from json --to markdown
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "First paragraph."]
+  ],
+  ["comment", { "level": 0 },
+    ["plain", "Comment."]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "Second paragraph."]
+  ]
+]
+>>>
+First paragraph.
+
+Second paragraph.

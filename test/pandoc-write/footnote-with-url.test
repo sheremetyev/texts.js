@@ -1,0 +1,18 @@
+node ../../bin/texts.js --from json --to pandoc-json | pandoc --from json --to markdown
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Reference "],
+    ["noteref", "1"],
+    ["plain", "."]
+  ],
+  ["note", { "level": 0 },
+    ["noteref", "1"],
+    ["plain", "Link: "],
+    ["url", "http://www.texts.io/"]
+  ]
+]
+>>>
+Reference [^1].
+
+[^1]: Link: <http://www.texts.io/>

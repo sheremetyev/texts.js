@@ -1,5 +1,5 @@
 node ../../bin/texts.js --from json --to json
-<<<>>>
+<<<>>>JSON
 ["text",
 
   ["plain", { "level": 0 }

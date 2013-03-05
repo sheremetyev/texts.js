@@ -1,0 +1,18 @@
+node ../../bin/texts.js --from json --to xelatex
+<<<
+["text",
+  ["heading", { "level": -3, "direction": "rtl" },
+    ["plain", "First"]
+  ],
+  ["para", { "level": 0, "direction": "rtl" },
+    ["plain", "Second."]
+  ]
+]
+>>>
+\begin{RTL}
+\section{First}
+\end{RTL}
+
+\begin{RTL}
+Second.
+\end{RTL}

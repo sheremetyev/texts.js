@@ -1,0 +1,21 @@
+node ../../bin/texts.js --from text --to json
+<<<
+‏Heading
+‏=======
+
+‏Subheading
+‏----------
+
+‏### Subsubheading
+>>>JSON
+["text",
+  ["heading", { "level": -3, "direction": "rtl" },
+    ["plain", "Heading"]
+  ],
+  ["heading", { "level": -2, "direction": "rtl" },
+    ["plain", "Subheading"]
+  ],
+  ["heading", { "level": -1, "direction": "rtl" },
+    ["plain", "Subsubheading"]
+  ]
+]

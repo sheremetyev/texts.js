@@ -1,0 +1,19 @@
+node ../../bin/texts.js --from text --to json
+<<<
+LTR block.
+
+‏RTL block.
+
+LTR block.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "LTR block."]
+  ],
+  ["para", { "level": 0, "direction": "rtl" },
+    ["plain", "RTL block."]
+  ],
+  ["para", { "level": 0 },
+    ["plain", "LTR block."]
+  ]
+]

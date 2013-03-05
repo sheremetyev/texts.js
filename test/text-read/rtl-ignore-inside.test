@@ -1,0 +1,9 @@
+node ../../bin/texts.js --from text --to json
+<<<
+Mark “‏” inside block.
+>>>JSON
+["text",
+  ["para", { "level": 0 },
+    ["plain", "Mark “” inside block."]
+  ]
+]

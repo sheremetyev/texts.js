@@ -1,3 +1,5 @@
+pandoc --from markdown --to json | pandoc --from json --to markdown
+<<<>>>
 Synopsis
 ========
 

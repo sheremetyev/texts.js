@@ -1,0 +1,5 @@
+pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc-json --to pandoc-json | pandoc --from json --to markdown
+<<<>>>
+> Inline [^1].
+
+[^1]: Footnote.

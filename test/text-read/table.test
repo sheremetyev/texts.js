@@ -1,0 +1,22 @@
+node ../../bin/texts.js --from text --to json
+<<<
++-------+------+
+| One   | Two  |
++-------+------+
+| Three | Four |
++-------+------+
+>>>JSON
+["text",
+  ["row", { "level": 1 },
+    ["plain", "One"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Two"]
+  ],
+  ["row", { "level": 1 },
+    ["plain", "Three"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Four"]
+  ]
+]

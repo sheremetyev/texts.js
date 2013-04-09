@@ -1,0 +1,14 @@
+node ../../bin/texts.js --from text --to json
+<<<
++-------+-------+
+| *One* | $\pi$ |
++-------+-------+
+>>>JSON
+["text",
+  ["row", { "level": 1 },
+    ["emph", "One"]
+  ],
+  ["col", { "level": 2 },
+    ["math", "\\pi"]
+  ]
+]

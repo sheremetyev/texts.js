@@ -7,22 +7,22 @@ pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc-json --
 +------+-----+-------+
 >>>JSON
 ["text",
-  ["bulleted", { "level": 0 },
+  ["row", { "level": 1 },
     ["plain", "one"]
   ],
-  ["bulleted", { "level": 0 },
+  ["col", { "level": 2 },
     ["plain", "two"]
   ],
-  ["bulleted", { "level": 0 },
+  ["col", { "level": 2 },
     ["plain", "three"]
   ],
-  ["bulleted", { "level": 0 },
+  ["row", { "level": 1 },
     ["plain", "five"]
   ],
-  ["bulleted", { "level": 0 },
+  ["col", { "level": 2 },
     ["plain", "six"]
   ],
-  ["bulleted", { "level": 0 },
+  ["col", { "level": 2 },
     ["plain", "seven"]
   ]
 ]

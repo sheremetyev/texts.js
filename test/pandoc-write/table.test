@@ -1,0 +1,30 @@
+node ../../bin/texts.js --from json --to pandoc-json | pandoc --from json --to markdown
+<<<
+["text",
+  ["row", { "level": 1 },
+    ["plain", "one"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "two"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "three"]
+  ],
+  ["row", { "level": 1 },
+    ["plain", "five"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "six"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "seven"]
+  ]
+]
+>>>
++-------+-------+-------+
+| one   | two   | three |
++-------+-------+-------+
+| five  | six   | seven |
++-------+-------+-------+
+
+

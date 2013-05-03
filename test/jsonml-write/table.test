@@ -1,0 +1,37 @@
+node ../../bin/texts.js --from json --to jsonml
+<<<
+["text",
+  ["row", { "level": 1 },
+    ["plain", "One"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Two"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Three"]
+  ],
+  ["row", { "level": 1 },
+    ["plain", "Four"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Five"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Six"]
+  ]
+]
+>>>JSON
+[
+  ["table",
+    ["tr",
+      ["td", ["p", "One"]],
+      ["td", ["p", "Two"]],
+      ["td", ["p", "Three"]]
+    ],
+    ["tr",
+      ["td", ["p", "Four"]],
+      ["td", ["p", "Five"]],
+      ["td", ["p", "Six"]]
+    ]
+  ]
+]

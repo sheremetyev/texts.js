@@ -1,0 +1,42 @@
+node ../../bin/texts.js --from json --to html5
+<<<
+["text",
+  ["row", { "level": 1 },
+    ["plain", "One"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Two"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Three"]
+  ],
+  ["row", { "level": 1 },
+    ["plain", "Four"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Five"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Six"]
+  ]
+]
+>>>
+<table>
+<tr>
+<td>
+<p>One</p>
+</td><td>
+<p>Two</p>
+</td><td>
+<p>Three</p>
+</td>
+</tr><tr>
+<td>
+<p>Four</p>
+</td><td>
+<p>Five</p>
+</td><td>
+<p>Six</p>
+</td>
+</tr>
+</table>

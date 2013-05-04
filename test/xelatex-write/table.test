@@ -17,7 +17,7 @@ node ../../bin/texts.js --from json --to xelatex
 >>>
 \begin{table}[H]
 \centering
-\begin{tabular}{ | l | l |}
+\begin{tabular}{ | p{0.2\textwidth} | p{0.2\textwidth} |}
 \hline
 One & Two \\
 \hline

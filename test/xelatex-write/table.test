@@ -15,6 +15,7 @@ node ../../bin/texts.js --from json --to xelatex
   ]
 ]
 >>>
+\begin{savenotes}
 \begin{table}[H]
 \centering
 \begin{tabular}{ | p{0.2\textwidth} | p{0.2\textwidth} |}
@@ -25,3 +26,4 @@ Three & Four \\
 \hline
 \end{tabular}
 \end{table}
+\end{savenotes}

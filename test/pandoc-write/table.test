@@ -1,11 +1,5 @@
-pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc-json --to json
+node ../../bin/texts.js --from json --to pandoc-json | pandoc --from json --to markdown
 <<<
-+------+-----+-------+
-| one  | two | three |
-+======+=====+=======+
-| five | six | seven |
-+------+-----+-------+
->>>JSON
 ["text",
   ["row", { "level": 1 },
     ["plain", "one"]
@@ -26,3 +20,11 @@ pandoc --from markdown --to json | node ../../bin/texts.js --from pandoc-json --
     ["plain", "seven"]
   ]
 ]
+>>>
++-------+-------+-------+
+| one   | two   | three |
++-------+-------+-------+
+| five  | six   | seven |
++-------+-------+-------+
+
+

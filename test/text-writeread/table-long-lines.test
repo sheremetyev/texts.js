@@ -1,0 +1,16 @@
+node ../../bin/texts.js --from json --to text | node ../../bin/texts.js --from text --to json
+<<<>>>JSON
+["text",
+  ["row", { "level": 1 },
+    ["plain", "Monday"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "A clear day with lots of sunshine. However, the strong breeze will bring down the temperatures."]
+  ],
+  ["row", { "level": 1 },
+    ["plain", "Tuesday"]
+  ],
+  ["col", { "level": 2 },
+    ["plain", "Cloudy with rain, across many northern regions. Clear spells across most of Scotland and Northern Ireland, but rain reaching the far northwest."]
+  ]
+]

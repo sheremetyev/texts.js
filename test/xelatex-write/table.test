@@ -15,7 +15,7 @@ node ../../bin/texts.js --from json --to xelatex
   ]
 ]
 >>>
-\begin{longtable}{ | p{0.2\textwidth} | p{0.2\textwidth} |}
+\begin{longtable}{ | p{0.05\textwidth} | p{0.05\textwidth} |}
 \hline
 One & Two \\
 \hline

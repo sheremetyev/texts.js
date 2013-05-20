@@ -1,0 +1,25 @@
+node ../../bin/texts.js --from text --to json
+<<<
+# Heading with two spaces  
+
+## Heading with three spaces   
+
+### Heading with four spaces    
+
+Underlined with two spaces  
+==========================
+>>>JSON
+["text",
+  ["heading", { "level": -3 },
+    ["plain", "Heading with two spaces"]
+  ],
+  ["heading", { "level": -2 },
+    ["plain", "Heading with three spaces"]
+  ],
+  ["heading", { "level": -1 },
+    ["plain", "Heading with four spaces"]
+  ],
+  ["heading", { "level": -3 },
+    ["plain", "Underlined with two spaces"]
+  ]
+]

@@ -55,7 +55,7 @@ FinalEOL
   = EOL EOF
 
 Break
-  = '  ' EOL
+  = '  ' ' '* EOL
   { return ['break', '\n']; }
 
 Indent
@@ -96,29 +96,29 @@ Heading
   / Heading3Atx
 
 Heading1
-  = inlines:Inline Heading1Bottom
+  = inlines:Inline ' '* Heading1Bottom
   { return [['heading', { 'level': -3 }, inlines]]; }
 
 Heading1Bottom
   = EOL RLM? '='+ &(BlockEnd / FinalEOL)
 
 Heading2
-  = inlines:Inline Heading2Bottom
+  = inlines:Inline ' '* Heading2Bottom
   { return [['heading', { 'level': -2 }, inlines]]; }
 
 Heading2Bottom
   = EOL RLM? '-'+ &(BlockEnd / FinalEOL)
 
 Heading1Atx
-  = '# ' inlines:Inline
+  = '# ' inlines:Inline ' '*
   { return [['heading', { 'level': -3 }, inlines]]; }
 
 Heading2Atx
-  = '## ' inlines:Inline
+  = '## ' inlines:Inline ' '*
   { return [['heading', { 'level': -2 }, inlines]]; }
 
 Heading3Atx
-  = '### ' inlines:Inline
+  = '### ' inlines:Inline ' '*
   { return [['heading', { 'level': -1 }, inlines]]; }
 
 /*** Verbatim ***/

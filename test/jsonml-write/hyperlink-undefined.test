@@ -1,0 +1,14 @@
+node ../../bin/texts.js --from json --to jsonml
+<<<
+["text",
+  ["para", { "level": 0 },
+    ["plain", "text "],
+    ["linktext", "link"],
+    ["linkref", "1"],
+    ["plain", "."]
+  ]
+]
+>>>JSON
+[
+  ["p", "text ", "link", "."]
+]

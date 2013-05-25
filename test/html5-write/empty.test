@@ -4,4 +4,4 @@ node ../../bin/texts.js --from json --to html5
   ["para", { "level": 0 }]
 ]
 >>>
-<p></p>
+

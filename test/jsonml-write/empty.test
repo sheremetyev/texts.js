@@ -5,5 +5,4 @@ node ../../bin/texts.js --from json --to jsonml
 ]
 >>>JSON
 [
-  ["p"]
 ]
